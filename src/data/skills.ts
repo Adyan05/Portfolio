@@ -1,0 +1,1 @@
+export const skills = [{title:'Engineering',text:'Add your programming languages and software engineering tools.'},{title:'Interfaces',text:'Add your frontend frameworks and design tools.'},{title:'Data & intelligence',text:'Add your data analysis and machine learning tools.'}];

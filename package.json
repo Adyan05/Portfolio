@@ -1,0 +1,27 @@
+{
+  "name": "developer-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "react": null,
+    "react-dom": null,
+    "motion": null,
+    "lucide-react": null
+  },
+  "devDependencies": {
+    "@types/react": null,
+    "@types/react-dom": null,
+    "@types/node": null,
+    "@vitejs/plugin-react": null,
+    "vite": null,
+    "typescript": null,
+    "tailwindcss": null,
+    "@tailwindcss/vite": null
+  }
+}
