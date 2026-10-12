@@ -43,3 +43,7 @@ The intended destination is https://github.com/Adyan05/Portfolio . The workflow 
 Before sharing, update the HTML title, SEO text, and social image. The SVG social placeholder is editable; replace it with an absolute public PNG/JPEG URL for broad social-platform preview compatibility.
 
 For future project changes, edit only that project's data and assets. Preserve the other entries and reusable components unless behavior must change.
+
+
+## Reference-inspired visual update
+The monochrome layout is defined in src/reference.css, loaded after the shared styles. The home portrait uses profile.image, with a neutral silhouette while it is empty. The project description view introduces the same configurable slide reader. No personal details or project claims were copied from the design references.
