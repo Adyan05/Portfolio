@@ -9,19 +9,19 @@
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
-    "react": null,
-    "react-dom": null,
-    "motion": null,
-    "lucide-react": null
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "motion": "14.1.0",
+    "lucide-react": "1.55.0"
   },
   "devDependencies": {
-    "@types/react": null,
-    "@types/react-dom": null,
-    "@types/node": null,
-    "@vitejs/plugin-react": null,
-    "vite": null,
-    "typescript": null,
-    "tailwindcss": null,
-    "@tailwindcss/vite": null
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/node": "26.6.5",
+    "@vitejs/plugin-react": "6.1.2",
+    "vite": "8.3.4",
+    "typescript": "7.0.2",
+    "tailwindcss": "4.3.3",
+    "@tailwindcss/vite": "4.3.3"
   }
 }
