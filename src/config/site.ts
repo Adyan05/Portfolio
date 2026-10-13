@@ -1,1 +1,1 @@
-export const site = {sections:['Home','About','Projects','Skills','Experience','Achievements','Contact'], label:'PORTFOLIO / IN PROGRESS'};
+export const site = {sections:[{id:'about',label:'About me'},{id:'projects',label:'Projects'},{id:'education',label:'Education'},{id:'skills',label:'Skills'},{id:'experience',label:'Experience'},{id:'achievements',label:'Achievements'},{id:'contact',label:'Contact'}], label:'PORTFOLIO / IN PROGRESS'};
