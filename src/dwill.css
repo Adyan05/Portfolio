@@ -1,0 +1,46 @@
+/* Case-study extensions; placeholder projects retain their existing layouts. */
+.project-card.dwill .project-cover{background:#09090c;height:390px;display:flex;justify-content:center;align-items:center}
+.project-card.dwill .project-cover>.slide-image{width:100%;height:100%;max-height:none;object-fit:contain}
+.project-card.dwill .cover-label{top:12px;left:12px;box-shadow:0 2px 9px #0003}
+.project-card.dwill .cover-bottom{background:#17151ce8;padding:9px 12px;bottom:0;left:0;right:0}
+.project-card.dwill .project-subtitle{font-size:15px;font-weight:500;color:#333;margin:0 0 12px}
+.project-card.dwill .card-bottom{align-items:flex-start}
+.project-card.dwill .card-bottom>span{max-width:57%;line-height:1.7}
+.project-card.dwill .project-info>.text-link{margin-top:16px;font-size:11px}
+.presentation.dwill .project-description{grid-template-columns:1.6fr 1fr}
+.presentation.dwill .description-main h2{font-size:clamp(30px,3.5vw,47px)}
+.presentation.dwill .case-subtitle{font-size:16px;font-weight:500;margin-bottom:18px}
+.case-award{border-left:3px solid #8a76b4;padding:10px 13px;background:#eeeaf5;color:#453956!important;font-size:12px!important;margin-top:18px}
+.description-facts dd small{display:block;font-size:11px;color:#777;margin-top:8px;line-height:1.6}
+.presentation.dwill .description-facts dd{font-size:14px;line-height:1.6;max-width:290px}
+.case-expanded{grid-template-columns:1fr;gap:15px}
+.case-expanded .slide-copy>div>p{max-width:850px}
+.case-expanded .slide-copy>div>ul{max-width:850px}
+.case-details{grid-column:1/-1;min-width:0}
+.case-details:empty{display:none}
+.case-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.case-cards section{background:#fafafa;border:1px solid #e3e0e9;padding:22px;border-radius:7px;min-width:0}
+.case-cards svg{color:#78658f;margin-bottom:15px}
+.case-cards h4{font-size:16px;line-height:1.4;font-weight:500;margin:0}
+.case-cards p{font-size:12px;line-height:1.8;margin-top:10px}
+.slide .case-caption{font-size:11px;color:#6d6575;line-height:1.7;max-width:100%;margin-top:20px}
+.case-resources{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.case-resources .pill{font-size:11px;min-height:40px}
+.case-workflow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.case-workflow li{background:#f1eef6;border:1px solid #dbd5e4;border-radius:6px;padding:18px;line-height:1.6;font-size:12px;display:flex;flex-direction:column;gap:13px}
+.case-workflow li>span{font-size:11px;color:#78658f;letter-spacing:.1em}
+.case-workflow li>svg{margin-top:auto}
+.workflow-branches{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}
+.workflow-branches p{border:1px solid #ddd;border-radius:6px;padding:16px;max-width:none;margin:0;font-size:12px}
+.case-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.case-gallery figure{margin:0;border:1px solid #ddd;background:#fff;border-radius:6px;overflow:hidden}
+.case-gallery a{display:block;background:#17141e}
+.case-gallery .slide-image{height:220px;width:100%;object-fit:contain}
+.case-gallery .placeholder{min-height:220px;height:220px;border:0;border-radius:0}
+.case-gallery figcaption{padding:15px;font-size:12px;line-height:1.6}
+.case-gallery strong,.case-gallery figcaption span{display:block}
+.case-gallery figcaption span{font-size:11px;color:#777;margin-top:5px}
+.presentation.dwill .slide-visual .slide-image{max-height:560px}
+.presentation.dwill .slide-dots{max-width:70%}
+.presentation.dwill .slide-dots button{min-width:24px}
+@media(max-width:760px){.project-card.dwill .project-cover{height:370px}.presentation.dwill .project-description{grid-template-columns:1fr}.presentation.dwill .description-facts{display:grid;grid-template-columns:1fr 1fr;gap:20px}.presentation.dwill .description-facts dd{max-width:none;font-size:12px}.case-cards{grid-template-columns:1fr}.case-cards section{padding:18px}.case-workflow ol{grid-template-columns:1fr}.case-workflow li{flex-direction:row;align-items:center}.case-workflow li>svg{margin:auto 0 auto auto}.workflow-branches{grid-template-columns:1fr}.case-gallery{grid-template-columns:1fr}.presentation.dwill .slide-dots{max-width:50%;gap:2px}.presentation.dwill .slide-dots button{width:18px;min-width:18px}.presentation.dwill .slide-visual .slide-image{max-height:540px}.case-resources .pill{font-size:10px}.case-gallery .slide-image{height:190px}}
