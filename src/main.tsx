@@ -6,3 +6,6 @@ import './styles.css';
 import './reference.css';
 createRoot(document.getElementById('root')!).render(<React.StrictMode><MotionConfig reducedMotion="user"><App/></MotionConfig></React.StrictMode>);
 import './dwill.css';
+
+import './coffee.css';
+import './retail.css';
