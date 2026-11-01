@@ -23,3 +23,7 @@ main{max-width:none;padding:0 7%}p{color:#626262}em{font-family:inherit;font-sty
 .experience-period{font-size:12px;color:#555;margin:14px 0}.experience-duties{padding-left:18px;font-size:13px;line-height:1.9}.experience-duties li{margin-bottom:10px}.experience-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}#experience .timeline-item{padding-bottom:30px;margin-bottom:25px}
 
 #experience .experience-group{padding:0 0 32px;margin:0 0 28px;border-bottom:1px solid #ddd}#experience .experience-organization{font-size:22px;line-height:1.4;margin:0 0 25px}#experience .experience-group .timeline-item{position:relative;border:0;border-left:1px solid #ddd;padding:0 0 28px 24px;margin:0}#experience .experience-group .timeline-item:before{content:'';position:absolute;left:-4px;top:6px;width:7px;height:7px;border-radius:50%;background:#222}#experience .experience-group .timeline-item:last-child{padding-bottom:0}#experience .timeline-item h4{font-size:19px;font-weight:500;margin:0 0 12px}
+/* Two-column achievements gallery with a full-width section heading. */
+#achievements{grid-template-columns:1fr;gap:36px}
+#achievements .achievement-list{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:28px}
+@media(max-width:760px){#achievements .achievement-list{grid-template-columns:1fr;gap:24px}}
