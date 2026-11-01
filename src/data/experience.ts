@@ -78,3 +78,10 @@ export const experience = [
     "certificate": "images/achievements/event-manager.pdf"
   }
 ];
+
+export const experienceGroups = [
+ {organization:'University of Nottingham Malaysia',roles:[experience[0],experience[3]]},
+ {organization:'Nottingham Wolves Dodgeball Club',roles:[experience[1],experience[4]]},
+ {organization:'UNM Rock Climbing Club',roles:[experience[2]]},
+ {organization:'Computer Science Society, UNM',roles:[experience[5]]},
+];
