@@ -37,7 +37,7 @@ export const experience = [
       "Promoted student participation, teamwork and engagement."
     ],
     "source": "https://www.linkedin.com/in/adyan-d-09a516258/",
-    "certificate": null
+    "certificate": "images/achievements/rock-climbing-event-manager.pdf"
   },
   {
     "title": "Course Representative",

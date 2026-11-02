@@ -63,4 +63,4 @@ export const achievements = [
     "image": "images/achievements/wolves-treasurer.png",
     "certificate": "images/achievements/wolves-treasurer.pdf"
   }
-, ...leadership];
+, {title:'Event Manager — Rock Climbing Club',organization:'University of Nottingham Malaysia',period:'2023/2024',category:'Leadership',description:'Received a Certificate of Appreciation for outstanding contribution as Event Manager of the Rock Climbing Club.',role:'Planned club activities, coordinated event logistics and encouraged student participation and teamwork.',skills:['Event planning','Team coordination','Organisation'],image:'images/achievements/rock-climbing-event-manager.png',certificate:'images/achievements/rock-climbing-event-manager.pdf'}, ...leadership];
