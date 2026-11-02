@@ -4,9 +4,10 @@ export interface Project { id: string; title: string; fullTitle?:string; subtitl
 import { dwill } from './dwill';
 import { coffee } from './coffee';
 import { retail } from './retail';
+import { hr } from './hr';
 const slide = (kind: SlideKind, title: string, body: string): Slide => ({id:kind,kind,title,body,placeholder:true});
 export const projects: Project[] = [
- coffee, retail,
+ coffee, retail, hr,
  {id:'data-project',title:'Data analytics project',category:'Data Analytics',description:'A space for clear questions, careful analysis, and meaningful visual stories.',accent:'sand',technologies:[],placeholder:true,slides:[slide('overview','Find the story in the data.','Introduce your analysis and the question it explores.'),slide('architecture','Make the process visible.','Add your real data preparation and analysis methodology.'),slide('screenshots','Show your analysis.','Add verified charts or implementation screenshots.'),slide('results','Share what you learned.','Add findings, uncertainty, and limitations supported by your work.')]},
  dwill,
  {id:'software-project',title:'Software project',category:'Software Engineering',description:'A space for a thoughtful software solution. Your project story starts here.',accent:'sage',technologies:[],placeholder:true,slides:[

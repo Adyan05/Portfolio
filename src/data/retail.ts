@@ -4,6 +4,7 @@ export const retailFile = (name:string) => `${retailRepo}/blob/main/${name}`;
 export const retailMedia: Record<string,{title:string;caption:string;image?:string;group:string}> = {
   "overview": {
     "title": "Online Retail Overview",
+    "image": "images/retail/dashboard-1.png",
     "group": "Power BI",
     "caption": "One verified repository report page: five KPI cards, revenue trend, product and country revenue, Country and YearMonth slicers."
   },
@@ -191,7 +192,8 @@ export const retail:Project = {
   "category": "Data Analytics",
   "cardAction": "View Case Study",
   "accent": "coffee retail",
-  "coverLabel": "Online Retail dashboard \u2014 screenshot pending",
+  "cover": "images/retail/dashboard-1.png",
+  "coverLabel": "Online Retail Overview",
   "description": "Transforming transaction data into business insights through Python preparation, SQL analysis, RFM customer segmentation and Power BI reporting. An analytics portfolio project exploring performance, customer value, product demand and geographical sales.",
   "technologies": [
     "Python",
@@ -216,14 +218,14 @@ export const retail:Project = {
       "value": "RFM Customer Segmentation"
     }
   ],
-  "slides": [
+  "slides": [{"id":"customer-segmentation-report","kind":"screenshots","title":"Customer Segmentation — Power BI","image":"images/retail/dashboard-2.png","imageAlt":"Power BI customer segmentation report","caption":"Actual second page exported from OverviewReport.pbix."},
     {
       "id": "dashboard",
       "kind": "overview",
       "title": "Retail performance, in perspective.",
       "body": "Understanding retail performance and customer behaviour through data. Explore the analysis, the original SQL and the supplied customer segmentation output.",
       "analytics": "retail:dashboard",
-      "caption": "Original Power BI screenshots are pending. These placeholders do not simulate a dashboard; download the actual PBIX to explore its report."
+      "caption": "Actual overview page exported from the local Power BI report."
     },
     {
       "id": "overview",
