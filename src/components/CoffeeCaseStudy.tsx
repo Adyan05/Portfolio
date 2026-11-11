@@ -133,7 +133,7 @@ function LearningPage() {
   return (
     <div className="coffee-case-page learning-page">
       <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">DEDICATED REFLECTION</span><h1>What I Learned</h1><p>This page explains how my thinking developed from preparing a workbook to solving relational and time-based SQL problems.</p></div></header>
-      <div className="learning-index" aria-label="Learning topics">{learningSections.map(item => <a key={item.id} href={`#learning-${item.id}`}><span>{item.label}</span>{item.title}</a>)}</div>
+      <div className="learning-index" aria-label="Learning topics">{learningSections.map(item => <div className="learning-index-item" key={item.id}><span>{item.label}</span>{item.title}</div>)}</div>
       <div className="learning-sections">{learningSections.map(item => <section id={`learning-${item.id}`} key={item.id}><span>{item.label}</span><div><h2>{item.title}</h2><p>{item.body}</p></div></section>)}</div>
       <section className="next-learning"><GraduationCap size={28} /><div><span className="eyebrow">NEXT DEVELOPMENT AREA</span><h2>Stronger validation and retention analysis.</h2><p>I want to finish and test the remaining draft queries, add repeatable data-quality checks, and explore customer cohorts so that retention is measured across comparable time periods.</p></div></section>
     </div>
