@@ -34,9 +34,9 @@ export const questionGroups = [
 
 export const coffee: Project = {
  id:'coffee-sales',title:'Coffee Orders Data Analysis',fullTitle:'Coffee Orders Data Analysis | Excel & SQL',subtitle:'From raw workbook to relational business analysis',
- category:'Data Analytics',cardAction:'View Case Study',accent:'coffee',coverLabel:'Raw Excel data → SQL analysis',
- description:'An evidence-based case study showing how I prepared three related Excel datasets and progressed from SQL fundamentals to joins, CTEs and window functions.',
- technologies:['Microsoft Excel','PostgreSQL','SQL'], repository:coffeeRepo,documentation:coffeeFile('README.md'),
+ category:'Data Analytics',cardAction:'View Case Study',accent:'coffee',cover:'images/coffee/dashboard-1.png',
+ description:'An evidence-based case study showing how I prepared three related Excel datasets, analysed them with SQL and presented the results in Power BI.',
+ technologies:['Microsoft Excel','PostgreSQL','SQL','Power BI'], repository:coffeeRepo,documentation:coffeeFile('README.md'),
  metadata:[{label:'Project type',value:'Personal Data Analytics Project'},{label:'Dataset period',value:'2 January 2019 – 19 August 2022'},{label:'Focus',value:'Data Preparation / SQL Analysis'}],
  slides:[
  {id:'dashboard',kind:'overview',title:'From raw transactions to business intelligence.',body:'Explore two verified report pages: Sales Overview and Monthly Detail. This portfolio presents the analysis through slides; the original interactive report is available as a PBIX download.',analytics:'dashboard',caption:'Actual pages exported from the local Coffee Sales Power BI report.'},

@@ -1,4 +1,4 @@
-export type CoffeePage = 'overview' | 'cleaning' | 'sql' | 'learning';
+export type CoffeePage = 'overview' | 'cleaning' | 'dashboard' | 'sql' | 'learning';
 
 export type SqlExample = {
   title: string;
@@ -386,6 +386,7 @@ export const workflow = [
   ['Excel Preparation', 'Lookup formulas connect the tables and calculate readable sales fields.'],
   ['Cleaned CSV Datasets', 'Structured exports provide consistent inputs for the database.'],
   ['SQL Analysis', 'Four stages progress from filtering to window functions and retention questions.'],
+  ['Power BI Dashboard', 'Two report pages turn the prepared measures into interactive performance views.'],
   ['Business Insights', 'KPIs and comparisons describe sales, products, markets and customers.'],
   ['Learning Outcomes', 'The project records the reasoning, limitations and technical lessons behind the queries.'],
 ] as const;

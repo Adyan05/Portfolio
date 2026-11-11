@@ -3,6 +3,7 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUpRight,
+  BarChart3,
   CheckCircle2,
   Copy,
   Database,
@@ -26,12 +27,13 @@ import { coffeeFile, coffeeRepo } from '../data/coffee';
 const pages: { id: CoffeePage; label: string }[] = [
   { id: 'overview', label: 'Overview' },
   { id: 'cleaning', label: 'Data Cleaning' },
+  { id: 'dashboard', label: 'Dashboard' },
   { id: 'sql', label: 'SQL Analysis' },
   { id: 'learning', label: 'What I Learned' },
 ];
 
 function pageFromHash(): CoffeePage {
-  const match = location.hash.match(/^#project\/coffee-sales\/(overview|cleaning|sql|learning)$/);
+  const match = location.hash.match(/^#project\/coffee-sales\/(overview|cleaning|dashboard|sql|learning)$/);
   return (match?.[1] as CoffeePage) || 'overview';
 }
 
@@ -118,7 +120,7 @@ function SqlPage() {
   const stage = sqlStages[stageIndex];
   return (
     <div className="coffee-case-page">
-      <header className="case-page-heading"><span className="case-page-number">03</span><div><span className="eyebrow">SQL ANALYSIS & PRACTICAL APPLICATIONS</span><h2>From selecting rows to solving multi-step questions.</h2><p>The four repository scripts show a clear progression. I selected examples that demonstrate a distinct analytical technique and kept source limitations visible.</p></div></header>
+      <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">SQL ANALYSIS & PRACTICAL APPLICATIONS</span><h2>From selecting rows to solving multi-step questions.</h2><p>The four repository scripts show a clear progression. I selected examples that demonstrate a distinct analytical technique and kept source limitations visible.</p></div></header>
       <div className="sql-stage-nav" role="tablist" aria-label="SQL learning stages">{sqlStages.map((item, index) => <button type="button" role="tab" aria-selected={stageIndex === index} onClick={() => setStageIndex(index)} key={item.id}><span>{item.number}</span>{item.title}<small>{item.source}</small></button>)}</div>
       <section className="sql-stage" role="tabpanel" aria-label={stage.title}>
         <header><div><span className="eyebrow">STAGE {stage.number}</span><h3>{stage.title}</h3></div><a href={coffeeFile(stage.source)} target="_blank" rel="noreferrer">Open source file <ArrowUpRight size={15} /></a></header>
@@ -129,10 +131,24 @@ function SqlPage() {
   );
 }
 
+function DashboardPage() {
+  return (
+    <div className="coffee-case-page">
+      <header className="case-page-heading"><span className="case-page-number">03</span><div><span className="eyebrow">POWER BI DASHBOARD & DATA MODEL</span><h2>Turning the analysis into an interactive report.</h2><p>I built two report pages for different levels of analysis. The overview summarises sales performance and the monthly page adds period comparisons. A relational model connects the Orders fact table to Products, Customers and a dedicated Calendar table.</p></div></header>
+      <section className="dashboard-gallery" aria-label="Coffee Sales Power BI dashboards">
+        <figure className="dashboard-figure dashboard-figure-wide"><a href="images/coffee/dashboard-1.png" target="_blank" rel="noreferrer"><img src="images/coffee/dashboard-1.png" alt="Coffee Sales Overview Power BI dashboard with KPI cards, slicers and revenue charts" /></a><figcaption><span>REPORT PAGE 01</span><h3>Sales Overview</h3><p>Revenue, distinct orders, units sold, Average Order Value and purchasing customers, supported by monthly, country and coffee-type views.</p></figcaption></figure>
+        <figure className="dashboard-figure"><a href="images/coffee/dashboard-2.png" target="_blank" rel="noreferrer"><img src="images/coffee/dashboard-2.png" alt="Monthly Performance Power BI dashboard with revenue, orders and growth table" /></a><figcaption><span>REPORT PAGE 02</span><h3>Monthly Performance</h3><p>A month-level table comparing revenue, orders, units, customers, AOV, month-over-month growth and year-over-year growth.</p></figcaption></figure>
+        <figure className="dashboard-figure"><a href="images/coffee/model-view.png" target="_blank" rel="noreferrer"><img src="images/coffee/model-view.png" alt="Power BI model view showing Products, Customers and Calendar related to the Orders table" /></a><figcaption><span>MODEL VIEW</span><h3>Relational Data Model</h3><p>One-to-many relationships allow Products, Customers and Calendar to filter sales rows in Orders while keeping each table at the correct granularity.</p></figcaption></figure>
+      </section>
+      <section className="case-block dashboard-notes"><div className="case-section-heading"><span className="eyebrow">REPORT DESIGN</span><h2>How the dashboard supports analysis.</h2></div><div className="skill-evidence-grid"><article><BarChart3 size={23} /><h3>Executive overview</h3><p>KPI cards give a quick view of business scale before the supporting charts explain time, market and product patterns.</p></article><article><Search size={23} /><h3>Interactive filtering</h3><p>Year, Country and Coffee Type slicers let viewers investigate the same measures under different filter contexts.</p></article><article><Database size={23} /><h3>Reliable model structure</h3><p>Dimension-to-fact relationships support consistent filtering and reduce the need to repeat descriptive fields in every calculation.</p></article></div><a className="button dark dashboard-download" href="images/coffee/dashboard.pdf" target="_blank" rel="noreferrer">Open dashboard export <ArrowUpRight size={15} /></a></section>
+    </div>
+  );
+}
+
 function LearningPage() {
   return (
     <div className="coffee-case-page learning-page">
-      <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">DEDICATED REFLECTION</span><h1>What I Learned</h1><p>This page explains how my thinking developed from preparing a workbook to solving relational and time-based SQL problems.</p></div></header>
+      <header className="case-page-heading"><span className="case-page-number">05</span><div><span className="eyebrow">DEDICATED REFLECTION</span><h1>What I Learned</h1><p>This page explains how my thinking developed from preparing a workbook to solving relational and time-based SQL problems.</p></div></header>
       <div className="learning-index" aria-label="Learning topics">{learningSections.map(item => <div className="learning-index-item" key={item.id}><span>{item.label}</span>{item.title}</div>)}</div>
       <div className="learning-sections">{learningSections.map(item => <section id={`learning-${item.id}`} key={item.id}><span>{item.label}</span><div><h2>{item.title}</h2><p>{item.body}</p></div></section>)}</div>
       <section className="next-learning"><GraduationCap size={28} /><div><span className="eyebrow">NEXT DEVELOPMENT AREA</span><h2>Stronger validation and retention analysis.</h2><p>I want to finish and test the remaining draft queries, add repeatable data-quality checks, and explore customer cohorts so that retention is measured across comparable time periods.</p></div></section>
@@ -144,15 +160,17 @@ function OverviewPage({ navigate }: { navigate: (page: CoffeePage) => void }) {
   const metrics = [
     ['1,000', 'sales lines'],
     ['957', 'distinct orders'],
-    ['3', 'related tables'],
+    ['2', 'Power BI report pages'],
     ['4', 'SQL learning stages'],
   ];
   return (
     <div className="coffee-case-page">
       <section className="coffee-case-hero">
-        <div><span className="eyebrow">PORTFOLIO CASE STUDY</span><h1>Coffee Orders Data Analysis <em>Excel & SQL</em></h1><p>I prepared a raw coffee-orders workbook, exported structured datasets and used PostgreSQL to answer progressively more complex business questions. This case study focuses on the evidence behind the work: the source data, formulas, queries, findings and lessons.</p><div className="case-hero-actions"><button className="button dark" type="button" onClick={() => navigate('cleaning')}>View data preparation <ArrowRight size={15} /></button><a className="pill" href={coffeeRepo} target="_blank" rel="noreferrer">Open repository <ArrowUpRight size={15} /></a></div></div>
+        <div><span className="eyebrow">PORTFOLIO CASE STUDY</span><h1>Coffee Orders Data Analysis <em>Excel, SQL & Power BI</em></h1><p>I prepared a raw coffee-orders workbook, exported structured datasets, used PostgreSQL to answer progressively more complex business questions and built a two-page Power BI report. This case study focuses on the evidence behind the work: the source data, formulas, queries, dashboards, findings and lessons.</p><div className="case-hero-actions"><button className="button dark" type="button" onClick={() => navigate('dashboard')}>View dashboards <ArrowRight size={15} /></button><button className="pill" type="button" onClick={() => navigate('cleaning')}>View data preparation</button><a className="pill" href={coffeeRepo} target="_blank" rel="noreferrer">Open repository <ArrowUpRight size={15} /></a></div></div>
         <div className="case-metrics">{metrics.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>
       </section>
+
+      <section className="overview-dashboard-showcase"><div className="case-section-heading"><span className="eyebrow">POWER BI REPORT</span><h2>Two dashboard pages built from the prepared data.</h2><p>The report moves from a high-level sales overview to a detailed monthly performance table. Select either preview to view the full image.</p></div><div className="overview-dashboard-grid"><a href="images/coffee/dashboard-1.png" target="_blank" rel="noreferrer"><img src="images/coffee/dashboard-1.png" alt="Coffee Sales Overview dashboard preview" /><span>Sales Overview <ArrowUpRight size={15} /></span></a><a href="images/coffee/dashboard-2.png" target="_blank" rel="noreferrer"><img src="images/coffee/dashboard-2.png" alt="Monthly Performance dashboard preview" /><span>Monthly Performance <ArrowUpRight size={15} /></span></a></div><button className="text-link" type="button" onClick={() => navigate('dashboard')}>Explore the dashboard and model <ArrowRight size={16} /></button></section>
 
       <section className="case-block overview-intro"><div className="case-section-heading"><span className="eyebrow">PROJECT PURPOSE</span><h2>Turning prepared records into explainable analysis.</h2></div><div className="overview-columns"><p>The project starts with three Excel worksheets: Orders, Customers and Products. I used the related identifiers to enrich the order data, calculate sales fields and create structured CSV files for PostgreSQL.</p><p>The SQL work then progresses through retrieval, filtering, aggregation, joins, CTEs and window functions. Each stage connects the syntax to a practical question rather than treating SQL as a list of commands.</p></div></section>
 
@@ -160,7 +178,7 @@ function OverviewPage({ navigate }: { navigate: (page: CoffeePage) => void }) {
 
       <section className="case-block"><div className="case-section-heading"><span className="eyebrow">VERIFIED FINDINGS</span><h2>What the prepared data shows.</h2></div><div className="verified-findings"><article><strong>45,135.35</strong><span>Total revenue in the unspecified source currency</span></article><article><strong>79%</strong><span>Approximate revenue contribution from the United States</span></article><article><strong>25 of 913</strong><span>Purchasing customers with more than one distinct order</span></article><article><strong>Excelsa</strong><span>Highest-revenue coffee type at 12,306.71</span></article></div><p className="finding-limit">These observations describe this dataset. They do not prove that a product, market or loyalty programme caused the result.</p></section>
 
-      <section className="case-block"><div className="case-section-heading"><span className="eyebrow">SKILLS DEMONSTRATED</span><h2>Techniques connected to analytical decisions.</h2></div><div className="skill-evidence-grid"><article><FileSpreadsheet size={23} /><h3>Excel & Data Preparation</h3><p>XLOOKUP, INDEX/MATCH, IF, calculated fields, structured tables, missing-value review and CSV preparation.</p></article><article><Database size={23} /><h3>SQL</h3><p>Filtering, aggregation, joins, CTEs, subqueries, conditional logic, window functions and date analysis.</p></article><article><Search size={23} /><h3>Analytical Reasoning</h3><p>Defining KPIs, checking data grain, validating results, interpreting limitations and translating questions into queries.</p></article></div></section>
+      <section className="case-block"><div className="case-section-heading"><span className="eyebrow">SKILLS DEMONSTRATED</span><h2>Techniques connected to analytical decisions.</h2></div><div className="skill-evidence-grid"><article><FileSpreadsheet size={23} /><h3>Excel & Data Preparation</h3><p>XLOOKUP, INDEX/MATCH, IF, calculated fields, structured tables, missing-value review and CSV preparation.</p></article><article><Database size={23} /><h3>SQL</h3><p>Filtering, aggregation, joins, CTEs, subqueries, conditional logic, window functions and date analysis.</p></article><article><BarChart3 size={23} /><h3>Power BI</h3><p>Data modelling, DAX measures, KPI cards, slicers, time-series reporting and interactive dashboard design.</p></article><article><Search size={23} /><h3>Analytical Reasoning</h3><p>Defining KPIs, checking data grain, validating results, interpreting limitations and translating questions into queries.</p></article></div></section>
     </div>
   );
 }
@@ -194,6 +212,7 @@ export default function CoffeeCaseStudy({ onClose }: { onClose: () => void }) {
       <div className="coffee-case-content" role="main">
         {page === 'overview' && <OverviewPage navigate={navigate} />}
         {page === 'cleaning' && <CleaningPage />}
+        {page === 'dashboard' && <DashboardPage />}
         {page === 'sql' && <SqlPage />}
         {page === 'learning' && <LearningPage />}
       </div>
