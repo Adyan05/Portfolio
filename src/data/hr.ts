@@ -17,12 +17,12 @@ export const hr: Project = {
       "id": "overview",
       "kind": "overview",
       "title": "HR Analytics — Employee Attrition",
-      "body": "Exploring attrition patterns through the supplied Python analysis and exported charts. These are analysis charts, not Power BI dashboard screenshots."
+      "body": "Employee attrition comparisons using Python analysis charts."
     },
     {
       "id": "method",
       "kind": "architecture",
-      "title": "From employee records to visual comparisons",
+      "title": "Methodology",
       "body": "The local project includes a Python notebook, SQL analysis and exported charts comparing attrition across employee groups. Observed associations do not establish causes."
     },
     {

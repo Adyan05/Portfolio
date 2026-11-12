@@ -334,37 +334,37 @@ export const learningSections = [
   {
     id: 'quality',
     label: 'A',
-    title: 'Understanding Data Quality',
+    title: 'Data Quality',
     body: 'I learned that an analysis is only as reliable as the structure beneath it. The original Orders worksheet contained the core identifiers, dates and quantities, while its customer and product attribute columns were blank. Comparing it with the prepared CSV made the enrichment step visible. I also checked missing contact values and exact duplicate rows instead of treating an exported file as automatically clean.',
   },
   {
     id: 'excel',
     label: 'B',
-    title: 'Developing My Excel Skills',
+    title: 'Excel Preparation',
     body: 'The raw workbook contains no formulas. In the project workbook, I used XLOOKUP to retrieve customer attributes, INDEX and MATCH to retrieve product attributes, IF to expand abbreviated category codes, and multiplication to calculate Sales. This taught me how lookup keys connect worksheets and why readable, structured fields make later analysis easier.',
   },
   {
     id: 'foundation',
     label: 'C',
-    title: 'Building My SQL Foundation',
+    title: 'SQL Fundamentals',
     body: 'The first queries taught me to retrieve only the fields I needed, define date boundaries, sort results explicitly and handle missing values. I learned that a query should begin with a clear question and that small validation queries are useful before attempting complex analysis.',
   },
   {
     id: 'metrics',
     label: 'D',
-    title: 'Turning Data into Business Metrics',
+    title: 'Business Metrics',
     body: 'Aggregation helped me move from individual sales lines to measures such as revenue, units, distinct orders, purchasing customers and Average Order Value. The distinction between COUNT(*) and COUNT(DISTINCT orderid) was especially important because one order can contain several product lines.',
   },
   {
     id: 'relationships',
     label: 'E',
-    title: 'Understanding Relational Data',
+    title: 'Relational Data',
     body: 'Joining Orders, Customers and Products showed me how a database avoids repeating the same descriptive information in every table. I learned that INNER JOIN returns matches, whereas LEFT JOIN is required when I need to keep customers who have not ordered. I also learned to check the row grain after each join before aggregating.',
   },
   {
     id: 'complex',
     label: 'F',
-    title: 'Solving Complex SQL Problems',
+    title: 'Advanced SQL',
     body: 'CTEs gave me a practical way to break a large question into named intermediate results. Window functions then allowed me to rank products inside each country, calculate contribution percentages without losing product rows, and compare one month with another using LAG.',
   },
   {
@@ -376,7 +376,7 @@ export const learningSections = [
   {
     id: 'reflection',
     label: 'H',
-    title: 'Overall Project Reflection',
+    title: 'Overall Reflection',
     body: 'This project helped me connect preparation and analysis as one workflow. Excel made the raw relationships visible and produced structured exports; SQL let me test questions, calculate KPIs and analyse behaviour across tables. My next step is to strengthen automated data-quality checks, rewrite the remaining unfinished SQL queries, and develop more customer-retention analysis. These are the same habits I would apply in an entry-level analyst role: define the question, verify the data, choose the correct grain and explain the result clearly.',
   },
 ] as const;

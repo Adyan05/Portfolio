@@ -1,6 +1,6 @@
 const leadership = [
- {title:'Course Representative',organization:'School of Computer Science · Education Network',period:'2022/2023',category:'Leadership',description:'Recognised by the University of Nottingham Malaysia for outstanding contribution as the Year 1 Computer Science Course Representative.',role:'Represented Year 1 students, communicated their concerns to academic staff and advocated for the learning experience.',skills:['Student advocacy','Communication','Active listening'],image:'images/achievements/course-representative.png',certificate:'images/achievements/course-representative.pdf'},
- {title:'Event Manager',organization:'Computer Science Society',period:'2022/2023',category:'Leadership',description:'Recognised by the University of Nottingham Malaysia for outstanding contribution as Event Manager of the Computer Science Society.',role:'Event management centres on planning activities, coordinating teams and managing schedules and logistics.',skills:['Event planning','Team coordination','Organisation'],image:'images/achievements/event-manager.png',certificate:'images/achievements/event-manager.pdf'}
+ {title:'Course Representative',organization:'School of Computer Science · Education Network',period:'2022/2023',category:'Leadership',description:'Certificate of Appreciation for Year 1 Computer Science representation.',role:'Represented Year 1 students, communicated their concerns to academic staff and advocated for the learning experience.',skills:['Student advocacy','Communication','Active listening'],image:'images/achievements/course-representative.png',certificate:'images/achievements/course-representative.pdf'},
+ {title:'Event Manager',organization:'Computer Science Society',period:'2022/2023',category:'Leadership',description:'Certificate of Appreciation for service as Event Manager.',role:'Role focus: event planning, team coordination and logistics.',skills:['Event planning','Team coordination','Organisation'],image:'images/achievements/event-manager.png',certificate:'images/achievements/event-manager.pdf'}
  ];
 
 export const achievements = [
@@ -9,8 +9,8 @@ export const achievements = [
     "organization": "DAIM Hackathon 2026",
     "period": "15 June 2026",
     "category": "Team award",
-    "description": "Member of the winning team in the AI Racer category, recognised for outstanding technical achievement at DAIM Hackathon 2026.",
-    "role": "Recognised for collaborative technical problem-solving in the AI Racer challenge.",
+    "description": "Member of the AI Racer winning team at DAIM Hackathon 2026.",
+    "role": "Team award for technical achievement.",
     "skills": [
       "Technical problem-solving",
       "Team collaboration"

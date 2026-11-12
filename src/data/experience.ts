@@ -6,9 +6,9 @@ export const experience = [
     "type": "Part-time",
     "description": "Supported student recruitment, stakeholder engagement, event coordination and digital outreach.",
     "bullets": [
-      "Coordinated recruitment events and communications with internal teams, external partners, prospective students and university stakeholders.",
+      "Coordinated recruitment events and communications with university teams, partners and prospective students.",
       "Used Salesforce to streamline event coordination; my LinkedIn profile reports a 40% improvement in operational efficiency.",
-      "Contributed to Instagram and TikTok initiatives supporting growth of 8,000 followers, and communications engaging over 10,000 prospective students and stakeholders."
+      "Supported Instagram and TikTok growth of 8,000 followers and communications reaching over 10,000 prospective students and stakeholders."
     ],
     "source": "https://www.linkedin.com/in/adyan-d-09a516258/",
     "certificate": null
@@ -70,7 +70,7 @@ export const experience = [
     "organization": "Computer Science Society, UNM",
     "period": "Sep 2022 – May 2023",
     "type": "Student leadership",
-    "description": "Served as Event Manager and received a Certificate of Appreciation for contributions during the 2022/2023 academic year.",
+    "description": "Received a Certificate of Appreciation as Event Manager in 2022/2023.",
     "bullets": [
       "Role focus: event planning, scheduling, logistics and coordination with an organising team."
     ],

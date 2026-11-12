@@ -7,7 +7,7 @@ import { retailMedia, retailQuestions } from '../data/retail';
 
 import { retailSegments } from '../data/retailMetrics';
 const number=(n:number,d=0)=>n.toLocaleString('en',{minimumFractionDigits:d,maximumFractionDigits:d});
-const recommendations:Record<string,string>={Champions:'Consider recognition and personalised service; evaluate a reward pilot before wider investment.','Loyal Customers':'Explore relevant cross-sell offers and measure incremental response.','At Risk':'Investigate inactivity and test a targeted re-engagement approach.','Needs Attention':'Review contact relevance and acquisition cohorts before spending on outreach.','New or Promising':'Consider onboarding and a second-purchase experiment; the label alone does not prove a customer is new.'};
+const recommendations:Record<string,string>={Champions:'Consider recognition and personalised service; evaluate a reward pilot before wider investment.','Loyal Customers':'Test relevant cross-sell offers and measure the response.','At Risk':'Investigate inactivity and test a targeted re-engagement approach.','Needs Attention':'Review contact relevance and acquisition cohorts before spending on outreach.','New or Promising':'Consider onboarding and a second-purchase experiment; the label alone does not prove a customer is new.'};
 const findings=[
  ['Overall performance','17,743,429.18 revenue / 479.95 AOV','36,969 distinct invoices from 805,549 positive sales lines.','Use this as a positive-sales baseline, not net revenue after returns.'],
  ['Monthly pattern','November 2010 · 1,172,336.04','Highest revenue month in the supplied cleaned dataset; November 2011 follows at 1,161,817.38.','Investigate repeat seasonal demand, using complete months for comparisons.'],

@@ -188,13 +188,13 @@ export const retail:Project = {
   "id": "online-retail",
   "title": "Online Retail Analytics",
   "fullTitle": "Online Retail \u2014 End-to-End Data Analysis",
-  "subtitle": "End-to-End Retail Analysis and Customer Segmentation",
+  "subtitle": "Sales Analysis & Customer Segmentation",
   "category": "Data Analytics",
-  "cardAction": "View Case Study",
+  "cardAction": "View Project",
   "accent": "coffee retail",
   "cover": "images/retail/sales_overview.png",
   "coverLabel": "Online Retail Overview",
-  "description": "Transforming transaction data into business insights through Python preparation, SQL analysis, RFM customer segmentation and Power BI reporting. An analytics portfolio project exploring performance, customer value, product demand and geographical sales.",
+  "description": "I used Python to prepare retail transactions, SQL to analyse sales and customer segments, and Power BI to report the findings.",
   "technologies": [
     "Python",
     "Excel",
@@ -221,7 +221,7 @@ export const retail:Project = {
   "slides": [
  {id:'overview',kind:'overview',title:'Project Overview',body:'I prepared retail transactions, analysed sales with SQL and compared revenue, products, countries and customer segments in Power BI.',analytics:'retail:kpis'},
  {id:'dataset',kind:'overview',title:'Dataset & Data Quality',body:'805,549 retained sales lines from 1 December 2009 to 9 December 2011. Revenue is Quantity × Price for positive sales with known customers; it excludes returns and is not net revenue. I checked missing identifiers, descriptions and nonpositive quantities and prices.',analytics:'retail:dataset',caption:'Source currency is unspecified. December 2011 is a partial month.'},
- {id:'sql',kind:'technologies',title:'SQL Analysis',body:'Six stages use the original T-SQL. Expand the examples to inspect the question, code, explanation and learning.',analytics:'retail:sql'},
+ {id:'sql',kind:'technologies',title:'SQL Analysis',body:'Six stages use the original T-SQL. Expand an example to view the code and explanation.',analytics:'retail:sql'},
  {id:'dashboards',kind:'screenshots',title:'Power BI Dashboards',body:'Three existing Power BI pages. Select an image to enlarge it.',analytics:'retail:dashboard'},
  {id:'findings',kind:'results',title:'Key Findings',analytics:'retail:findings'},
  {id:'learning',kind:'objectives',title:'What I Learned',body:'Technical lessons from the six SQL scripts and three report pages.',analytics:'retail:learning',links:[{label:'What I Learned',url:'#project/online-retail-learning'}]}
