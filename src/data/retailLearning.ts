@@ -1,0 +1,2 @@
+import type { Project } from './projects';
+export const retailLearning: Project = {id:'online-retail-learning',title:'What I Learned — Online Retail',category:'Data Analytics',description:'Lessons from SQL analysis and Power BI reporting.',accent:'retail',technologies:['SQL','Power BI','DAX'],slides:[{id:'learning',kind:'objectives',title:'What I Learned',analytics:'retail:learning'}]};

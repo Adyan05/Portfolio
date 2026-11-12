@@ -1,9 +1,10 @@
+import { RetailSQL, RetailDashboards, RetailLearning } from './RetailCaseStudy';
 import { useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Clock3, Repeat2, Coins, ArrowDown } from 'lucide-react';
-import { Tabs, EvidenceImage, CodePanel, Count } from './CoffeeContent';
-import { retailMedia, retailQuestions, retailFile } from '../data/retail';
-import { retailExamples } from '../data/retailExamples';
+import { Tabs, EvidenceImage, Count } from './CoffeeContent';
+import { retailMedia, retailQuestions } from '../data/retail';
+
 import { retailSegments } from '../data/retailMetrics';
 const number=(n:number,d=0)=>n.toLocaleString('en',{minimumFractionDigits:d,maximumFractionDigits:d});
 const recommendations:Record<string,string>={Champions:'Consider recognition and personalised service; evaluate a reward pilot before wider investment.','Loyal Customers':'Explore relevant cross-sell offers and measure incremental response.','At Risk':'Investigate inactivity and test a targeted re-engagement approach.','Needs Attention':'Review contact relevance and acquisition cohorts before spending on outreach.','New or Promising':'Consider onboarding and a second-purchase experiment; the label alone does not prove a customer is new.'};
@@ -17,8 +18,9 @@ const findings=[
 ];
 export default function RetailContent({kind}:{kind:string}) {
  const [tab,setTab]=useState(0);const reduced=useReducedMotion();
- if(kind==='sql')return <CodePanel supplied={retailExamples} fileLink={retailFile}/>;
- if(kind==='dashboard')return <div className="coffee-dashboard retail-dashboard"><EvidenceImage item={retailMedia.overview}/><div className="retail-report-notes"><span>02 verified report pages</span><span>05 KPI cards</span><span>02 slicers</span></div></div>;
+ if(kind==='sql')return <RetailSQL/>;
+ if(kind==='learning')return <RetailLearning/>;
+ if(kind==='dashboard')return <RetailDashboards/>;
  if(kind==='kpis')return <div className="coffee-kpis retail-kpis">{[['Revenue',17743429.18,2],['Distinct orders',36969,0],['Customers',5878,0],['Average Order Value',479.95,2]].map(([label,value,d])=><div key={label}><span>{label}</span><strong><Count value={Number(value)} decimals={Number(d)}/></strong><small>{d?'Source monetary unit':'Cleaned sales population'}</small></div>)}</div>;
  if(kind==='questions'){let i=0;return <div className="coffee-questions">{retailQuestions.map(g=><details key={g.title}><summary>{g.title}<span>{g.items.length} questions</span></summary><p><strong>Objective:</strong> {g.objective}</p><ul>{g.items.map(q=>{const n=++i;const status=n===27?'Output verified; scoring rules missing':[13,18,30].includes(n)?'Proposed business interpretation':'Implemented analysis / output verified';return <li key={q}><span>Q{n}. {q}</span><small>{status}</small></li>;})}</ul><p><strong>Techniques:</strong> {g.techniques}</p><p><strong>Finding:</strong> {g.findings}</p><p><strong>Business relevance:</strong> {g.relevance}</p></details>)}</div>;}
  if(kind==='dataset')return <div className="retail-fields">{[['Invoice','Order identifier','Integer in cleaned CSV'],['StockCode','Product identifier','Text'],['Description','Product description','Text'],['Quantity','Purchased units','Integer'],['InvoiceDate','Transaction timestamp','Datetime-formatted text'],['Price','Unit price','Decimal number'],['CustomerID','Customer identifier','Numeric identifier'],['Country','Customer market','Text'],['Revenue','Quantity × Price','Decimal number'],['YearMonth','Reporting month','YYYY-MM text']].map(([field,purpose,type])=><div key={field}><code>{field}</code><span>{purpose}</span><small>{type}</small></div>)}</div>;

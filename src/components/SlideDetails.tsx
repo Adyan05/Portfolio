@@ -4,7 +4,7 @@ import { Media } from './Placeholder';
 import CoffeeContent from './CoffeeContent';
 import RetailContent from './RetailContent';
 
-export const resourceUrl = (url:string) => url.startsWith('https://') ? url : `${import.meta.env.BASE_URL}${url.replace(/^\//,'')}`;
+export const resourceUrl = (url:string) => (url.startsWith('https://') || url.startsWith('#')) ? url : `${import.meta.env.BASE_URL}${url.replace(/^\//,'')}`;
 const icons = [Users, LockKeyhole, Timer, Blocks, Wallet, Folder];
 
 export function SlideDetails({slide}:{slide:Slide}) {

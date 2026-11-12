@@ -1,3 +1,4 @@
+import { retailLearning } from './data/retailLearning';
 import { useEffect, useState } from 'react';
 
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
@@ -31,7 +32,7 @@ export default function App(){const [filter,setFilter]=useState('All projects'),
 
  useEffect(()=>{const hash=()=>setSelected(projectFromHash());window.addEventListener('hashchange',hash);const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:'-20% 0px -55% 0px'});document.querySelectorAll('main > section').forEach(el=>observer.observe(el));return()=>{window.removeEventListener('hashchange',hash);observer.disconnect();};},[]);
 
- const open=(id:string)=>{const target=id==='coffee-sales'?`#project/${id}/overview`:`#project/${id}`;history.pushState({presentation:true},'',target);setSelected(id);};const close=()=>{if(location.hash.startsWith('#project/coffee-sales')){history.replaceState(null,'','#projects');setSelected(null);}else if(history.state?.presentation)history.back();else {history.replaceState(null,'','#projects');setSelected(null);}};const project=projects.find(p=>p.id===selected);
+ const open=(id:string)=>{const target=id==='coffee-sales'?`#project/${id}/overview`:`#project/${id}`;history.pushState({presentation:true},'',target);setSelected(id);};const close=()=>{if(location.hash.startsWith('#project/coffee-sales')){history.replaceState(null,'','#projects');setSelected(null);}else if(history.state?.presentation)history.back();else {history.replaceState(null,'','#projects');setSelected(null);}};const project=[...projects,retailLearning].find(p=>p.id===selected);
 
  const reveal={initial:{opacity:0,y:reduced?0:24},whileInView:{opacity:1,y:0},viewport:{once:true},transition:{duration:.5}};
 
