@@ -10,7 +10,7 @@ export const education = [
     "institution": "University of Nottingham Malaysia",
     "degree": "Bachelor of Science — Computer Science with AI",
     "period": "Sep 2022 – Jul 2025",
-    "grade": "First Class with Honours",
-    "detail": "Course Representative; committee roles in the Computer Science Society, Wolves Dodgeball Club and Rock Climbing Club."
+    "grade": "Second Class First Division with Honours",
+    "detail": "Course Representative and President of Wolves Dodgeball Club; committee roles in the Computer Science Society, Wolves Dodgeball Club and Rock Climbing Club."
   }
 ];
