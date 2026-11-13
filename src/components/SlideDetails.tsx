@@ -9,6 +9,7 @@ const icons = [Users, LockKeyhole, Timer, Blocks, Wallet, Folder];
 
 export function SlideDetails({slide}:{slide:Slide}) {
   return <>
+    {slide.code && <pre className="evidence-code" tabIndex={0} aria-label="Python code from the assignment notebook"><code>{slide.code}</code></pre>}
     {slide.analytics && (slide.analytics.startsWith('retail:') ? <RetailContent key={slide.id} kind={slide.analytics.slice(7)}/> : <CoffeeContent key={slide.id} kind={slide.analytics}/>)}
     {slide.cards && <div className="case-cards">{slide.cards.map((card,i)=>{const Icon=icons[i%icons.length];return <section key={card.title}><Icon size={22} strokeWidth={1.4}/><h4>{card.title}</h4><p>{card.text}</p></section>;})}</div>}
     {slide.workflow && <div className="case-workflow"><ol>{slide.workflow.map((step,i)=><li key={step}><span>{String(i+1).padStart(2,'0')}</span>{step}<ArrowDown size={15} aria-hidden="true"/></li>)}</ol><div className="workflow-branches">{slide.branches?.map(branch=><p key={branch}>{branch}</p>)}</div></div>}

@@ -1,0 +1,7 @@
+Source: https://github.com/Adyan05/Census-Demographic-Analysis
+Notebook: CensusDemographicAnalysis.ipynb
+All code excerpts are verbatim from saved notebook cells (combined where stated).
+Age boxplot: cell 7; population pyramid: cell 45. PNGs decoded directly from embedded outputs.
+Missing-value audit: cell 1. Numeric cleaning: cells 4, 6, 39. Religion treatment: cell 35. Household features: cells 10-12. Employment table: cell 52. Occupancy: cell 56. Rate proxies: cell 58.
+Saved outputs were reviewed; the notebook was not rerun or modified for this portfolio entry.
+Limitations: imputation assumptions, manual corrections, inconsistent category casing in some rules, and final right-open age-bin boundary at 110.
