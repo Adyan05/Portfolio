@@ -5,10 +5,12 @@ import { type Project, validRepository } from '../data/projects';
 import { Media } from './Placeholder';
 import { SlideDetails } from './SlideDetails';
 import CoffeeCaseStudy from './CoffeeCaseStudy';
+import HRCaseStudy from './HRCaseStudy';
 export default function Presentation({project,onClose}:{project:Project;onClose:()=>void}) {
  const [index,setIndex]=useState(0),[direction,setDirection]=useState(1); const reduced=useReducedMotion(); const dialog=useRef<HTMLDialogElement>(null); const start=useRef<{x:number;y:number}|null>(null); const slide=project.slides[index];
  const go=(next:number)=>{if(next<0||next>=project.slides.length)return;setDirection(next>index?1:-1);setIndex(next);};
  useEffect(()=>{const previous=document.activeElement as HTMLElement;const element=dialog.current;element?.showModal();const old=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=old;element?.close();previous?.focus();};},[]);
+ if(project.id==='hr-analytics') return <motion.dialog ref={dialog} className="presentation coffee coffee-case-dialog" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} onCancel={e=>{e.preventDefault();onClose();}} aria-label="HR Employee Attrition Analytics case study"><HRCaseStudy onClose={onClose}/></motion.dialog>;
  if(project.id==='coffee-sales') return <motion.dialog ref={dialog} className="presentation coffee coffee-case-dialog" initial={{opacity:0,scale:reduced?1:.98}} animate={{opacity:1,scale:1}} exit={{opacity:0,scale:reduced?1:.98}} transition={{duration:.2}} onCancel={e=>{e.preventDefault();onClose();}} aria-label="Coffee Orders Data Analysis case study"><CoffeeCaseStudy onClose={onClose}/></motion.dialog>;
  return <motion.dialog ref={dialog} className={`presentation ${project.accent}`} initial={{opacity:0,scale:reduced?1:.98}} animate={{opacity:1,scale:1}} exit={{opacity:0,scale:reduced?1:.98}} transition={{duration:.2}} onCancel={e=>{e.preventDefault();onClose();}} onKeyDown={e=>{if(e.key==='ArrowRight'){e.preventDefault();go(index+1);}if(e.key==='ArrowLeft'){e.preventDefault();go(index-1);}}} aria-labelledby="presentation-title">
  <div className="presentation-top"><button className="pill back-button" onClick={onClose} aria-label="Close presentation"><ArrowLeft size={15}/> Back</button><span className="pill">PROJECT PRESENTATION</span></div>

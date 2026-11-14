@@ -1,0 +1,41 @@
+Total Employees =
+DISTINCTCOUNT(HR_Data[EmployeeNumber])
+
+Total Leavers =
+COALESCE(CALCULATE([Total Employees], HR_Data[Attrition] = "Yes"), 0)
+
+Total Retained =
+COALESCE(CALCULATE([Total Employees], HR_Data[Attrition] = "No"), 0)
+
+Attrition Rate =
+DIVIDE([Total Leavers], [Total Employees])
+
+Retention Rate =
+DIVIDE([Total Retained], [Total Employees])
+
+Overall Attrition Rate =
+CALCULATE([Attrition Rate], REMOVEFILTERS(HR_Data))
+
+Rate Difference (pp) =
+100 * ([Attrition Rate] - [Overall Attrition Rate])
+
+Average Monthly Income =
+AVERAGE(HR_Data[MonthlyIncome])
+
+Average Age of Leavers =
+CALCULATE(AVERAGE(HR_Data[Age]), HR_Data[Attrition] = "Yes")
+
+Average Distance of Leavers =
+CALCULATE(AVERAGE(HR_Data[DistanceFromHome]), HR_Data[Attrition] = "Yes")
+
+Overtime Attrition Rate =
+CALCULATE([Attrition Rate], HR_Data[OverTime] = "Yes")
+
+No Overtime Attrition Rate =
+CALCULATE([Attrition Rate], HR_Data[OverTime] = "No")
+
+Eligible Segment Rate =
+IF([Total Employees] >= 10, [Attrition Rate])
+
+Highest Attrition Department =
+VAR T = TOPN(1, ADDCOLUMNS(ALLSELECTED(HR_Data[Department]), "Rate", [Attrition Rate]), [Rate], DESC, HR_Data[Department], ASC) RETURN CONCATENATEX(T, HR_Data[Department], ", ")

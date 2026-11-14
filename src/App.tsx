@@ -32,7 +32,7 @@ export default function App(){const [filter,setFilter]=useState('All projects'),
 
  useEffect(()=>{const hash=()=>setSelected(projectFromHash());window.addEventListener('hashchange',hash);const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:'-20% 0px -55% 0px'});document.querySelectorAll('main > section').forEach(el=>observer.observe(el));return()=>{window.removeEventListener('hashchange',hash);observer.disconnect();};},[]);
 
- const open=(id:string)=>{const target=id==='coffee-sales'?`#project/${id}/overview`:`#project/${id}`;history.pushState({presentation:true},'',target);setSelected(id);};const close=()=>{if(location.hash.startsWith('#project/coffee-sales')){history.replaceState(null,'','#projects');setSelected(null);}else if(history.state?.presentation)history.back();else {history.replaceState(null,'','#projects');setSelected(null);}};const project=[...projects,retailLearning].find(p=>p.id===selected);
+ const open=(id:string)=>{const target=id==='coffee-sales'?`#project/${id}/overview`:`#project/${id}`;history.pushState({presentation:true},'',target);setSelected(id);};const close=()=>{if(location.hash.startsWith('#project/coffee-sales') || location.hash.startsWith('#project/hr-analytics')){history.replaceState(null,'','#projects');setSelected(null);}else if(history.state?.presentation)history.back();else {history.replaceState(null,'','#projects');setSelected(null);}};const project=[...projects,retailLearning].find(p=>p.id===selected);
 
  const reveal={initial:{opacity:0,y:reduced?0:24},whileInView:{opacity:1,y:0},viewport:{once:true},transition:{duration:.5}};
 
@@ -65,4 +65,5 @@ export default function App(){const [filter,setFilter]=useState('All projects'),
  <section id="contact" className="contact-section"><h2>Contact Me</h2><p>Contact me about data analytics and software development opportunities.</p><div className="contact-links">{profile.phone&&<a className="button dark" href={`tel:${profile.phone}`}><Phone size={18}/>{profile.phone}</a>}{profile.email&&<a className="button dark" href={`mailto:${profile.email}`}><Mail size={18}/>{profile.email}</a>}{profile.github&&<a className="button dark" href={profile.github}><GitFork size={18}/>GitHub</a>}{profile.linkedin&&<a className="button dark" href={profile.linkedin}><Link size={18}/>LinkedIn</a>}{!profile.email&&!profile.github&&!profile.linkedin&&<span className="contact-placeholder"><Mail size={18}/> Contact details coming soon</span>}</div></section></main><footer className="site-footer"><span>{profile.name} / Developer portfolio</span><a href="#home">Back to top <ArrowRight size={15}/></a></footer><AnimatePresence mode="wait">{project&&<Presentation key={project.id} project={project} onClose={close}/>}</AnimatePresence></>;
 
 }
+
 
