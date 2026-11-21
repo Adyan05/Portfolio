@@ -8,7 +8,7 @@
   background: var(--paper);
 }
 
-body { background: var(--paper); }
+body { background: var(--paper); font-size: calc(1rem + 2px); }
 
 #root,
 .header,
@@ -77,12 +77,13 @@ button.pill:not(:disabled),
 .dataset-switcher button,
 .question-toolbar a,
 .case-evidence-disclosure > summary {
-  text-decoration: underline var(--cornflower);
+  text-decoration: underline var(--ink-black);
   text-decoration-thickness: 2px;
   text-underline-offset: .22em;
 }
 
-.header nav a.active::after,
+.header nav a.active::after { background: var(--ink-black); }
+
 .slide-dots span {
   background: var(--cornflower);
 }
