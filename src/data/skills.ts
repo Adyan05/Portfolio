@@ -1,6 +1,6 @@
 export const skills = [
   {
-    "title": "Data & business intelligence",
+    "title": "Data Preparation",
     "items": [
       {
         "name": "SQL",
