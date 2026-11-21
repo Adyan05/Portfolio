@@ -1,0 +1,62 @@
+.project-info .project-focus {
+  margin-top: .75rem;
+  font-weight: 600;
+}
+
+.standard-case .case-section-select {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 0;
+  font-weight: 600;
+}
+
+.case-section-select select {
+  max-width: 100%;
+  border: 1px solid #c8c8c8;
+  border-radius: .5rem;
+  padding: .65rem;
+  background: white;
+  color: #222;
+  font: inherit;
+}
+
+.standard-case .standard-visuals {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+}
+
+.standard-case .evidence-image .slide-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  background: #f1f1f1;
+}
+
+.case-evidence-disclosure, .case-recommendation {
+  margin: .75rem 0;
+  padding: .9rem 1rem;
+  border: 1px solid #d4d4d4;
+  border-radius: .5rem;
+}
+
+.case-evidence-disclosure summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.case-recommendation dl {
+  display: grid;
+  gap: .4rem .9rem;
+  grid-template-columns: max-content 1fr;
+  margin: .65rem 0 0;
+}
+
+.case-recommendation dt { font-weight: 600; }
+.case-recommendation dd { margin: 0; }
+
+@media (max-width: 600px) {
+  .case-recommendation dl { grid-template-columns: 1fr; }
+}
