@@ -1,3 +1,4 @@
+import BusinessQuestions from './BusinessQuestions';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft,
@@ -109,7 +110,7 @@ function SqlExamplePanel({ example }: { example: SqlExample }) {
         <pre tabIndex={0}><code>{highlightSql(example.code)}</code></pre>
         <span className="copy-status" aria-live="polite">{status}</span>
         <div className="sql-techniques">{example.techniques.map(item => <span key={item}>{item}</span>)}</div>
-        <div className="sql-explanation-grid"><div><strong>How it works</strong><p>{example.explanation}</p></div><div><strong>What I learned</strong><p>{example.learning}</p></div>{example.result && <div><strong>Verified result or limitation</strong><p>{example.result}</p></div>}</div>
+        <div className="sql-explanation-grid"><div><strong>How it works</strong><p>{example.explanation}</p></div><div><strong>What I learned</strong><p>{example.learning}</p></div><div><strong>SQL Query Results</strong><p>{example.result || "Exact output for this source example is unverified. Use the linked PostgreSQL source and dataset to run it."}</p></div></div>
       </div>
     </details>
   );
@@ -120,7 +121,9 @@ function SqlPage() {
   const stage = sqlStages[stageIndex];
   return (
     <div className="coffee-case-page">
-      <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">SQL ANALYSIS & PRACTICAL APPLICATIONS</span><h2>SQL Analysis</h2><p>Examples from four SQL scripts, with explanations and source limitations.</p></div></header>
+      <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">SQL ANALYSIS & PRACTICAL APPLICATIONS</span><h2>Business Questions & SQL Analysis</h2><p>Examples from four SQL scripts, with explanations and source limitations.</p></div></header>
+      <BusinessQuestions project="coffee-sales"/>
+      <h3>Additional SQL examples</h3>
       <div className="sql-stage-nav" role="tablist" aria-label="SQL learning stages">{sqlStages.map((item, index) => <button type="button" role="tab" aria-selected={stageIndex === index} onClick={() => setStageIndex(index)} key={item.id}><span>{item.number}</span>{item.title}<small>{item.source}</small></button>)}</div>
       <section className="sql-stage" role="tabpanel" aria-label={stage.title}>
         <header><div><span className="eyebrow">STAGE {stage.number}</span><h3>{stage.title}</h3></div><a href={coffeeFile(stage.source)} target="_blank" rel="noreferrer">Open source file <ArrowUpRight size={15} /></a></header>

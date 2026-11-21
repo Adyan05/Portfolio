@@ -130,6 +130,9 @@ export function standardiseProject(project: Project): Project {
       : item.kind === 'results' ? 5 : item.kind === 'repository' ? 9 : 3;
     (slides[target].evidence ??= []).push(item);
   }
+  if (project.id === 'coffee-sales' || project.id === 'online-retail' || project.id === 'hr-analytics') {
+    slides.splice(4, 0, { id: 'business-sql', kind: 'technologies', title: 'Business Questions & SQL Analysis', sqlProject: project.id });
+  }
   return { ...project, cardAction: 'View Case Study', metadata: [
     { label: 'Project Type', value: project.category }, { label: 'Tools Used', value: project.technologies.join(' · ') }, { label: 'Dataset', value: brief.dataset },
     { label: 'Analytical Techniques', value: brief.techniques }, { label: 'Deliverables', value: brief.deliverables },

@@ -1,0 +1,782 @@
+{
+  "coffee-sales": [
+    {
+      "id": "coffee-totals",
+      "title": "What sales volume and revenue did the business record?",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT SUM(sales) as total_revenue, SUM(quantity) as units_sold, COUNT(DISTINCT orderid) AS distinct_orders, COUNT(DISTINCT customerid) as purchasing_customers\nFROM orders",
+      "columns": [
+        "Revenue",
+        "Units",
+        "Orders",
+        "Customers"
+      ],
+      "rows": [
+        [
+          45135.35,
+          3551,
+          957,
+          913
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "explanation": "SUM totals sales and quantities. COUNT DISTINCT prevents repeated order and customer IDs inflating those KPIs.",
+      "finding": "45,135.35 across 957 orders is the sales baseline. The 3,551 units measure volume independently of order count.",
+      "decision": "Use the baseline to compare sales performance across periods.",
+      "action": "Review revenue, units and order counts together each month.",
+      "kpi": "Monthly revenue and distinct orders",
+      "dashboard": "images/coffee/dashboard-1.png",
+      "chart": null,
+      "decimals": [
+        0
+      ],
+      "hrRate": false
+    },
+    {
+      "id": "coffee-types",
+      "title": "Which coffee types lead revenue and unit sales?",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT SUM(sales) AS revenue, SUM(quantity) units_sold, coffeetypename\nFROM orders\nGROUP BY coffeetypename\nORDER BY revenue DESC",
+      "columns": [
+        "Revenue",
+        "Units",
+        "Coffee type"
+      ],
+      "rows": [
+        [
+          12306.71,
+          872,
+          "Excelsa"
+        ],
+        [
+          12054.33,
+          854,
+          "Liberica"
+        ],
+        [
+          11768.77,
+          947,
+          "Arabica"
+        ],
+        [
+          9005.54,
+          878,
+          "Robusta"
+        ]
+      ],
+      "rowCount": 4,
+      "export": null,
+      "explanation": "GROUP BY coffee type supports separate comparisons of SUM(sales) and SUM(quantity).",
+      "finding": "Excelsa leads revenue at 12,306.71. Comparing revenue with units helps separate product value from volume.",
+      "decision": "Decide which coffee types warrant an inventory review.",
+      "action": "Compare demand with stock availability and margins before adjusting stock.",
+      "kpi": "Units sold and stockout rate by coffee type",
+      "dashboard": "images/coffee/dashboard-1.png",
+      "chart": [
+        2,
+        0
+      ],
+      "decimals": [
+        0
+      ],
+      "hrRate": false
+    },
+    {
+      "id": "coffee-country",
+      "title": "Which markets contribute the most coffee revenue?",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT country, SUM(sales) AS revenue, COUNT(DISTINCT orderid), COUNT(DISTINCT customerid) , ROUND(SUM(sales)/ COUNT(DISTINCT orderid),2) AS AverageOrderValue\nFROM orders\nGROUP by country",
+      "columns": [
+        "Country",
+        "Revenue",
+        "Orders",
+        "Customers",
+        "Average order value"
+      ],
+      "rows": [
+        [
+          "United States",
+          35639.73,
+          743,
+          712,
+          47.97
+        ],
+        [
+          "Ireland",
+          6697.06,
+          146,
+          138,
+          45.87
+        ],
+        [
+          "United Kingdom",
+          2798.56,
+          68,
+          63,
+          41.16
+        ]
+      ],
+      "rowCount": 3,
+      "export": null,
+      "explanation": "The query groups by country, counts distinct invoices and customers, and divides revenue by each market’s order count.",
+      "finding": "The United States contributes 35,639.73, about 79% of revenue. A large share of sales depends on one market.",
+      "decision": "Decide where to examine sales concentration first.",
+      "action": "Track market shares and investigate demand in smaller markets before expanding.",
+      "kpi": "Revenue share by market",
+      "dashboard": "images/coffee/dashboard-1.png",
+      "chart": [
+        0,
+        1
+      ],
+      "decimals": [
+        1,
+        4
+      ],
+      "hrRate": false
+    }
+  ],
+  "online-retail": [
+    {
+      "id": "retail-totals",
+      "title": "What revenue, orders, customers and order value did retail record?",
+      "source": "RevenueAnalysis.sql",
+      "code": "WITH revenue_summary AS(    \n    SELECT \n        SUM(Revenue) AS total_revenue, \n        COUNT (DISTINCT Invoice) AS total_orders, \n        COUNT (DISTINCT CustomerID) AS total_customers\n    FROM OnlineRetail..OnlineRetail)\nSELECT \n    ROUND(total_revenue,2) AS total_revenue,\n    total_orders,\n    total_customers,\n    ROUND(total_revenue/total_orders,2) AS average_order_value\nFROM revenue_summary",
+      "columns": [
+        "Revenue",
+        "Orders",
+        "Customers",
+        "Average order value"
+      ],
+      "rows": [
+        [
+          17743429.18,
+          36969,
+          5878,
+          479.95
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "explanation": "A CTE aggregates sales and counts distinct invoices and customers before calculating average order value.",
+      "finding": "The cleaned dataset contains 17,743,429.18 in positive sales over 36,969 distinct invoices. These totals exclude returns.",
+      "decision": "Set a baseline for retail reporting.",
+      "action": "Track positive sales separately from returns and net revenue.",
+      "kpi": "Positive sales and return rate",
+      "dashboard": "images/retail/sales_overview.png",
+      "chart": null,
+      "decimals": [
+        0,
+        3
+      ],
+      "hrRate": false
+    },
+    {
+      "id": "retail-country",
+      "title": "Which countries contribute the most retail revenue?",
+      "source": "Country_Analysis.sql",
+      "code": "SELECT\n    Country,\n    ROUND (SUM(Revenue),2) AS Revenue,\n    COUNT (DISTINCT Invoice) AS Orders,\n    COUNT (DISTINCT CustomerID) AS Customers\nFROM OnlineRetail..OnlineRetail\nGROUP BY Country\nORDER BY revenue DESC",
+      "columns": [
+        "Country",
+        "Revenue",
+        "Orders",
+        "Customers"
+      ],
+      "rows": [
+        [
+          "United Kingdom",
+          14723147.52,
+          33541,
+          5350
+        ],
+        [
+          "EIRE",
+          621631.11,
+          567,
+          5
+        ],
+        [
+          "Netherlands",
+          554232.34,
+          228,
+          22
+        ],
+        [
+          "Germany",
+          431262.46,
+          789,
+          107
+        ],
+        [
+          "France",
+          355257.47,
+          614,
+          95
+        ],
+        [
+          "Australia",
+          169968.11,
+          95,
+          15
+        ],
+        [
+          "Spain",
+          109178.53,
+          154,
+          41
+        ],
+        [
+          "Switzerland",
+          100365.34,
+          90,
+          22
+        ],
+        [
+          "Sweden",
+          91549.72,
+          104,
+          19
+        ],
+        [
+          "Denmark",
+          69862.19,
+          43,
+          12
+        ],
+        [
+          "Belgium",
+          65753.42,
+          149,
+          29
+        ],
+        [
+          "Norway",
+          60109.62,
+          45,
+          13
+        ],
+        [
+          "Portugal",
+          57285.3,
+          93,
+          24
+        ],
+        [
+          "Japan",
+          47138.39,
+          33,
+          10
+        ],
+        [
+          "Channel Islands",
+          44996.76,
+          55,
+          13
+        ],
+        [
+          "Italy",
+          32550.42,
+          65,
+          17
+        ],
+        [
+          "Finland",
+          29925.54,
+          57,
+          14
+        ],
+        [
+          "Singapore",
+          25317.06,
+          11,
+          1
+        ],
+        [
+          "Cyprus",
+          24980.13,
+          37,
+          11
+        ],
+        [
+          "Austria",
+          23613.01,
+          45,
+          13
+        ],
+        [
+          "Greece",
+          19096.19,
+          18,
+          5
+        ],
+        [
+          "Poland",
+          10902.45,
+          28,
+          6
+        ],
+        [
+          "Israel",
+          10421.09,
+          7,
+          4
+        ],
+        [
+          "United Arab Emirates",
+          9202.69,
+          11,
+          4
+        ],
+        [
+          "Unspecified",
+          8613.65,
+          16,
+          6
+        ],
+        [
+          "USA",
+          8366.86,
+          20,
+          9
+        ],
+        [
+          "Malta",
+          8099.09,
+          9,
+          2
+        ],
+        [
+          "Lithuania",
+          6553.74,
+          6,
+          1
+        ],
+        [
+          "Iceland",
+          5633.32,
+          8,
+          1
+        ],
+        [
+          "Canada",
+          4883.04,
+          8,
+          5
+        ],
+        [
+          "Thailand",
+          3070.54,
+          2,
+          1
+        ],
+        [
+          "RSA",
+          1933.74,
+          2,
+          2
+        ],
+        [
+          "Lebanon",
+          1693.88,
+          1,
+          1
+        ],
+        [
+          "Brazil",
+          1411.87,
+          2,
+          2
+        ],
+        [
+          "Bahrain",
+          1354.37,
+          4,
+          2
+        ],
+        [
+          "European Community",
+          1300.25,
+          4,
+          1
+        ],
+        [
+          "Korea",
+          1118.51,
+          2,
+          2
+        ],
+        [
+          "Czech Republic",
+          826.74,
+          2,
+          1
+        ],
+        [
+          "West Indies",
+          536.41,
+          1,
+          1
+        ],
+        [
+          "Saudi Arabia",
+          145.92,
+          1,
+          1
+        ],
+        [
+          "Nigeria",
+          140.39,
+          2,
+          1
+        ]
+      ],
+      "rowCount": 41,
+      "export": null,
+      "explanation": "GROUP BY Country measures market revenue and distinct counts at the same level.",
+      "finding": "The UK generated about 82.98% of retained sales revenue. Other markets account for a much smaller share.",
+      "decision": "Prioritise a review of exposure to the UK market.",
+      "action": "Monitor the country mix and investigate non-UK demand before making expansion decisions.",
+      "kpi": "Country revenue share",
+      "dashboard": "images/retail/sales_overview.png",
+      "chart": [
+        0,
+        1
+      ],
+      "decimals": [
+        1
+      ],
+      "hrRate": false
+    },
+    {
+      "id": "retail-product",
+      "title": "Which stock-code and description combinations lead sales?",
+      "source": "ProductAnalysis.sql",
+      "code": "SELECT \n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    SUM(Quantity) AS Units_Sold,\n    COUNT (DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description\nORDER BY Revenue DESC",
+      "columns": [
+        "Stock code",
+        "Description",
+        "Revenue",
+        "Units",
+        "Orders"
+      ],
+      "rows": [
+        [
+          "22423",
+          "REGENCY CAKESTAND 3 TIER",
+          286486.3,
+          24899,
+          3317
+        ],
+        [
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          252072.46,
+          93640,
+          4888
+        ],
+        [
+          "23843",
+          "PAPER CRAFT , LITTLE BIRDIE",
+          168469.6,
+          80995,
+          1
+        ],
+        [
+          "M",
+          "Manual",
+          152340.57,
+          9803,
+          620
+        ],
+        [
+          "85099B",
+          "JUMBO BAG RED RETROSPOT",
+          136980.08,
+          75759,
+          2612
+        ],
+        [
+          "84879",
+          "ASSORTED COLOUR BIRD ORNAMENT",
+          127074.17,
+          79913,
+          2652
+        ],
+        [
+          "POST",
+          "POSTAGE",
+          126563.04,
+          5333,
+          1803
+        ],
+        [
+          "47566",
+          "PARTY BUNTING",
+          103880.23,
+          23607,
+          2077
+        ],
+        [
+          "23166",
+          "MEDIUM CERAMIC TOP STORAGE JAR",
+          81416.73,
+          77916,
+          195
+        ],
+        [
+          "22086",
+          "PAPER CHAIN KIT 50'S CHRISTMAS",
+          79594.33,
+          29477,
+          1691
+        ]
+      ],
+      "rowCount": 5286,
+      "export": "sql-results/retail-product.csv",
+      "explanation": "Groups by both stock code and description, then ranks revenue. A stock code can appear under different descriptions.",
+      "finding": "The leading row is stock code 22423. Revenue rankings should be read alongside volumes and stock-code definitions.",
+      "decision": "Identify products to examine for assortment and inventory planning.",
+      "action": "Group consistently by stock code and separate nonmerchandise entries before changing the assortment.",
+      "kpi": "Units sold and revenue by stock code",
+      "dashboard": "images/retail/product_performance.png",
+      "chart": [
+        0,
+        2
+      ],
+      "decimals": [
+        2
+      ],
+      "hrRate": false
+    }
+  ],
+  "hr-analytics": [
+    {
+      "id": "hr-1",
+      "title": "What is the overall employee attrition rate?",
+      "source": "hr_employee.sql",
+      "code": "SELECT \n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis;",
+      "columns": [
+        "Employees",
+        "Leavers",
+        "Original SQL rate (%)",
+        "Decimal rate (%)"
+      ],
+      "rows": [
+        [
+          1470,
+          237,
+          16.0,
+          16.12
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
+      "finding": "237 of 1,470 employees left. The decimal snapshot baseline is 16.12%.",
+      "decision": "Set a baseline for comparing groups.",
+      "action": "Compare future snapshots using the same definition.",
+      "kpi": "Attrition rate and leaver count",
+      "dashboard": "images/hr/powerbi/01-overview.png",
+      "chart": null,
+      "decimals": [
+        2,
+        3
+      ],
+      "hrRate": true
+    },
+    {
+      "id": "hr-2",
+      "title": "Which departments have the highest employee attrition rates?",
+      "source": "hr_employee.sql",
+      "code": "SELECT \n    Department,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY department\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Department",
+        "Employees",
+        "Leavers",
+        "Original SQL rate (%)",
+        "Decimal rate (%)"
+      ],
+      "rows": [
+        [
+          "Sales",
+          446,
+          92,
+          20.0,
+          20.63
+        ],
+        [
+          "Human Resources",
+          63,
+          12,
+          19.0,
+          19.05
+        ],
+        [
+          "Research & Development",
+          961,
+          133,
+          13.0,
+          13.84
+        ]
+      ],
+      "rowCount": 3,
+      "export": null,
+      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
+      "finding": "Sales has the highest decimal rate at 20.63%, followed by Human Resources at 19.05%. Research & Development has the most leavers in absolute terms (133).",
+      "decision": "Use both rates and counts to prioritise investigation.",
+      "action": "Review workload and employee feedback in Sales, and examine the volume of departures in R&D.",
+      "kpi": "Department attrition rate and leaver count",
+      "dashboard": "images/hr/powerbi/01-overview.png",
+      "chart": [
+        0,
+        4
+      ],
+      "decimals": [
+        3,
+        4
+      ],
+      "hrRate": true
+    },
+    {
+      "id": "hr-3",
+      "title": "Which job roles show the highest attrition rates?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    JobRole,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY JobRole\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Job role",
+        "Employees",
+        "Leavers",
+        "Original SQL rate (%)",
+        "Decimal rate (%)"
+      ],
+      "rows": [
+        [
+          "Sales Representative",
+          83,
+          33,
+          39.0,
+          39.76
+        ],
+        [
+          "Laboratory Technician",
+          259,
+          62,
+          23.0,
+          23.94
+        ],
+        [
+          "Human Resources",
+          52,
+          12,
+          23.0,
+          23.08
+        ],
+        [
+          "Sales Executive",
+          326,
+          57,
+          17.0,
+          17.48
+        ],
+        [
+          "Research Scientist",
+          292,
+          47,
+          16.0,
+          16.1
+        ],
+        [
+          "Manufacturing Director",
+          145,
+          10,
+          6.0,
+          6.9
+        ],
+        [
+          "Healthcare Representative",
+          131,
+          9,
+          6.0,
+          6.87
+        ],
+        [
+          "Manager",
+          102,
+          5,
+          4.0,
+          4.9
+        ],
+        [
+          "Research Director",
+          80,
+          2,
+          2.0,
+          2.5
+        ]
+      ],
+      "rowCount": 9,
+      "export": null,
+      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
+      "finding": "Sales Representatives have the highest observed rate. Group sizes differ across roles and affect the interpretation.",
+      "decision": "Identify roles that warrant a closer retention review.",
+      "action": "Ask HR to investigate job conditions and compare rates alongside role headcounts.",
+      "kpi": "Attrition rate and headcount by role",
+      "dashboard": "images/hr/powerbi/01-overview.png",
+      "chart": [
+        0,
+        4
+      ],
+      "decimals": [
+        3,
+        4
+      ],
+      "hrRate": true
+    },
+    {
+      "id": "hr-4",
+      "title": "How does overtime relate to employee attrition?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    OverTime,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY OverTime\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Overtime",
+        "Employees",
+        "Leavers",
+        "Original SQL rate (%)",
+        "Decimal rate (%)"
+      ],
+      "rows": [
+        [
+          "Yes",
+          416,
+          127,
+          30.0,
+          30.53
+        ],
+        [
+          "No",
+          1054,
+          110,
+          10.0,
+          10.44
+        ]
+      ],
+      "rowCount": 2,
+      "export": null,
+      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
+      "finding": "The decimal rate is 30.53% with overtime and 10.44% without. The comparison is observational.",
+      "decision": "Decide whether workload patterns warrant review.",
+      "action": "Compare overtime allocation with role, staffing and employee feedback.",
+      "kpi": "Overtime hours and attrition rate",
+      "dashboard": "images/hr/powerbi/02-factors.png",
+      "chart": [
+        0,
+        4
+      ],
+      "decimals": [
+        3,
+        4
+      ],
+      "hrRate": true
+    }
+  ]
+}

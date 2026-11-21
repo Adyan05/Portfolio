@@ -1,3 +1,4 @@
+import BusinessQuestions from './BusinessQuestions';
 import { ArrowDown, ArrowUpRight, Users, LockKeyhole, Timer, Blocks, Wallet, Folder } from 'lucide-react';
 import type { Slide } from '../data/projects';
 import { Media } from './Placeholder';
@@ -9,6 +10,7 @@ const icons = [Users, LockKeyhole, Timer, Blocks, Wallet, Folder];
 
 export function SlideDetails({slide}:{slide:Slide}) {
   return <>
+    {slide.sqlProject && <BusinessQuestions project={slide.sqlProject}/>}
     {slide.code && <pre className="evidence-code" tabIndex={0} aria-label="Source code example"><code>{slide.code}</code></pre>}
     {slide.analytics && (slide.analytics.startsWith('retail:') ? <RetailContent key={slide.id} kind={slide.analytics.slice(7)}/> : <CoffeeContent key={slide.id} kind={slide.analytics}/>)}
     {slide.cards && <div className="case-cards">{slide.cards.map((card,i)=>{const Icon=icons[i%icons.length];return <section key={card.title}><Icon size={22} strokeWidth={1.4}/><h4>{card.title}</h4><p>{card.text}</p></section>;})}</div>}
