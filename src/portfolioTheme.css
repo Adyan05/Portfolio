@@ -42,12 +42,8 @@ body { background: var(--paper); }
 .hero-portrait .slide-image { filter: none; }
 
 .profile-keyword {
-  background: transparent;
+  background: var(--cornflower-wash);
   color: inherit;
-  text-decoration: underline var(--cornflower);
-  text-decoration-thickness: .16em;
-  text-underline-offset: .15em;
-  text-decoration-skip-ink: auto;
 }
 
 .header-contact,
@@ -171,9 +167,7 @@ summary:focus-visible,
 }
 
 .coffee-case-hero h1 em {
-  text-decoration: underline var(--cornflower);
-  text-decoration-thickness: .12em;
-  text-underline-offset: .17em;
+  background: var(--cornflower-wash);
 }
 
 .case-callout,
