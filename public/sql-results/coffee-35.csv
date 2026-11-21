@@ -1,0 +1,132 @@
+﻿Revenue,Product ID,Country,Revenue percentage
+714.86,L-D-2.5,Ireland,10.67
+535.22,R-D-2.5,Ireland,7.99
+444.02,E-L-2.5,Ireland,6.63
+439.76,R-L-2.5,Ireland,6.57
+437.47,L-L-2.5,Ireland,6.53
+268.08,A-L-2.5,Ireland,4.0
+213.75,A-M-1,Ireland,3.19
+208.95,A-D-1,Ireland,3.12
+200.79,L-M-0.5,Ireland,3.0
+194.25,L-D-1,Ireland,2.9
+190.2,L-L-1,Ireland,2.84
+182.25,E-D-1,Ireland,2.72
+167.33,L-M-2.5,Ireland,2.5
+167.68,E-D-2.5,Ireland,2.5
+167.3,R-L-1,Ireland,2.5
+158.14,E-M-2.5,Ireland,2.36
+137.5,E-M-1,Ireland,2.05
+124.32,L-D-0.5,Ireland,1.86
+116.55,A-L-1,Ireland,1.74
+109.35,E-D-0.5,Ireland,1.63
+107.56,R-L-0.2,Ireland,1.61
+95.52,A-D-0.5,Ireland,1.43
+94.5,A-M-0.5,Ireland,1.41
+91.54,R-M-2.5,Ireland,1.37
+89.11,E-L-0.2,Ireland,1.33
+85.47,A-L-0.5,Ireland,1.28
+80.55,R-D-1,Ireland,1.2
+80.62,A-D-0.2,Ireland,1.2
+77.63,A-M-2.5,Ireland,1.16
+76.09,L-L-0.2,Ireland,1.14
+74.25,E-L-1,Ireland,1.11
+74.25,E-M-0.5,Ireland,1.11
+69.65,R-M-1,Ireland,1.04
+68.66,A-D-2.5,Ireland,1.03
+50.63,A-M-0.2,Ireland,0.76
+48.35,R-D-0.2,Ireland,0.72
+38.04,L-L-0.5,Ireland,0.57
+36.46,E-D-0.2,Ireland,0.54
+35.85,R-L-0.5,Ireland,0.54
+35.64,E-L-0.5,Ireland,0.53
+29.85,R-M-0.5,Ireland,0.45
+24.75,E-M-0.2,Ireland,0.37
+16.11,R-D-0.5,Ireland,0.24
+14.55,L-M-1,Ireland,0.22
+14.93,R-M-0.2,Ireland,0.22
+8.73,L-M-0.2,Ireland,0.13
+279.46,E-D-2.5,United Kingdom,9.99
+182.28,L-L-2.5,United Kingdom,6.51
+137.31,A-D-2.5,United Kingdom,4.91
+137.31,R-M-2.5,United Kingdom,4.91
+126.5,E-M-2.5,United Kingdom,4.52
+119.4,R-M-1,United Kingdom,4.27
+119.14,L-D-2.5,United Kingdom,4.26
+115.83,E-L-0.5,United Kingdom,4.14
+110.95,L-L-1,United Kingdom,3.96
+104.76,L-M-0.5,United Kingdom,3.74
+95.52,R-M-0.5,United Kingdom,3.41
+90.65,L-D-1,United Kingdom,3.24
+85.59,L-L-0.5,United Kingdom,3.06
+82.5,E-M-1,United Kingdom,2.95
+82.46,R-L-2.5,United Kingdom,2.95
+78.75,A-M-1,United Kingdom,2.81
+76.09,L-L-0.2,United Kingdom,2.72
+74.25,E-M-0.5,United Kingdom,2.65
+71.7,R-L-0.5,United Kingdom,2.56
+68.31,E-L-2.5,United Kingdom,2.44
+60.75,E-D-1,United Kingdom,2.17
+58.2,L-M-1,United Kingdom,2.08
+57.76,E-M-0.2,United Kingdom,2.06
+47.8,R-L-1,United Kingdom,1.71
+44.55,E-L-1,United Kingdom,1.59
+41.17,R-D-2.5,United Kingdom,1.47
+32.27,R-L-0.2,United Kingdom,1.15
+32.22,R-D-0.5,United Kingdom,1.15
+29.85,A-D-0.5,United Kingdom,1.07
+26.85,R-D-0.2,United Kingdom,0.96
+26.2,L-M-0.2,United Kingdom,0.94
+23.31,L-D-0.2,United Kingdom,0.83
+21.87,E-D-0.5,United Kingdom,0.78
+17.82,E-L-0.2,United Kingdom,0.64
+17.91,R-M-0.2,United Kingdom,0.64
+13.5,A-M-0.5,United Kingdom,0.48
+7.77,A-L-0.5,United Kingdom,0.28
+2432.29,A-M-2.5,United States,6.82
+2293.51,A-L-2.5,United States,6.44
+1946.86,E-L-2.5,United States,5.46
+1802.65,E-M-2.5,United States,5.06
+1608.42,L-D-2.5,United States,4.51
+1531.14,L-L-2.5,United States,4.3
+1533.35,A-D-2.5,United States,4.3
+1397.29,E-D-2.5,United States,3.92
+1291.84,R-L-2.5,United States,3.62
+1204.77,L-M-2.5,United States,3.38
+1069.2,E-L-1,United States,3.0
+1052.74,R-M-2.5,United States,2.95
+1003.75,E-M-1,United States,2.82
+946.93,R-D-2.5,United States,2.66
+935.15,L-L-1,United States,2.62
+916.65,L-M-1,United States,2.57
+884.3,R-L-1,United States,2.48
+815.85,A-L-1,United States,2.29
+798.75,A-M-1,United States,2.24
+659.34,E-L-0.5,United States,1.85
+618.15,L-L-0.5,United States,1.73
+560.25,A-M-0.5,United States,1.57
+556.85,L-D-1,United States,1.56
+507.45,R-M-1,United States,1.42
+498.15,E-D-1,United States,1.4
+473.97,L-D-0.5,United States,1.33
+450.66,A-L-0.5,United States,1.26
+437.4,E-D-0.5,United States,1.23
+420.75,E-M-0.5,United States,1.18
+405.96,A-D-0.5,United States,1.14
+402.75,R-D-1,United States,1.13
+380.01,R-L-0.5,United States,1.07
+366.66,L-M-0.5,United States,1.03
+358.2,R-M-0.5,United States,1.01
+323.04,L-M-0.2,United States,0.91
+306.09,R-D-0.5,United States,0.86
+285.34,L-L-0.2,United States,0.8
+278.6,A-D-1,United States,0.78
+236.96,E-D-0.2,United States,0.66
+231.7,E-L-0.2,United States,0.65
+218.73,R-L-0.2,United States,0.61
+208.97,A-D-0.2,United States,0.59
+194.28,A-L-0.2,United States,0.55
+190.39,L-D-0.2,United States,0.53
+171.9,R-D-0.2,United States,0.48
+168.76,A-M-0.2,United States,0.47
+143.32,R-M-0.2,United States,0.4
+119.66,E-M-0.2,United States,0.34

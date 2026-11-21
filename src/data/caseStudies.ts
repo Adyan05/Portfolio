@@ -124,6 +124,7 @@ export function standardiseProject(project: Project): Project {
   slides[9].cards = ['Technical Skills', 'Analytical Skills', 'Business Understanding', 'Challenges and Improvements'].map((title, index) => ({ title, text: brief.learning[index] }));
 
   for (const item of project.slides) {
+    if (item.analytics === 'sql' || item.analytics === 'retail:sql' || item.id === 'quality-check') continue;
     const target = item.analytics === 'kpis' || item.analytics === 'retail:kpis' ? 0
       : item.analytics?.endsWith(':learning') || item.id === 'learning' || item.id === 'learnings' ? 9
       : item.kind === 'screenshots' || item.analytics === 'dashboard' ? 4

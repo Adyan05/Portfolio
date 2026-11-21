@@ -1,0 +1,81 @@
+﻿Department,Job role,Age group,Overtime,Income band,Total employees,Employees left,Attrition (%)
+Sales,Sales Representative,Under 25,Yes,Low Income,8,7,87.0
+Research & Development,Laboratory Technician,Under 25,Yes,Low Income,5,4,80.0
+Research & Development,Laboratory Technician,25-34,Yes,Low Income,13,9,69.0
+Sales,Sales Representative,25-34,Yes,Low Income,8,5,62.0
+Research & Development,Research Scientist,Under 25,Yes,Low Income,11,6,54.0
+Research & Development,Research Scientist,25-34,Yes,Low Income,28,15,53.0
+Research & Development,Laboratory Technician,25-34,Yes,Medium Income,13,6,46.0
+Research & Development,Laboratory Technician,35-44,Yes,Low Income,11,5,45.0
+Sales,Sales Executive,35-44,Yes,Medium Income,18,8,44.0
+Sales,Sales Representative,25-34,No,Medium Income,5,2,40.0
+Sales,Sales Executive,25-34,Yes,High Income,10,4,40.0
+Human Resources,Human Resources,25-34,No,Low Income,10,4,40.0
+Sales,Sales Representative,Under 25,No,Low Income,13,5,38.0
+Sales,Sales Executive,45-54,Yes,High Income,8,3,37.0
+Research & Development,Laboratory Technician,Under 25,No,Low Income,19,7,36.0
+Research & Development,Research Scientist,35-44,Yes,Low Income,15,5,33.0
+Sales,Sales Executive,45-54,Yes,Medium Income,9,3,33.0
+Sales,Sales Representative,25-34,No,Low Income,25,8,32.0
+Research & Development,Laboratory Technician,35-44,Yes,Medium Income,10,3,30.0
+Sales,Sales Executive,45-54,No,High Income,17,5,29.0
+Sales,Sales Executive,35-44,Yes,High Income,18,5,27.0
+Research & Development,Research Scientist,25-34,Yes,Medium Income,15,4,26.0
+Sales,Sales Executive,25-34,Yes,Medium Income,27,7,25.0
+Research & Development,Laboratory Technician,25-34,No,Low Income,38,9,23.0
+Research & Development,Healthcare Representative,25-34,No,High Income,9,2,22.0
+Sales,Sales Executive,Over 55,No,Medium Income,5,1,20.0
+Sales,Manager,45-54,Yes,High Income,5,1,20.0
+Research & Development,Manufacturing Director,45-54,No,High Income,10,2,20.0
+Sales,Sales Executive,25-34,No,High Income,29,5,17.0
+Research & Development,Laboratory Technician,25-34,No,Medium Income,43,7,16.0
+Research & Development,Research Scientist,Over 55,No,Low Income,6,1,16.0
+Research & Development,Laboratory Technician,Under 25,No,Medium Income,6,1,16.0
+Research & Development,Manufacturing Director,25-34,Yes,Medium Income,6,1,16.0
+Research & Development,Laboratory Technician,45-54,No,Medium Income,9,1,11.0
+Sales,Sales Executive,45-54,No,Medium Income,17,2,11.0
+Sales,Sales Representative,35-44,No,Low Income,9,1,11.0
+Research & Development,Manufacturing Director,35-44,Yes,Medium Income,9,1,11.0
+Research & Development,Healthcare Representative,35-44,No,High Income,18,2,11.0
+Sales,Sales Executive,25-34,No,Medium Income,78,8,10.0
+Research & Development,Research Scientist,45-54,No,Medium Income,10,1,10.0
+Research & Development,Research Scientist,25-34,No,Medium Income,39,4,10.0
+Research & Development,Healthcare Representative,35-44,Yes,Medium Income,10,1,10.0
+Research & Development,Laboratory Technician,35-44,No,Low Income,35,3,8.0
+Research & Development,Research Scientist,25-34,No,Low Income,62,5,8.0
+Sales,Sales Executive,35-44,No,High Income,35,3,8.0
+Research & Development,Research Scientist,Under 25,No,Low Income,13,1,7.0
+Research & Development,Manufacturing Director,35-44,No,Medium Income,26,2,7.0
+Research & Development,Healthcare Representative,45-54,No,High Income,14,1,7.0
+Research & Development,Manufacturing Director,25-34,No,High Income,13,1,7.0
+Sales,Manager,45-54,No,High Income,15,1,6.0
+Research & Development,Research Scientist,35-44,Yes,Medium Income,20,1,5.0
+Research & Development,Manufacturing Director,35-44,No,High Income,17,1,5.0
+Research & Development,Research Director,35-44,No,High Income,20,1,5.0
+Research & Development,Research Scientist,35-44,No,Low Income,23,1,4.0
+Research & Development,Research Scientist,35-44,No,Medium Income,27,1,3.0
+Research & Development,Healthcare Representative,35-44,No,Medium Income,26,1,3.0
+Sales,Sales Executive,35-44,No,Medium Income,44,1,2.0
+Research & Development,Laboratory Technician,35-44,No,Medium Income,35,1,2.0
+Human Resources,Human Resources,25-34,No,Medium Income,5,0,0.0
+Sales,Manager,35-44,No,High Income,6,0,0.0
+Research & Development,Manufacturing Director,35-44,Yes,High Income,9,0,0.0
+Sales,Sales Executive,Over 55,No,High Income,5,0,0.0
+Research & Development,Healthcare Representative,25-34,Yes,Medium Income,8,0,0.0
+Research & Development,Healthcare Representative,25-34,No,Medium Income,17,0,0.0
+Research & Development,Healthcare Representative,35-44,Yes,High Income,6,0,0.0
+Research & Development,Manager,45-54,No,High Income,21,0,0.0
+Research & Development,Healthcare Representative,45-54,Yes,High Income,6,0,0.0
+Research & Development,Manager,35-44,Yes,High Income,5,0,0.0
+Research & Development,Research Director,45-54,Yes,High Income,10,0,0.0
+Research & Development,Research Scientist,Under 25,No,Medium Income,5,0,0.0
+Research & Development,Research Scientist,45-54,No,Low Income,7,0,0.0
+Research & Development,Manufacturing Director,45-54,No,Medium Income,10,0,0.0
+Research & Development,Research Director,45-54,No,High Income,24,0,0.0
+Research & Development,Manufacturing Director,25-34,No,Medium Income,24,0,0.0
+Research & Development,Manufacturing Director,45-54,Yes,High Income,6,0,0.0
+Human Resources,Human Resources,35-44,No,Medium Income,10,0,0.0
+Research & Development,Laboratory Technician,45-54,No,Low Income,9,0,0.0
+Research & Development,Manager,35-44,No,High Income,13,0,0.0
+Research & Development,Research Director,25-34,No,High Income,10,0,0.0
+Research & Development,Research Director,35-44,Yes,High Income,7,0,0.0

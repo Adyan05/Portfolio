@@ -1,130 +1,195 @@
-"""Rebuild the public question results from the local AdyLearn CSV and SQL files."""
+"""Generate portfolio query tables from local CSVs and an isolated PostgreSQL cluster."""
 import csv
-import itertools
+import io
 import json
+import os
+from pathlib import Path
 import re
 import sqlite3
+import subprocess
 import sys
-import textwrap
-from pathlib import Path
 
 root = Path(sys.argv[1])
+psql = Path(sys.argv[2])
 coffee = root / 'CoffeeSaes/excel-project-coffee-sales-main'
-retail = root / 'OnlineRetailUCI/CompleteProject'
 hr = root / 'HRAnalytics'
-db = sqlite3.connect(':memory:')
+retail = root / 'OnlineRetailUCI/CompleteProject'
+sql_dir = Path('public/retail/sql')
+output = Path('public/sql-results')
+output.mkdir(parents=True, exist_ok=True)
+results = {}
 
-def load(path, name, columns):
-    definitions = ', '.join(f'"{key}" {kind}' for key, kind, source in columns)
-    db.execute(f'CREATE TABLE {name} ({definitions})')
-    marks = ', '.join('?' for _ in columns)
-    with path.open(encoding='utf-8-sig', newline='') as stream:
-        source_rows = csv.DictReader(stream)
-        db.executemany(f'INSERT INTO {name} VALUES ({marks})', (
-            [row[source].strip() or None for _, _, source in columns] for row in source_rows
-        ))
+def read(path):
+    return path.read_text(encoding='utf-8-sig')
 
-load(coffee / 'orders.csv', 'orders', [
-    ('orderid','TEXT','Order ID'), ('customerid','TEXT','Customer ID'),
-    ('sales','REAL','Sales'), ('quantity','INTEGER','Quantity'),
-    ('country','TEXT','Country'), ('coffeetypename','TEXT','Coffee Type Name'),
-])
-load(retail / 'cleaned_online_retail_sales.csv', 'retail_sales', [
-    ('Invoice','TEXT','Invoice'), ('CustomerID','TEXT','CustomerID'),
-    ('Country','TEXT','Country'), ('Revenue','REAL','Revenue'), ('StockCode','TEXT','StockCode'),
-    ('Description','TEXT','Description'), ('Quantity','INTEGER','Quantity'),
-])
-load(hr / 'HR-Employee-Attrition.csv', 'employees', [
-    ('Department','TEXT','Department'), ('JobRole','TEXT','JobRole'),
-    ('OverTime','TEXT','OverTime'), ('Attrition','TEXT','Attrition'),
-])
-db.execute("CREATE VIEW hr_analysis AS SELECT *, CASE WHEN Attrition='Yes' THEN 1 ELSE 0 END AS attrition_flag FROM employees")
+def pg(sql, params=()):
+    return subprocess.run(
+        [str(psql), '-X', '-w', '-h', '127.0.0.1', '-p', '55482',
+         '-U', 'portfolio_check', '-d', 'postgres', '-v', 'ON_ERROR_STOP=1',
+         *params],
+        input=sql, capture_output=True, encoding='utf-8',
+        env={**os.environ, 'PGCLIENTENCODING': 'UTF8'},
+    )
 
-def query(path, marker, prefix=None):
-    source = path.read_text(encoding='utf-8-sig')
-    tail = source.split(marker, 1)[1].split('\n',1)[1] if marker else source
-    start = re.search(r'(?im)^\s*(SELECT|WITH)\b', tail).start()
-    result = re.split(r'(?m)^--', tail[start:].lstrip(), maxsplit=1)[0].strip()
-    if prefix and not result.upper().startswith(prefix):
-        raise ValueError(marker)
-    return textwrap.dedent(result).replace('\t','    ')
+def initialise():
+    hr_script = read(Path('public/downloads/hr/hr_employee.sql'))
+    hr_ddl = hr_script[hr_script.index('CREATE TABLE'):hr_script.index('--Check if Import works')]
+    hr_view = hr_script[hr_script.index('CREATE VIEW hr_analysis'):hr_script.index('--Q1)')]
+    coffee_ddl = re.sub(r'(?m)^\)\s*$', ');', read(coffee / 'TableSQL.sql'))
+    sources = [(name, coffee / f'{name}.csv') for name in ('orders', 'customers', 'products')]
+    sources.append(('hr_employee_attrition', hr / 'HR-Employee-Attrition.csv'))
+    copies = '\n'.join(
+        "\\copy " + name + " FROM '" + path.as_posix().replace("'", "''") + "' WITH (FORMAT csv, HEADER true)"
+        for name, path in sources
+    )
+    setup = '\n'.join((
+        'DROP VIEW IF EXISTS hr_analysis;',
+        'DROP TABLE IF EXISTS orders, customers, products, hr_employee_attrition;',
+        "SET datestyle TO 'ISO, DMY';", coffee_ddl, hr_ddl, copies, hr_view,
+    ))
+    res = pg(setup)
+    if res.returncode:
+        raise RuntimeError(res.stderr)
 
-cards = {}
-def record(project, id, title, path, marker, columns, explanation, finding, decision, action, kpi,
-           chart=None, dashboard=None, decimals=(), hr_rate=False, sorted_by=None):
-    code = query(path, marker)
-    runnable = re.sub(r'OnlineRetail\.\.OnlineRetail\b', 'retail_sales', code, flags=re.I)
-    rows = db.execute(runnable).fetchall()
-    if sorted_by is not None:
-        rows.sort(key=lambda row: -row[sorted_by])
-    if hr_rate:
-        rows = [(*row, round(row[-2] * 100 / row[-3], 2)) for row in rows]
-    assert rows and all(len(row) == len(columns) for row in rows), id
+def numbered(path, pattern):
+    chunks = re.split(pattern, read(path), flags=re.M)
+    for number, title, chunk in zip(chunks[1::3], chunks[2::3], chunks[3::3]):
+        yield number, title.strip(), clean(chunk)
+
+def clean(text):
+    lines = [line for line in text.strip().splitlines() if not line.lstrip().startswith('--')]
+    return '\n'.join(line.expandtabs(4).rstrip() for line in lines).strip()
+
+def display_header(name):
+    aliases = {
+        'count': 'Count', 'customerid': 'Customer ID', 'customername': 'Customer name',
+        'orderid': 'Order ID', 'orderdate': 'Order date', 'productid': 'Product ID',
+        'coffeetypename': 'Coffee type', 'coffeetype': 'Coffee type', 'roasttypename': 'Roast type',
+        'employeeNumber': 'Employee number', 'jobrole': 'Job role', 'overtime': 'Overtime',
+        'attrition_percentage': 'Attrition (%)', 'yearmonth': 'Year and month',
+    }
+    return aliases.get(name, aliases.get(name.lower(), name.replace('_', ' ').capitalize()))
+
+def safe_value(name, value):
+    key = name.lower().replace('_', '')
+    if key in {'customerid', 'customername', 'email', 'phonenumber', 'addressline', 'postcode', 'orderid', 'employeenumber'}:
+        return 'Redacted' if value is not None and value != '' else None
+    if value == '':
+        return None
+    if isinstance(value, str) and key not in {'stockcode', 'productid', 'segment', 'rfmscore'}:
+        if re.fullmatch(r'-?\d+(\.\d+)?', value):
+            return float(value) if '.' in value else int(value)
+    return value
+
+def add(project, id, title, source, code, headers=(), rows=(), status=None):
+    names = [display_header(name) for name in headers]
+    if id == 'coffee-15' and len(names) == 5:
+        names[2:4] = ['Orders', 'Customers']
+    safe_rows = [[safe_value(name, value) for name, value in zip(headers, row)] for row in rows]
     export = None
-    if len(rows) > 50:
+    if len(safe_rows) > 10:
         export = f'sql-results/{id}.csv'
-        with (Path('public') / export).open('w', newline='', encoding='utf-8-sig') as stream:
-            writer = csv.writer(stream)
-            writer.writerow(columns)
-            writer.writerows(rows)
-    cards.setdefault(project, []).append(dict(
-        id=id, title=title, source=path.name, code=code, columns=columns,
-        rows=rows[:10] if export else rows, rowCount=len(rows), export=export,
-        explanation=explanation, finding=finding, decision=decision, action=action, kpi=kpi,
-        dashboard=dashboard, chart=chart, decimals=decimals, hrRate=hr_rate,
+        with (Path('public') / export).open('w', newline='', encoding='utf-8-sig') as file:
+            writer = csv.writer(file)
+            writer.writerow(names)
+            writer.writerows(
+                [("'" + cell if isinstance(cell, str) and cell.lstrip().startswith(('=', '+', '-', '@')) else cell) for cell in row]
+                for row in safe_rows
+            )
+    results.setdefault(project, []).append(dict(
+        id=id, title=title, source=source, code=code, columns=names,
+        rows=safe_rows[:10], rowCount=len(safe_rows), export=export, status=status,
     ))
 
-c = coffee / 'AggregationKPI.sql'
-record('coffee-sales','coffee-totals','What sales volume and revenue did the business record?',c,'-- 9)', ['Revenue','Units','Orders','Customers'],
-       'SUM totals sales and quantities. COUNT DISTINCT prevents repeated order and customer IDs inflating those KPIs.',
-       '45,135.35 across 957 orders is the sales baseline. The 3,551 units measure volume independently of order count.',
-       'Use the baseline to compare sales performance across periods.','Review revenue, units and order counts together each month.','Monthly revenue and distinct orders',
-       dashboard='images/coffee/dashboard-1.png', decimals=[0])
-record('coffee-sales','coffee-types','Which coffee types lead revenue and unit sales?',c,'-- 13)', ['Revenue','Units','Coffee type'],
-       'GROUP BY coffee type supports separate comparisons of SUM(sales) and SUM(quantity).',
-       'Excelsa leads revenue at 12,306.71. Comparing revenue with units helps separate product value from volume.',
-       'Decide which coffee types warrant an inventory review.','Compare demand with stock availability and margins before adjusting stock.','Units sold and stockout rate by coffee type',
-       chart=[2,0],dashboard='images/coffee/dashboard-1.png',decimals=[0])
-record('coffee-sales','coffee-country','Which markets contribute the most coffee revenue?',c,'-- 15)', ['Country','Revenue','Orders','Customers','Average order value'],
-       'The query groups by country, counts distinct invoices and customers, and divides revenue by each market’s order count.',
-       'The United States contributes 35,639.73, about 79% of revenue. A large share of sales depends on one market.',
-       'Decide where to examine sales concentration first.','Track market shares and investigate demand in smaller markets before expanding.','Revenue share by market',
-       chart=[0,1],dashboard='images/coffee/dashboard-1.png',decimals=[1,4],sorted_by=1)
+def postgres_card(project, id, title, source, code):
+    response = pg(code + '\n' + (';' if not code.endswith(';') else '') + '\n', ('--csv', '-q', '-P', 'footer=off'))
+    if response.returncode:
+        errors = {
+            'coffee-19': 'No output. The source calls the undefined function COALESECE.',
+            'coffee-29': 'No output. The source ends with an extra FROM clause.',
+            'coffee-30': 'No output. The source starts with an incomplete WITH clause.',
+            'coffee-36': 'No output. The source ends inside its CTE.',
+            'coffee-39': 'No output. The source has syntax errors and ends before a final SELECT.',
+        }
+        if id not in errors:
+            raise RuntimeError(f'{id}: {response.stderr}')
+        add(project, id, title, source, code, status=errors[id])
+    else:
+        data = list(csv.reader(io.StringIO(response.stdout)))
+        if not data:
+            raise ValueError(id)
+        state = 'No rows returned.' if len(data) == 1 else None
+        if id == 'coffee-18':
+            state = 'No rows returned. The source uses an inner join before filtering for missing orders.'
+        add(project, id, title, source, code, data[0], data[1:], state)
 
-rp=Path('public/retail/sql')
-record('online-retail','retail-totals','What revenue, orders, customers and order value did retail record?',rp/'RevenueAnalysis.sql',None,['Revenue','Orders','Customers','Average order value'],
-       'A CTE aggregates sales and counts distinct invoices and customers before calculating average order value.',
-       'The cleaned dataset contains 17,743,429.18 in positive sales over 36,969 distinct invoices. These totals exclude returns.',
-       'Set a baseline for retail reporting.','Track positive sales separately from returns and net revenue.','Positive sales and return rate',
-       dashboard='images/retail/sales_overview.png',decimals=[0,3])
-record('online-retail','retail-country','Which countries contribute the most retail revenue?',rp/'Country_Analysis.sql','-- Top countries',['Country','Revenue','Orders','Customers'],
-       'GROUP BY Country measures market revenue and distinct counts at the same level.',
-       'The UK generated about 82.98% of retained sales revenue. Other markets account for a much smaller share.',
-       'Prioritise a review of exposure to the UK market.','Monitor the country mix and investigate non-UK demand before making expansion decisions.','Country revenue share',
-       chart=[0,1],dashboard='images/retail/sales_overview.png',decimals=[1])
-record('online-retail','retail-product','Which stock-code and description combinations lead sales?',rp/'ProductAnalysis.sql','GROUP BY StockCode, Description, Price',['Stock code','Description','Revenue','Units','Orders'],
-       'Groups by both stock code and description, then ranks revenue. A stock code can appear under different descriptions.',
-       'The leading row is stock code 22423. Revenue rankings should be read alongside volumes and stock-code definitions.',
-       'Identify products to examine for assortment and inventory planning.','Group consistently by stock code and separate nonmerchandise entries before changing the assortment.','Units sold and revenue by stock code',
-       chart=[0,2],dashboard='images/retail/product_performance.png',decimals=[2])
+def retail_tables(db):
+    settings = [
+        ('retail_sales', 'cleaned_online_retail_sales.csv', {
+            'Invoice': 'TEXT', 'CustomerID': 'TEXT', 'Country': 'TEXT', 'Revenue': 'REAL',
+            'StockCode': 'TEXT', 'Description': 'TEXT', 'Quantity': 'INTEGER', 'Price': 'REAL', 'YearMonth': 'TEXT',
+        }),
+        ('rfm_segments', 'customer_rfm_segments.csv', {
+            'Segment': 'TEXT', 'Frequency': 'INTEGER', 'Monetary': 'REAL', 'Recency': 'INTEGER',
+        }),
+    ]
+    for table, filename, columns in settings:
+        db.execute(f"CREATE TABLE {table} (" + ', '.join(f'"{k}" {v}' for k,v in columns.items()) + ')')
+        with (retail / filename).open(encoding='utf-8-sig', newline='') as file:
+            db.executemany(f"INSERT INTO {table} VALUES (" + ','.join('?' for _ in columns) + ')', (
+                [row[key].strip() or None for key in columns] for row in csv.DictReader(file)
+            ))
 
-h=Path('public/downloads/hr/hr_employee.sql')
-for num,group,title,finding,decision,action,kpi in [
-    (1,None,'What is the overall employee attrition rate?','237 of 1,470 employees left. The decimal snapshot baseline is 16.12%.','Set a baseline for comparing groups.','Compare future snapshots using the same definition.','Attrition rate and leaver count'),
-    (2,'Department','Which departments have the highest employee attrition rates?','Sales has the highest decimal rate at 20.63%, followed by Human Resources at 19.05%. Research & Development has the most leavers in absolute terms (133).','Use both rates and counts to prioritise investigation.','Review workload and employee feedback in Sales, and examine the volume of departures in R&D.','Department attrition rate and leaver count'),
-    (3,'Job role','Which job roles show the highest attrition rates?','Sales Representatives have the highest observed rate. Group sizes differ across roles and affect the interpretation.','Identify roles that warrant a closer retention review.','Ask HR to investigate job conditions and compare rates alongside role headcounts.','Attrition rate and headcount by role'),
-    (4,'Overtime','How does overtime relate to employee attrition?','The decimal rate is 30.53% with overtime and 10.44% without. The comparison is observational.','Decide whether workload patterns warrant review.','Compare overtime allocation with role, staffing and employee feedback.','Overtime hours and attrition rate'),
-]:
-    headers = ([group] if group else [])+['Employees','Leavers','Original SQL rate (%)','Decimal rate (%)']
-    record('hr-analytics',f'hr-{num}',title,h,f'--Q{num})',headers,
-           'SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.',
-           finding,decision,action,kpi,chart=[0,4] if group else None,hr_rate=True,
-           dashboard='images/hr/powerbi/02-factors.png' if num==4 else 'images/hr/powerbi/01-overview.png',
-           decimals=[len(headers)-2,len(headers)-1])
+def retail_cards():
+    files = {
+        'DataQuality.sql': (r'^-- Data quality check', ['How many records, invoices and customers are present, and which rows fail quality checks?']),
+        'RevenueAnalysis.sql': (r'^--(?:Overall revenue KPI summary| Monthly revenue)', ['What are the overall revenue and order KPIs?', 'How do revenue and order KPIs vary by month?']),
+        'ProductAnalysis.sql': (r'^-- (?:Top Products by revenue|Top Products by quantity sold|High Quantity, Low Revenue Products)', ['Which product and price combinations generate the most revenue?', 'Which products lead by revenue?', 'Which products sell the most units?', 'What is average unit revenue for products selling at least 1,000 units?']),
+        'CustomerAnalysis.sql': (r'^-- (?:Top Customers by Revenue|Revenue Concentration| Customer Repeat Rate|Customer Repeat Rate)', ['Which customers generate the most revenue?', 'How much revenue comes from each customer decile?', 'What share of customers order more than once?']),
+        'Country_Analysis.sql': (r'^-- (?:Top countries by revenue|Average Order Value by country)', ['Which countries generate the most revenue?', 'What is average order value by country?']),
+        'RFMSegment.sql': (r'^-- RFM Segment Performance', ['How do customer count, revenue and average RFM metrics vary by segment?']),
+    }
+    with sqlite3.connect(':memory:') as db:
+        retail_tables(db)
+        index = 0
+        for name, (pattern, titles) in files.items():
+            blocks = re.split(pattern, read(sql_dir / name), flags=re.M)[1:]
+            assert len(blocks) == len(titles), name
+            for title, block in zip(titles, blocks):
+                index += 1
+                code = clean(block.partition('\n')[2])
+                sql = code.replace('OnlineRetail..OnlineRetail', 'retail_sales').replace('OnlineRetail..RFMSegments', 'rfm_segments')
+                # SQL Server AVG over INT truncates. Preserve that integer type in this replay.
+                sql = re.sub(r'AVG\((Recency|Frequency)\)', r'CAST(AVG(\1) AS INTEGER)', sql)
+                result = db.execute(sql)
+                add('online-retail', f'retail-{index}', title, name, code, [col[0] for col in result.description], result.fetchall())
 
-assert cards['hr-analytics'][1]['rows'][0] == ('Sales', 446, 92, 20.0, 20.63)
-assert cards['coffee-sales'][0]['rows'][0][1:] == (3551,957,913)
-assert cards['online-retail'][0]['rows'][0] == (17743429.18,36969,5878,479.95)
-Path('src/data/sqlQuestionResults.json').write_text(json.dumps(cards,ensure_ascii=False,indent=2,default=str)+'\n',encoding='utf-8')
-for project, questions in cards.items():
-    print(project, [(q['id'],q['rowCount'],q['rows'][0]) for q in questions])
+def build():
+    initialise()
+    coffee_questions = []
+    pattern = r'^--[ \t]*(\d+)\)[ \t]*([^\n]+)'
+    for filename in ('SimpleSummary.sql', 'AggregationKPI.sql', 'MultitableAnalysis.sql', 'AdvancedAnalysis.sql', 'QuestionSQL.sql'):
+        for number, title, code in numbered(coffee / filename, pattern):
+            if any(number == known[0] and code == known[3] for known in coffee_questions):
+                continue
+            coffee_questions.append((number, title, filename, code))
+    for number, title, source, code in sorted(coffee_questions, key=lambda q: int(q[0])):
+        postgres_card('coffee-sales', f'coffee-{number}', title, source, code)
+    retail_cards()
+    path = Path('public/downloads/hr/hr_employee.sql')
+    for number, title, code in numbered(path, r'^--Q(\d+[a-z]?)\)[ \t]*([^\n]+)'):
+        title = {'4':'How does observed attrition compare by overtime status?', '8':'How does observed attrition vary by job satisfaction?', '9':'How does observed attrition vary by work-life balance?', '10':'How does observed attrition vary by time since promotion?', '11a':'How does the draft heuristic score rank records in this fictional dataset?'}.get(number, title)
+        if number == '11a':
+            code = code.split(';',1)[0]+';'
+        postgres_card('hr-analytics', f'hr-{number}', title, path.name, code)
+
+    assert [len(results[key]) for key in ('coffee-sales','online-retail','hr-analytics')] == [36,13,12]
+    assert next(q for q in results['coffee-sales'] if q['id']=='coffee-9')['rows'][0][1:] == [3551,957,913]
+    assert results['online-retail'][1]['rows'][0] == [17743429.18,36969,5878,479.95]
+    assert results['hr-analytics'][1]['rows'][0] == ['Sales',446,92,20.0]
+    Path('src/data/sqlQuestionResults.json').write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    for project, cards in results.items():
+        print(project, len(cards), [(entry['id'], entry['rowCount']) for entry in cards])
+
+if __name__ == '__main__':
+    build()

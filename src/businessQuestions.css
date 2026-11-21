@@ -16,7 +16,7 @@
   color-scheme: dark;
 }
 
-.question-header, .question-toolbar, .question-controls {
+.question-toolbar, .question-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,15 +24,17 @@
   gap: .6rem;
 }
 
-.question-header, .question-toolbar, .question-controls {
+.question-toolbar, .question-controls {
   font-size: .82rem;
   color: #d2d7e1;
 }
 
-.question-tag {
-  background: #303541;
-  padding: .25rem .65rem;
-  border-radius: 1rem;
+.question-number {
+  display: block;
+  margin-bottom: .4rem;
+  font-size: .8rem;
+  font-weight: 650;
+  color: #d2d7e1;
 }
 
 .business-question h4 {
@@ -104,31 +106,4 @@
   text-align: right;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-}
-
-.question-chart { margin: .75rem 0; }
-.question-chart figcaption { font-weight: 600; }
-.question-chart ul { padding: 0; list-style: none; color: inherit; }
-.question-chart li {
-  display: grid;
-  grid-template-columns: minmax(4rem, 11rem) minmax(2rem, 1fr) minmax(4rem, max-content);
-  align-items: center;
-  gap: .65rem;
-}
-.question-chart meter { width: 100%; accent-color: #65a5fd; }
-.question-chart strong { text-align: right; }
-
-.question-decisions {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: .5rem 1rem;
-  margin: 0;
-  font-size: .875rem;
-}
-.question-decisions dt { font-weight: 650; }
-.question-decisions dd { margin: 0; }
-
-@media (max-width: 600px) {
-  .question-decisions { grid-template-columns: 1fr; }
-  .question-chart li { grid-template-columns: minmax(4rem, 1fr) minmax(2rem, 1fr) auto; }
 }

@@ -6,7 +6,6 @@ import {
   ArrowUpRight,
   BarChart3,
   CheckCircle2,
-  Copy,
   Database,
   FileSpreadsheet,
   GraduationCap,
@@ -18,10 +17,8 @@ import {
   cleaningChecks,
   formulaEvidence,
   learningSections,
-  sqlStages,
   workflow,
   type CoffeePage,
-  type SqlExample,
 } from '../data/coffeeCaseStudy';
 import { coffeeFile, coffeeRepo } from '../data/coffee';
 
@@ -92,44 +89,11 @@ function CleaningPage() {
   );
 }
 
-function highlightSql(code: string) {
-  const keyword = /\b(SELECT|FROM|WHERE|GROUP|BY|ORDER|AS|SUM|COUNT|DISTINCT|WITH|JOIN|LEFT|ON|CASE|WHEN|THEN|ELSE|END|RANK|OVER|PARTITION|DESC|COALESCE|ROUND|NULLIF|AVG|NULL|IS|DATE_TRUNC|LIMIT|AND|OR|LAG)\b/gi;
-  const exactKeyword = /^(SELECT|FROM|WHERE|GROUP|BY|ORDER|AS|SUM|COUNT|DISTINCT|WITH|JOIN|LEFT|ON|CASE|WHEN|THEN|ELSE|END|RANK|OVER|PARTITION|DESC|COALESCE|ROUND|NULLIF|AVG|NULL|IS|DATE_TRUNC|LIMIT|AND|OR|LAG)$/i;
-  return code.split(keyword).map((part, index) => exactKeyword.test(part) ? <span className="sql-keyword" key={index}>{part}</span> : <span key={index}>{part}</span>);
-}
-
-function SqlExamplePanel({ example }: { example: SqlExample }) {
-  const [status, setStatus] = useState('');
-  return (
-    <details className="sql-example">
-      <summary><span><small>PROBLEM</small>{example.title}</span><span>View analysis</span></summary>
-      <div className="sql-example-body">
-        <p className="sql-problem">{example.problem}</p>
-        {example.reviewNote && <aside className="sql-review-note"><strong>Source review note</strong><p>{example.reviewNote}</p></aside>}
-        <div className="sql-toolbar"><span>SQL solution</span><button type="button" onClick={async () => { try { await navigator.clipboard.writeText(example.code); setStatus('Copied'); } catch { setStatus('Select the code to copy'); } }}><Copy size={14} /> Copy SQL</button></div>
-        <pre tabIndex={0}><code>{highlightSql(example.code)}</code></pre>
-        <span className="copy-status" aria-live="polite">{status}</span>
-        <div className="sql-techniques">{example.techniques.map(item => <span key={item}>{item}</span>)}</div>
-        <div className="sql-explanation-grid"><div><strong>How it works</strong><p>{example.explanation}</p></div><div><strong>What I learned</strong><p>{example.learning}</p></div><div><strong>SQL Query Results</strong><p>{example.result || "Exact output for this source example is unverified. Use the linked PostgreSQL source and dataset to run it."}</p></div></div>
-      </div>
-    </details>
-  );
-}
-
 function SqlPage() {
-  const [stageIndex, setStageIndex] = useState(0);
-  const stage = sqlStages[stageIndex];
   return (
     <div className="coffee-case-page">
-      <header className="case-page-heading"><span className="case-page-number">04</span><div><span className="eyebrow">SQL ANALYSIS & PRACTICAL APPLICATIONS</span><h2>Business Questions & SQL Analysis</h2><p>Examples from four SQL scripts, with explanations and source limitations.</p></div></header>
+      <header className="case-page-heading"><span className="case-page-number">04</span><div><h2>Business Questions & SQL Analysis</h2></div></header>
       <BusinessQuestions project="coffee-sales"/>
-      <h3>Additional SQL examples</h3>
-      <div className="sql-stage-nav" role="tablist" aria-label="SQL learning stages">{sqlStages.map((item, index) => <button type="button" role="tab" aria-selected={stageIndex === index} onClick={() => setStageIndex(index)} key={item.id}><span>{item.number}</span>{item.title}<small>{item.source}</small></button>)}</div>
-      <section className="sql-stage" role="tabpanel" aria-label={stage.title}>
-        <header><div><span className="eyebrow">STAGE {stage.number}</span><h3>{stage.title}</h3></div><a href={coffeeFile(stage.source)} target="_blank" rel="noreferrer">Open source file <ArrowUpRight size={15} /></a></header>
-        <div className="stage-learning"><article><strong>What I applied</strong><p>{stage.applied}</p></article><article><strong>What I learned</strong><p>{stage.learned}</p></article></div>
-        <div className="sql-example-list">{stage.examples.map(example => <SqlExamplePanel example={example} key={example.title} />)}</div>
-      </section>
     </div>
   );
 }

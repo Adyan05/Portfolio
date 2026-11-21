@@ -1,0 +1,1001 @@
+﻿Customer ID,Order date,Order ID,Product ID,Sales,Quantity,Customer name,Country,Phonenumber,Email
+Redacted,2019-09-05,Redacted,R-M-1,19.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-05,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-17,Redacted,A-L-1,12.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-15,Redacted,E-M-1,27.5,2,Redacted,Ireland,Redacted,
+Redacted,2021-07-15,Redacted,R-L-2.5,54.97,2,Redacted,Ireland,Redacted,
+Redacted,2021-08-04,Redacted,L-D-1,38.85,3,Redacted,United States,Redacted,
+Redacted,2022-01-21,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-20,Redacted,L-L-0.2,4.76,1,Redacted,Ireland,Redacted,
+Redacted,2019-01-02,Redacted,R-M-0.5,17.91,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-05,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-08,Redacted,A-D-1,39.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-28,Redacted,E-L-2.5,170.78,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-02,Redacted,R-M-1,49.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-22,Redacted,R-D-2.5,41.17,2,Redacted,United States,,Redacted
+Redacted,2022-04-05,Redacted,L-D-0.2,11.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-07,Redacted,R-M-2.5,114.43,5,Redacted,United States,,Redacted
+Redacted,2019-03-20,Redacted,A-M-0.2,20.25,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-19,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-13,Redacted,R-D-2.5,82.34,4,Redacted,Ireland,,Redacted
+Redacted,2020-12-04,Redacted,A-M-0.2,16.88,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-04,Redacted,E-D-0.2,14.58,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-04,Redacted,A-D-0.2,17.91,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-22,Redacted,R-M-2.5,91.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-11,Redacted,A-D-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-15,Redacted,A-M-1,11.25,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-24,Redacted,E-M-0.2,12.38,3,Redacted,United States,Redacted,
+Redacted,2019-02-20,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-08,Redacted,A-M-0.2,16.88,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-08-02,Redacted,A-D-0.5,17.91,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-02-20,Redacted,A-D-1,39.8,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-09-25,Redacted,L-M-0.2,21.83,5,Redacted,United States,Redacted,
+Redacted,2021-09-25,Redacted,A-D-0.5,35.82,6,Redacted,United States,Redacted,
+Redacted,2021-09-25,Redacted,L-M-0.5,52.38,6,Redacted,United States,Redacted,
+Redacted,2021-07-17,Redacted,L-L-0.2,23.78,5,Redacted,United States,,Redacted
+Redacted,2020-06-29,Redacted,L-L-0.5,57.06,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-06-01,Redacted,A-D-0.5,35.82,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-06,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-25,Redacted,L-L-0.5,28.53,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-25,Redacted,R-M-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-24,Redacted,R-M-1,59.7,6,Redacted,United States,,
+Redacted,2021-04-19,Redacted,L-M-1,43.65,3,Redacted,United States,Redacted,
+Redacted,2022-07-07,Redacted,E-D-0.2,7.29,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-22,Redacted,R-D-0.2,8.06,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-04,Redacted,L-L-2.5,72.91,2,Redacted,United States,Redacted,
+Redacted,2020-04-11,Redacted,E-M-0.5,16.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-31,Redacted,L-D-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-07,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,
+Redacted,2019-06-28,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-11,Redacted,A-D-2.5,91.54,4,Redacted,United States,,Redacted
+Redacted,2022-08-17,Redacted,A-L-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-08-19,Redacted,L-D-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-15,Redacted,L-L-2.5,145.82,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-09-11,Redacted,R-M-0.5,29.85,5,Redacted,United Kingdom,,Redacted
+Redacted,2019-09-11,Redacted,L-L-2.5,72.91,2,Redacted,United Kingdom,,Redacted
+Redacted,2021-03-16,Redacted,L-M-1,72.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-03,Redacted,L-L-1,47.55,3,Redacted,United States,Redacted,
+Redacted,2020-01-27,Redacted,E-D-0.2,10.94,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-17,Redacted,E-L-1,59.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-04,Redacted,L-D-2.5,89.36,3,Redacted,United States,Redacted,
+Redacted,2021-12-07,Redacted,L-M-0.5,26.19,3,Redacted,United States,,Redacted
+Redacted,2021-02-25,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-25,Redacted,R-D-0.5,26.85,5,Redacted,United Kingdom,Redacted,
+Redacted,2019-02-09,Redacted,L-L-0.2,23.78,5,Redacted,United States,Redacted,
+Redacted,2020-02-07,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-23,Redacted,R-M-0.5,35.82,6,Redacted,United States,Redacted,
+Redacted,2022-03-06,Redacted,R-D-2.5,82.34,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-15,Redacted,R-L-0.5,7.17,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-19,Redacted,L-L-0.2,9.51,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-16,Redacted,R-M-0.2,2.99,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-26,Redacted,R-M-1,59.7,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-06-30,Redacted,E-L-2.5,136.62,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-04,Redacted,L-L-0.2,9.51,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-10-27,Redacted,A-M-2.5,77.63,3,Redacted,United States,Redacted,
+Redacted,2021-06-15,Redacted,L-M-0.2,21.83,5,Redacted,United States,Redacted,
+Redacted,2021-07-19,Redacted,E-L-0.5,17.82,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-23,Redacted,R-D-1,53.7,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-01-25,Redacted,R-L-0.2,3.59,1,Redacted,Ireland,Redacted,
+Redacted,2019-05-09,Redacted,E-D-0.2,7.29,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-30,Redacted,A-M-0.5,40.5,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-13,Redacted,R-L-1,47.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-17,Redacted,A-L-0.5,38.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-25,Redacted,L-L-2.5,109.37,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-13,Redacted,L-M-2.5,100.4,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-04-12,Redacted,R-D-2.5,82.34,4,Redacted,United States,Redacted,
+Redacted,2019-11-14,Redacted,L-L-0.5,9.51,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-18,Redacted,A-L-2.5,89.36,3,Redacted,United States,,Redacted
+Redacted,2019-07-18,Redacted,A-D-0.2,11.94,4,Redacted,United States,,Redacted
+Redacted,2021-04-03,Redacted,A-M-1,33.75,3,Redacted,United States,,Redacted
+Redacted,2021-03-29,Redacted,R-L-1,35.85,3,Redacted,United States,,Redacted
+Redacted,2021-12-15,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-20,Redacted,A-L-1,51.8,4,Redacted,Ireland,Redacted,
+Redacted,2020-11-02,Redacted,A-M-2.5,103.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-25,Redacted,E-L-1,44.55,3,Redacted,United States,Redacted,
+Redacted,2019-03-14,Redacted,E-L-0.5,35.64,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-07-02,Redacted,A-D-0.2,17.91,6,Redacted,Ireland,,
+Redacted,2019-12-17,Redacted,A-M-2.5,155.25,6,Redacted,United States,,Redacted
+Redacted,2020-12-06,Redacted,A-D-0.2,5.97,2,Redacted,United States,,Redacted
+Redacted,2021-03-04,Redacted,A-M-0.5,13.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-17,Redacted,A-D-0.2,2.99,1,Redacted,Ireland,Redacted,
+Redacted,2020-11-04,Redacted,L-M-0.2,13.1,3,Redacted,United States,Redacted,
+Redacted,2021-04-05,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,
+Redacted,2020-03-01,Redacted,L-D-2.5,148.93,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-10-19,Redacted,L-D-1,38.85,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-07-08,Redacted,R-M-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-17,Redacted,L-M-1,87.3,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-31,Redacted,A-M-0.5,40.5,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-05,Redacted,E-D-1,24.3,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-14,Redacted,R-M-0.5,17.91,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-29,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,
+Redacted,2019-12-12,Redacted,L-D-0.5,7.77,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-15,Redacted,E-L-0.2,13.37,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-26,Redacted,R-D-0.5,26.85,5,Redacted,United States,,Redacted
+Redacted,2021-10-12,Redacted,A-M-1,11.25,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-01,Redacted,L-M-1,14.55,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-03-10,Redacted,R-L-0.2,14.34,4,Redacted,United States,Redacted,
+Redacted,2019-08-16,Redacted,L-L-1,15.85,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-08-11,Redacted,L-L-0.2,19.02,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-05,Redacted,L-L-0.5,38.04,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-22,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-02,Redacted,E-M-0.2,4.13,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-02,Redacted,A-L-0.2,3.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-02,Redacted,E-M-1,68.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-13,Redacted,A-D-0.5,23.88,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-12,Redacted,L-L-2.5,145.82,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-27,Redacted,L-M-0.2,21.83,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-23,Redacted,L-M-0.5,26.19,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-14,Redacted,A-M-1,11.25,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-10,Redacted,L-D-1,77.7,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-08-31,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-06,Redacted,E-D-1,12.15,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-04,Redacted,A-L-2.5,148.93,5,Redacted,Ireland,Redacted,
+Redacted,2020-12-31,Redacted,E-D-0.5,14.58,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-31,Redacted,A-L-2.5,148.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-24,Redacted,L-D-1,12.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-16,Redacted,E-M-2.5,94.88,3,Redacted,United States,,
+Redacted,2021-02-05,Redacted,A-L-0.5,38.85,5,Redacted,United States,,Redacted
+Redacted,2021-07-29,Redacted,A-D-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-17,Redacted,E-L-2.5,102.47,3,Redacted,Ireland,Redacted,
+Redacted,2021-02-11,Redacted,E-D-1,48.6,4,Redacted,United States,Redacted,
+Redacted,2019-02-13,Redacted,L-D-1,77.7,6,Redacted,United States,Redacted,
+Redacted,2022-05-13,Redacted,L-D-2.5,29.79,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-05-19,Redacted,A-L-0.2,15.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-27,Redacted,E-L-2.5,136.62,4,Redacted,Ireland,,
+Redacted,2020-09-09,Redacted,L-M-0.5,17.46,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-10,Redacted,E-L-2.5,68.31,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-07,Redacted,L-M-0.2,17.46,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-12,Redacted,L-M-1,43.65,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-12,Redacted,E-M-1,27.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-21,Redacted,E-D-0.2,18.23,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-04,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,
+Redacted,2020-08-08,Redacted,L-D-1,12.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-11,Redacted,A-M-1,33.75,3,Redacted,United States,Redacted,
+Redacted,2021-11-10,Redacted,R-M-2.5,68.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-20,Redacted,R-D-0.2,2.69,1,Redacted,United States,Redacted,
+Redacted,2021-10-04,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-24,Redacted,A-M-2.5,155.25,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-26,Redacted,A-M-2.5,77.63,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-27,Redacted,R-D-2.5,61.76,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-09-06,Redacted,R-D-2.5,123.51,6,Redacted,United States,Redacted,
+Redacted,2021-04-30,Redacted,L-L-2.5,218.73,6,Redacted,United States,Redacted,
+Redacted,2020-01-07,Redacted,E-M-0.5,33.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-11,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-15,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-03,Redacted,R-D-0.2,16.11,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-17,Redacted,E-D-0.5,29.16,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-02-07,Redacted,R-D-1,53.7,6,Redacted,United States,Redacted,
+Redacted,2021-03-15,Redacted,R-D-0.5,26.85,5,Redacted,United States,Redacted,
+Redacted,2022-08-04,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-19,Redacted,A-M-0.5,40.5,6,Redacted,Ireland,Redacted,
+Redacted,2022-03-23,Redacted,R-D-1,17.9,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-10-07,Redacted,E-L-2.5,68.31,2,Redacted,United Kingdom,,Redacted
+Redacted,2019-03-20,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-15,Redacted,E-D-0.5,21.87,3,Redacted,Ireland,,Redacted
+Redacted,2022-06-08,Redacted,R-M-2.5,91.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-14,Redacted,E-L-2.5,204.93,6,Redacted,United States,Redacted,
+Redacted,2021-04-10,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-10,Redacted,E-L-2.5,34.16,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-16,Redacted,R-L-2.5,109.94,4,Redacted,United States,,Redacted
+Redacted,2019-10-08,Redacted,A-L-1,25.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-31,Redacted,A-D-0.2,2.99,1,Redacted,Ireland,Redacted,
+Redacted,2020-03-20,Redacted,E-L-0.2,22.28,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-20,Redacted,A-D-0.5,29.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-29,Redacted,R-D-0.5,32.22,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-12,Redacted,E-M-0.2,8.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-20,Redacted,A-L-0.5,31.08,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-18,Redacted,E-D-0.5,36.45,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-07,Redacted,R-M-2.5,68.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-13,Redacted,L-M-0.5,43.65,5,Redacted,United States,,Redacted
+Redacted,2022-05-17,Redacted,E-L-0.2,4.46,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-14,Redacted,L-M-1,43.65,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-15,Redacted,L-M-2.5,33.47,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-12,Redacted,L-D-0.2,19.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-29,Redacted,E-D-1,72.9,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-03-24,Redacted,E-L-1,44.55,3,Redacted,United States,Redacted,
+Redacted,2021-07-21,Redacted,E-D-0.5,36.45,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-06,Redacted,A-L-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-23,Redacted,E-L-0.5,53.46,6,Redacted,United States,,Redacted
+Redacted,2021-05-23,Redacted,L-D-2.5,59.57,2,Redacted,United States,,Redacted
+Redacted,2021-05-23,Redacted,L-D-2.5,89.36,3,Redacted,United States,,Redacted
+Redacted,2021-05-23,Redacted,L-L-0.5,38.04,4,Redacted,United States,,Redacted
+Redacted,2021-05-23,Redacted,E-M-1,41.25,3,Redacted,United States,,Redacted
+Redacted,2021-04-08,Redacted,L-L-0.5,57.06,6,Redacted,United States,Redacted,
+Redacted,2021-10-17,Redacted,L-D-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-16,Redacted,L-L-0.2,4.76,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-15,Redacted,E-M-1,82.5,6,Redacted,United States,Redacted,
+Redacted,2020-02-22,Redacted,R-D-0.2,8.06,3,Redacted,United States,Redacted,
+Redacted,2021-01-15,Redacted,A-M-1,22.5,2,Redacted,United States,,Redacted
+Redacted,2021-01-11,Redacted,A-M-0.5,40.5,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-08,Redacted,E-D-0.5,29.16,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-10-01,Redacted,A-M-0.5,6.75,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-10-28,Redacted,L-D-1,51.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-28,Redacted,E-L-0.5,53.46,6,Redacted,United States,,Redacted
+Redacted,2020-03-31,Redacted,E-D-0.2,14.58,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-26,Redacted,R-D-2.5,20.59,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-06,Redacted,L-L-1,31.7,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-12-30,Redacted,L-D-0.2,23.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-01,Redacted,L-M-1,58.2,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-09,Redacted,E-L-0.5,35.64,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-01,Redacted,A-M-1,56.25,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-08-04,Redacted,R-L-0.2,10.76,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-08-04,Redacted,R-M-0.2,14.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-13,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-16,Redacted,L-D-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-05,Redacted,E-L-1,59.4,4,Redacted,United States,Redacted,
+Redacted,2020-01-06,Redacted,L-D-2.5,119.14,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-21,Redacted,R-L-0.2,14.34,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-02-26,Redacted,A-M-2.5,129.38,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-19,Redacted,R-D-0.2,16.11,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-06-29,Redacted,R-L-0.2,17.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-27,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-27,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-12,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,
+Redacted,2020-06-28,Redacted,L-L-0.2,23.78,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-03-23,Redacted,E-M-0.2,20.63,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-10,Redacted,L-L-2.5,36.46,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-16,Redacted,L-L-2.5,182.28,5,Redacted,Ireland,,
+Redacted,2020-02-12,Redacted,L-D-2.5,89.36,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-01-02,Redacted,R-L-0.2,3.59,1,Redacted,United States,Redacted,
+Redacted,2020-12-07,Redacted,R-M-2.5,45.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-20,Redacted,E-L-1,59.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-11,Redacted,A-M-2.5,155.25,6,Redacted,United States,,
+Redacted,2020-09-08,Redacted,R-M-2.5,45.77,2,Redacted,United States,Redacted,
+Redacted,2020-03-28,Redacted,E-D-1,36.45,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-10,Redacted,E-D-0.5,29.16,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-21,Redacted,L-M-2.5,133.86,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-30,Redacted,L-L-0.2,23.78,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-12,Redacted,L-D-1,38.85,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-10-27,Redacted,R-L-0.2,21.51,6,Redacted,Ireland,Redacted,
+Redacted,2020-07-07,Redacted,A-D-1,9.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-31,Redacted,L-L-1,15.85,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-18,Redacted,R-M-0.2,2.99,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-13,Redacted,E-M-1,68.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-08-06,Redacted,A-D-1,29.85,3,Redacted,United States,Redacted,
+Redacted,2021-11-23,Redacted,L-M-1,58.2,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-13,Redacted,R-L-0.5,28.68,4,Redacted,United Kingdom,,Redacted
+Redacted,2021-08-31,Redacted,R-L-0.5,21.51,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-16,Redacted,L-M-0.5,17.46,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-25,Redacted,E-D-2.5,27.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-13,Redacted,E-D-2.5,139.73,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-08,Redacted,R-M-0.2,5.97,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-11-21,Redacted,R-L-2.5,27.49,1,Redacted,United States,,Redacted
+Redacted,2019-03-14,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-16,Redacted,E-M-1,41.25,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-22,Redacted,L-M-2.5,133.86,4,Redacted,United States,Redacted,
+Redacted,2022-05-02,Redacted,R-L-1,59.75,5,Redacted,Ireland,Redacted,
+Redacted,2020-02-11,Redacted,A-D-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-28,Redacted,E-D-1,24.3,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-05-08,Redacted,E-D-0.2,21.87,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-21,Redacted,A-D-1,19.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-17,Redacted,A-D-0.2,5.97,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-09,Redacted,E-D-0.5,7.29,1,Redacted,Ireland,,
+Redacted,2020-05-20,Redacted,A-D-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-27,Redacted,R-L-1,71.7,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-30,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-03,Redacted,A-M-2.5,25.88,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-13,Redacted,E-L-2.5,204.93,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-10,Redacted,R-L-2.5,109.94,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-12-18,Redacted,E-L-1,89.1,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-31,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-25,Redacted,L-M-2.5,33.47,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-07,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,
+Redacted,2021-01-14,Redacted,E-L-1,59.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-24,Redacted,A-L-0.5,7.77,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-06-23,Redacted,R-D-0.5,5.37,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-05-09,Redacted,E-M-2.5,94.88,3,Redacted,United States,Redacted,
+Redacted,2020-07-18,Redacted,L-L-2.5,36.46,1,Redacted,United States,Redacted,
+Redacted,2019-10-17,Redacted,A-M-0.2,13.5,4,Redacted,United States,,Redacted
+Redacted,2022-05-16,Redacted,R-L-0.2,14.34,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-24,Redacted,E-M-0.5,8.25,1,Redacted,Ireland,Redacted,
+Redacted,2019-11-03,Redacted,R-D-0.2,13.43,5,Redacted,United States,,
+Redacted,2021-10-28,Redacted,A-D-1,49.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-16,Redacted,E-M-0.5,16.5,2,Redacted,Ireland,,
+Redacted,2021-11-29,Redacted,A-D-0.5,17.91,3,Redacted,United States,,Redacted
+Redacted,2021-03-20,Redacted,A-D-0.5,29.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-08,Redacted,E-L-1,44.55,3,Redacted,United States,Redacted,
+Redacted,2020-08-14,Redacted,E-M-1,27.5,2,Redacted,United States,,
+Redacted,2019-05-12,Redacted,R-M-0.5,35.82,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-03,Redacted,R-D-0.5,16.11,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-11,Redacted,E-L-0.2,26.73,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-27,Redacted,E-L-2.5,204.93,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-26,Redacted,A-L-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-28,Redacted,L-D-0.2,15.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-24,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-04,Redacted,E-D-2.5,111.78,4,Redacted,United States,,Redacted
+Redacted,2019-12-29,Redacted,A-L-0.2,3.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-27,Redacted,L-M-0.2,21.83,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-02-29,Redacted,R-M-0.2,14.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-31,Redacted,A-M-1,33.75,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-17,Redacted,A-M-1,33.75,3,Redacted,United Kingdom,,Redacted
+Redacted,2020-02-03,Redacted,L-M-0.2,26.19,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-25,Redacted,E-L-1,14.85,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-04-30,Redacted,E-M-2.5,189.75,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-01,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-28,Redacted,R-M-1,29.85,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-08-29,Redacted,R-D-1,44.75,5,Redacted,United States,Redacted,
+Redacted,2019-12-27,Redacted,E-L-2.5,34.16,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-25,Redacted,E-L-2.5,204.93,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-03-02,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-02,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-30,Redacted,E-M-0.2,8.25,2,Redacted,United States,,Redacted
+Redacted,2019-07-30,Redacted,A-L-0.2,19.43,5,Redacted,United States,,Redacted
+Redacted,2020-12-05,Redacted,A-M-0.2,20.25,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-12-17,Redacted,L-D-0.5,23.31,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-06-26,Redacted,E-D-0.2,18.23,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-20,Redacted,E-M-1,13.75,1,Redacted,United States,Redacted,
+Redacted,2022-07-14,Redacted,A-L-2.5,29.79,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-08-14,Redacted,R-D-1,44.75,5,Redacted,United States,Redacted,
+Redacted,2019-04-24,Redacted,R-D-1,44.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-04,Redacted,L-L-0.5,38.04,4,Redacted,United States,Redacted,
+Redacted,2022-08-08,Redacted,R-D-0.5,21.48,4,Redacted,United States,,Redacted
+Redacted,2019-11-13,Redacted,R-D-0.5,16.11,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-07,Redacted,R-M-2.5,22.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-12,Redacted,A-D-0.5,17.91,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-04,Redacted,R-M-0.5,23.88,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-04,Redacted,R-L-1,59.75,5,Redacted,United States,,
+Redacted,2020-02-24,Redacted,L-L-0.2,28.53,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-26,Redacted,A-M-1,45.0,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-10-03,Redacted,E-D-2.5,55.89,2,Redacted,United States,Redacted,
+Redacted,2020-06-13,Redacted,E-L-1,59.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-01,Redacted,E-D-0.2,7.29,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-04,Redacted,E-D-0.5,7.29,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-13,Redacted,E-L-0.5,17.82,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-13,Redacted,L-D-0.5,38.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-15,Redacted,R-D-0.5,32.22,6,Redacted,United States,,Redacted
+Redacted,2021-11-29,Redacted,R-M-1,19.9,2,Redacted,Ireland,Redacted,
+Redacted,2020-01-19,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-28,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-15,Redacted,L-M-1,43.65,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-04,Redacted,E-L-2.5,204.93,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-01,Redacted,R-L-0.2,14.34,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-07,Redacted,A-D-0.5,23.88,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-08-23,Redacted,A-M-1,22.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-02,Redacted,E-D-0.5,36.45,5,Redacted,United States,Redacted,
+Redacted,2020-01-30,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,
+Redacted,2020-02-15,Redacted,A-M-2.5,155.25,6,Redacted,United States,,Redacted
+Redacted,2021-06-11,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-11,Redacted,L-D-1,51.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-09,Redacted,A-M-2.5,155.25,6,Redacted,United States,Redacted,
+Redacted,2019-05-14,Redacted,A-L-2.5,29.79,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-08,Redacted,R-L-0.2,21.51,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-08-15,Redacted,R-D-2.5,41.17,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-08-15,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-05,Redacted,E-L-1,74.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-27,Redacted,L-M-1,87.3,6,Redacted,United States,,Redacted
+Redacted,2019-04-27,Redacted,E-D-1,72.9,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-25,Redacted,L-D-0.5,7.77,1,Redacted,United States,,Redacted
+Redacted,2020-02-13,Redacted,E-D-0.5,43.74,6,Redacted,United States,Redacted,
+Redacted,2021-07-16,Redacted,L-M-0.2,8.73,2,Redacted,United States,,
+Redacted,2022-05-11,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-04,Redacted,E-L-0.5,8.91,1,Redacted,United States,,
+Redacted,2019-02-05,Redacted,E-D-1,24.3,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-24,Redacted,A-L-0.5,46.62,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-04,Redacted,R-L-0.5,43.02,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-30,Redacted,A-D-0.5,17.91,3,Redacted,Ireland,Redacted,
+Redacted,2020-10-21,Redacted,L-L-0.5,38.04,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-16,Redacted,A-M-0.2,6.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-23,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-08,Redacted,R-D-0.2,8.06,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-06-30,Redacted,A-L-0.5,23.31,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-08-13,Redacted,R-L-0.5,43.02,6,Redacted,United Kingdom,,Redacted
+Redacted,2021-02-22,Redacted,L-D-0.5,23.31,3,Redacted,United States,Redacted,
+Redacted,2022-03-26,Redacted,A-D-0.2,14.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-10,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-01,Redacted,E-L-0.5,53.46,6,Redacted,United States,Redacted,
+Redacted,2020-02-09,Redacted,A-L-2.5,119.14,4,Redacted,United States,Redacted,
+Redacted,2021-12-29,Redacted,L-M-0.5,43.65,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-09,Redacted,A-D-0.2,17.91,6,Redacted,United States,Redacted,
+Redacted,2021-09-16,Redacted,E-L-1,74.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-26,Redacted,L-D-0.2,11.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-12,Redacted,L-D-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-18,Redacted,E-D-0.5,14.58,2,Redacted,United States,,Redacted
+Redacted,2020-10-29,Redacted,A-M-0.5,13.5,2,Redacted,United States,,Redacted
+Redacted,2021-09-06,Redacted,E-L-1,89.1,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-06,Redacted,A-L-0.2,3.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-09,Redacted,R-L-2.5,109.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-26,Redacted,L-D-0.5,46.62,6,Redacted,United States,,Redacted
+Redacted,2020-11-05,Redacted,A-L-0.5,38.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-12,Redacted,L-D-0.5,31.08,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-31,Redacted,A-D-0.2,17.91,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-15,Redacted,E-D-2.5,167.67,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-05-16,Redacted,L-L-1,63.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-06,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-06,Redacted,R-D-1,26.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-09,Redacted,L-L-0.2,9.51,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-20,Redacted,A-D-1,39.8,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-12-02,Redacted,E-M-0.5,24.75,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-08,Redacted,E-M-1,68.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-03,Redacted,E-M-0.5,49.5,6,Redacted,Ireland,Redacted,
+Redacted,2022-04-08,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-07,Redacted,L-L-1,47.55,3,Redacted,Ireland,Redacted,
+Redacted,2021-09-02,Redacted,A-L-0.2,15.54,4,Redacted,United States,Redacted,
+Redacted,2021-11-04,Redacted,L-M-1,87.3,6,Redacted,United States,Redacted,
+Redacted,2021-08-02,Redacted,A-M-1,56.25,5,Redacted,United States,Redacted,
+Redacted,2020-01-27,Redacted,L-L-2.5,36.46,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-03,Redacted,R-L-0.2,10.76,3,Redacted,United States,Redacted,
+Redacted,2019-08-06,Redacted,R-M-0.2,8.96,3,Redacted,United States,,Redacted
+Redacted,2020-03-11,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,
+Redacted,2021-09-18,Redacted,A-L-2.5,29.79,1,Redacted,United States,Redacted,
+Redacted,2020-11-07,Redacted,A-L-2.5,148.93,5,Redacted,United States,,Redacted
+Redacted,2022-06-27,Redacted,L-M-0.5,8.73,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-05,Redacted,L-D-0.5,31.08,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-05,Redacted,A-D-2.5,137.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-07,Redacted,A-D-0.5,29.85,5,Redacted,United States,Redacted,
+Redacted,2020-12-18,Redacted,R-M-0.5,17.91,3,Redacted,United States,Redacted,
+Redacted,2021-08-23,Redacted,E-L-0.5,26.73,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-20,Redacted,R-D-1,17.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-01,Redacted,R-L-0.2,14.34,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-01-28,Redacted,A-M-2.5,77.63,3,Redacted,United States,Redacted,
+Redacted,2019-10-21,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-20,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-04,Redacted,R-D-0.2,5.37,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-05,Redacted,E-D-2.5,83.84,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-12-09,Redacted,A-M-1,22.5,2,Redacted,United States,Redacted,
+Redacted,2022-01-02,Redacted,L-M-2.5,200.79,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-08,Redacted,A-M-1,67.5,6,Redacted,United States,Redacted,
+Redacted,2021-11-28,Redacted,E-M-0.5,8.25,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-11,Redacted,L-L-0.2,9.51,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-17,Redacted,L-D-2.5,29.79,1,Redacted,United States,Redacted,
+Redacted,2019-01-18,Redacted,L-D-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-07,Redacted,E-L-0.5,35.64,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-02-03,Redacted,A-M-2.5,103.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-18,Redacted,E-D-1,36.45,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-07-07,Redacted,R-L-0.5,35.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-23,Redacted,E-L-0.2,22.28,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-08-10,Redacted,E-M-0.2,24.75,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-11-15,Redacted,L-M-2.5,66.93,2,Redacted,Ireland,,Redacted
+Redacted,2019-12-17,Redacted,L-M-0.5,8.73,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-03-18,Redacted,R-M-0.5,17.91,3,Redacted,United States,,Redacted
+Redacted,2022-06-06,Redacted,R-L-0.5,7.17,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-05-20,Redacted,R-D-0.2,5.37,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-11,Redacted,L-L-0.2,23.78,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-02-22,Redacted,R-D-2.5,41.17,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-24,Redacted,A-L-0.2,11.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-18,Redacted,L-L-0.5,38.04,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-13,Redacted,R-D-2.5,82.34,4,Redacted,Ireland,,Redacted
+Redacted,2020-01-11,Redacted,L-L-0.2,9.51,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-05,Redacted,R-D-2.5,41.17,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-07-25,Redacted,L-L-0.5,47.55,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-26,Redacted,A-M-1,45.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-10,Redacted,L-L-0.2,23.78,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-17,Redacted,R-D-0.5,16.11,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-24,Redacted,R-D-0.2,10.74,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-10-20,Redacted,A-D-1,49.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-22,Redacted,E-M-1,27.5,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-06-07,Redacted,L-D-2.5,119.14,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-12-15,Redacted,R-D-2.5,20.59,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-06,Redacted,A-D-0.2,8.96,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-06,Redacted,A-D-0.5,5.97,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-11,Redacted,E-M-1,41.25,3,Redacted,United States,,Redacted
+Redacted,2021-06-28,Redacted,E-L-0.2,22.28,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-05,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-24,Redacted,L-M-2.5,133.86,4,Redacted,United States,Redacted,
+Redacted,2020-02-08,Redacted,A-D-0.2,5.97,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-11,Redacted,A-L-1,25.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-02,Redacted,E-M-2.5,31.63,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-07-25,Redacted,L-M-0.2,8.73,2,Redacted,United States,,Redacted
+Redacted,2021-03-19,Redacted,E-L-0.2,26.73,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-11,Redacted,L-M-0.2,26.19,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-08,Redacted,R-D-1,53.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-08,Redacted,E-M-2.5,126.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-08,Redacted,E-M-0.2,4.13,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-09,Redacted,R-L-1,23.9,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-02-20,Redacted,E-D-2.5,139.73,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-21,Redacted,L-D-2.5,59.57,2,Redacted,United States,Redacted,
+Redacted,2021-10-10,Redacted,L-L-0.5,57.06,6,Redacted,United States,,Redacted
+Redacted,2021-08-05,Redacted,R-L-0.2,21.51,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-31,Redacted,L-M-0.5,52.38,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-09-19,Redacted,E-D-1,72.9,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-05-03,Redacted,R-M-0.2,14.93,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-07-08,Redacted,L-L-1,95.1,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-26,Redacted,L-D-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-27,Redacted,L-D-0.2,23.31,6,Redacted,United States,Redacted,
+Redacted,2022-02-28,Redacted,E-M-0.2,4.13,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-16,Redacted,R-M-0.5,35.82,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-10-28,Redacted,L-L-1,31.7,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-02,Redacted,L-L-1,79.25,5,Redacted,United States,Redacted,
+Redacted,2021-08-30,Redacted,E-D-0.2,10.94,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-04,Redacted,A-D-1,39.8,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-11-24,Redacted,R-M-1,49.75,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-06-21,Redacted,R-D-0.2,8.06,3,Redacted,Ireland,Redacted,
+Redacted,2020-07-13,Redacted,R-L-1,47.8,4,Redacted,United States,Redacted,
+Redacted,2019-01-02,Redacted,R-M-0.2,11.94,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-01-02,Redacted,E-M-0.2,16.5,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-01-02,Redacted,L-D-1,51.8,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-01-02,Redacted,L-L-0.2,14.27,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2022-02-17,Redacted,L-M-0.2,26.19,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-19,Redacted,A-L-1,25.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-20,Redacted,A-L-2.5,89.36,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-14,Redacted,L-D-0.5,46.62,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-11-16,Redacted,A-D-1,29.85,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-12-04,Redacted,R-L-0.2,10.76,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-31,Redacted,A-M-0.2,13.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-11,Redacted,L-L-1,47.55,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-10,Redacted,L-L-1,79.25,5,Redacted,United States,,Redacted
+Redacted,2021-12-25,Redacted,L-M-0.2,26.19,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-22,Redacted,R-L-0.5,21.51,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-11,Redacted,R-D-2.5,102.93,5,Redacted,United States,Redacted,
+Redacted,2022-04-27,Redacted,L-D-0.2,7.77,2,Redacted,United States,Redacted,
+Redacted,2020-12-29,Redacted,E-D-2.5,139.73,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-14,Redacted,A-D-0.5,11.94,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-09-07,Redacted,L-D-0.2,3.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-07,Redacted,R-M-1,39.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-09,Redacted,R-M-0.5,29.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-25,Redacted,L-D-2.5,29.79,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-02-28,Redacted,L-L-2.5,72.91,2,Redacted,United States,Redacted,
+Redacted,2020-07-26,Redacted,R-D-0.2,13.43,5,Redacted,United States,Redacted,
+Redacted,2022-06-05,Redacted,E-M-2.5,126.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-21,Redacted,E-M-0.5,41.25,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-04-05,Redacted,E-L-0.5,53.46,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-10,Redacted,R-M-1,59.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-12,Redacted,R-M-1,59.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-30,Redacted,R-D-1,44.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-14,Redacted,E-M-0.5,16.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-12,Redacted,R-D-0.5,21.48,4,Redacted,United States,Redacted,
+Redacted,2022-01-02,Redacted,R-M-2.5,45.77,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-01-24,Redacted,L-L-0.2,9.51,2,Redacted,Ireland,Redacted,
+Redacted,2019-03-20,Redacted,R-D-0.2,8.06,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-11-21,Redacted,E-D-2.5,111.78,4,Redacted,United States,,Redacted
+Redacted,2021-10-13,Redacted,R-D-0.2,10.74,4,Redacted,United States,,Redacted
+Redacted,2021-10-19,Redacted,R-D-0.5,26.85,5,Redacted,United States,,Redacted
+Redacted,2019-04-29,Redacted,L-L-1,63.4,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-12,Redacted,A-D-2.5,22.89,1,Redacted,Ireland,Redacted,
+Redacted,2021-05-19,Redacted,A-M-2.5,103.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-03,Redacted,R-L-2.5,54.97,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-08,Redacted,A-L-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-16,Redacted,L-D-0.2,15.54,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-10-23,Redacted,E-D-2.5,83.84,3,Redacted,Ireland,Redacted,
+Redacted,2021-03-10,Redacted,R-L-0.2,10.76,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-07,Redacted,E-L-0.2,13.37,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-05,Redacted,E-L-0.2,17.82,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-11,Redacted,L-D-0.2,23.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-13,Redacted,E-D-0.2,7.29,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-23,Redacted,E-L-0.2,17.82,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-09-11,Redacted,E-M-1,68.75,5,Redacted,United States,,Redacted
+Redacted,2019-09-29,Redacted,R-L-2.5,54.97,2,Redacted,United Kingdom,Redacted,
+Redacted,2021-03-03,Redacted,E-M-1,82.5,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-11-23,Redacted,L-M-0.2,8.73,2,Redacted,United States,,Redacted
+Redacted,2021-11-06,Redacted,E-L-1,59.4,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-01-29,Redacted,L-D-0.2,15.54,4,Redacted,United States,Redacted,
+Redacted,2022-04-16,Redacted,A-L-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-24,Redacted,E-M-2.5,189.75,6,Redacted,United States,Redacted,
+Redacted,2019-08-11,Redacted,A-D-0.2,17.91,6,Redacted,Ireland,Redacted,
+Redacted,2019-07-23,Redacted,L-L-0.2,28.53,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-06-09,Redacted,E-M-1,82.5,6,Redacted,United Kingdom,,Redacted
+Redacted,2020-02-22,Redacted,R-L-0.5,14.34,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-19,Redacted,R-D-2.5,82.34,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-20,Redacted,A-M-0.2,20.25,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-02,Redacted,R-L-2.5,164.91,6,Redacted,Ireland,Redacted,
+Redacted,2021-11-26,Redacted,L-L-0.2,19.02,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-18,Redacted,A-D-2.5,137.31,6,Redacted,United Kingdom,,Redacted
+Redacted,2020-04-07,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-31,Redacted,E-L-0.5,35.64,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-02-19,Redacted,A-D-0.2,5.97,2,Redacted,United States,,
+Redacted,2019-11-12,Redacted,A-M-1,67.5,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-16,Redacted,R-L-0.2,21.51,6,Redacted,United States,,Redacted
+Redacted,2021-02-12,Redacted,L-M-2.5,66.93,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-04,Redacted,A-D-0.2,17.91,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-02,Redacted,L-M-1,58.2,4,Redacted,United Kingdom,,Redacted
+Redacted,2022-06-08,Redacted,E-L-0.2,13.37,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-06-08,Redacted,A-M-0.5,33.75,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-05-14,Redacted,E-L-1,44.55,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-25,Redacted,E-L-0.5,44.55,5,Redacted,United Kingdom,,Redacted
+Redacted,2021-07-05,Redacted,E-D-1,60.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-14,Redacted,R-L-0.2,3.59,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-07,Redacted,R-L-0.2,21.51,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-05,Redacted,E-M-0.5,16.5,2,Redacted,United Kingdom,,Redacted
+Redacted,2020-02-06,Redacted,R-L-2.5,82.46,3,Redacted,United States,Redacted,
+Redacted,2021-03-12,Redacted,L-D-0.5,7.77,1,Redacted,United States,,Redacted
+Redacted,2020-08-03,Redacted,R-M-0.5,11.94,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-25,Redacted,E-L-2.5,204.93,6,Redacted,United States,,Redacted
+Redacted,2020-04-29,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-02,Redacted,R-D-0.2,8.06,3,Redacted,United States,,Redacted
+Redacted,2021-08-29,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,
+Redacted,2020-03-13,Redacted,E-D-2.5,27.95,1,Redacted,United Kingdom,,Redacted
+Redacted,2019-02-16,Redacted,A-L-2.5,59.57,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-27,Redacted,E-L-1,14.85,1,Redacted,United Kingdom,,
+Redacted,2021-11-23,Redacted,A-M-0.5,33.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-02,Redacted,L-L-2.5,145.82,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-06,Redacted,R-M-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-05,Redacted,A-D-0.2,11.94,4,Redacted,United States,,Redacted
+Redacted,2021-10-23,Redacted,L-D-0.5,7.77,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-16,Redacted,R-L-2.5,109.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-18,Redacted,E-L-0.2,22.28,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-14,Redacted,R-M-0.2,8.96,3,Redacted,United States,,Redacted
+Redacted,2020-11-13,Redacted,L-D-2.5,119.14,4,Redacted,Ireland,Redacted,
+Redacted,2020-07-16,Redacted,A-L-2.5,148.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-03,Redacted,L-L-2.5,109.37,3,Redacted,United Kingdom,,Redacted
+Redacted,2022-03-20,Redacted,E-D-0.2,3.65,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-16,Redacted,E-D-2.5,55.89,2,Redacted,United States,,
+Redacted,2020-11-12,Redacted,L-M-0.2,26.19,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-05,Redacted,R-M-1,39.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-01,Redacted,E-L-2.5,68.31,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-06,Redacted,A-M-0.2,13.5,4,Redacted,Ireland,Redacted,
+Redacted,2019-10-23,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,
+Redacted,2020-04-23,Redacted,R-M-0.5,29.85,5,Redacted,United Kingdom,,Redacted
+Redacted,2020-06-24,Redacted,L-L-2.5,72.91,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-16,Redacted,E-M-2.5,126.5,4,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-04-07,Redacted,L-M-2.5,33.47,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-30,Redacted,E-D-1,72.9,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-01,Redacted,L-D-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-21,Redacted,A-M-0.2,20.25,6,Redacted,United States,,Redacted
+Redacted,2020-06-24,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-03,Redacted,L-M-2.5,133.86,4,Redacted,United States,,Redacted
+Redacted,2021-01-28,Redacted,E-D-1,12.15,1,Redacted,United Kingdom,Redacted,
+Redacted,2020-06-28,Redacted,E-M-2.5,63.25,2,Redacted,Ireland,,Redacted
+Redacted,2020-07-05,Redacted,R-L-0.5,35.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-02,Redacted,A-M-2.5,77.63,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-01,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-29,Redacted,E-L-0.2,26.73,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-29,Redacted,L-D-0.5,31.08,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-29,Redacted,A-D-0.2,2.99,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-29,Redacted,R-D-2.5,102.93,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-08-06,Redacted,E-L-0.5,35.64,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-21,Redacted,R-L-1,47.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-19,Redacted,L-M-1,43.65,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-17,Redacted,E-L-0.5,35.64,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-22,Redacted,L-L-1,95.1,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-28,Redacted,E-M-2.5,31.63,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-08-07,Redacted,A-M-2.5,77.63,3,Redacted,Ireland,Redacted,
+Redacted,2021-05-15,Redacted,L-D-0.2,3.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-17,Redacted,R-L-2.5,137.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-09,Redacted,R-L-1,35.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-19,Redacted,E-M-0.2,8.25,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-06-29,Redacted,E-L-2.5,102.47,3,Redacted,United States,,Redacted
+Redacted,2022-05-13,Redacted,R-D-2.5,41.17,2,Redacted,United States,Redacted,
+Redacted,2020-10-02,Redacted,A-D-2.5,68.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-02,Redacted,A-D-1,9.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-02,Redacted,L-L-0.5,28.53,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-02-23,Redacted,R-D-0.2,16.11,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-03,Redacted,L-L-1,95.1,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-02-11,Redacted,R-D-0.5,5.37,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-10,Redacted,R-L-1,47.8,4,Redacted,United States,Redacted,
+Redacted,2020-03-02,Redacted,L-L-1,63.4,4,Redacted,Ireland,,Redacted
+Redacted,2021-06-28,Redacted,A-M-2.5,103.5,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-11,Redacted,A-D-2.5,68.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-20,Redacted,R-M-2.5,45.77,2,Redacted,United States,,Redacted
+Redacted,2021-10-16,Redacted,L-D-1,51.8,4,Redacted,United States,,Redacted
+Redacted,2020-01-01,Redacted,A-M-0.5,13.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-10,Redacted,E-M-0.5,24.75,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-12,Redacted,A-D-2.5,45.77,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-09-10,Redacted,E-L-0.5,53.46,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-16,Redacted,A-M-0.2,20.25,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-17,Redacted,L-D-2.5,148.93,5,Redacted,United States,,Redacted
+Redacted,2019-03-30,Redacted,A-M-1,67.5,6,Redacted,United States,,Redacted
+Redacted,2021-12-19,Redacted,E-D-1,72.9,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-19,Redacted,L-D-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-05,Redacted,A-D-2.5,91.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-12,Redacted,A-D-1,59.7,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-03-16,Redacted,R-L-2.5,137.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-21,Redacted,L-M-2.5,66.93,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-05-21,Redacted,L-M-0.2,13.1,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-26,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-26,Redacted,L-M-0.5,43.65,5,Redacted,United States,,Redacted
+Redacted,2020-10-14,Redacted,E-M-1,82.5,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-13,Redacted,A-L-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-08,Redacted,L-D-2.5,119.14,4,Redacted,United States,Redacted,
+Redacted,2021-01-21,Redacted,L-L-0.5,47.55,5,Redacted,United States,Redacted,
+Redacted,2021-01-10,Redacted,L-M-0.5,43.65,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-03-26,Redacted,A-L-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-25,Redacted,R-L-2.5,27.49,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-07-22,Redacted,A-M-1,56.25,5,Redacted,United States,,Redacted
+Redacted,2020-09-06,Redacted,L-L-0.2,9.51,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-12-28,Redacted,E-M-0.2,8.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-20,Redacted,L-D-0.5,46.62,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-21,Redacted,R-L-1,71.7,6,Redacted,United States,Redacted,
+Redacted,2022-03-17,Redacted,L-L-2.5,72.91,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-14,Redacted,R-D-0.2,8.06,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-06,Redacted,E-M-0.5,16.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-24,Redacted,A-L-1,64.75,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-05-30,Redacted,A-M-0.5,33.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-12,Redacted,L-D-2.5,178.71,6,Redacted,United States,,
+Redacted,2021-01-31,Redacted,A-M-1,22.5,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-09-12,Redacted,L-D-1,12.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-30,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-25,Redacted,E-D-0.5,36.45,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-14,Redacted,L-L-2.5,182.28,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-16,Redacted,L-D-0.5,31.08,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-17,Redacted,A-M-0.5,20.25,3,Redacted,Ireland,,
+Redacted,2019-12-31,Redacted,L-D-1,25.9,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-04-12,Redacted,A-D-0.5,23.88,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-28,Redacted,L-L-0.5,19.02,2,Redacted,United States,,Redacted
+Redacted,2022-06-15,Redacted,A-D-0.5,29.85,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-07-15,Redacted,A-L-0.5,7.77,1,Redacted,United States,,Redacted
+Redacted,2019-02-10,Redacted,L-D-2.5,119.14,4,Redacted,Ireland,Redacted,
+Redacted,2022-06-04,Redacted,E-D-0.2,21.87,6,Redacted,United States,Redacted,
+Redacted,2020-10-10,Redacted,E-L-0.5,17.82,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-06,Redacted,E-M-0.2,12.38,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-16,Redacted,L-D-1,25.9,2,Redacted,Ireland,Redacted,
+Redacted,2019-12-05,Redacted,A-M-0.5,13.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-20,Redacted,E-L-0.5,17.82,2,Redacted,United States,Redacted,
+Redacted,2022-04-04,Redacted,E-M-0.5,24.75,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-08,Redacted,R-M-0.2,17.91,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-30,Redacted,E-M-0.5,16.5,2,Redacted,United Kingdom,,
+Redacted,2020-05-09,Redacted,R-M-0.2,2.99,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-11,Redacted,E-D-0.2,14.58,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-11-04,Redacted,E-L-1,89.1,6,Redacted,United States,,Redacted
+Redacted,2022-02-20,Redacted,R-L-1,35.85,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-07-03,Redacted,A-D-2.5,68.66,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-06-01,Redacted,L-D-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-15,Redacted,L-L-1,79.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-19,Redacted,E-D-0.5,36.45,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-10,Redacted,R-M-0.2,8.96,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-28,Redacted,E-D-1,24.3,2,Redacted,United States,Redacted,
+Redacted,2021-10-01,Redacted,E-M-2.5,63.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-09-02,Redacted,A-M-0.2,6.75,2,Redacted,United States,Redacted,
+Redacted,2020-07-31,Redacted,A-L-0.2,23.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-10,Redacted,L-L-2.5,145.82,4,Redacted,United States,Redacted,
+Redacted,2021-03-09,Redacted,R-M-0.5,29.85,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-11-20,Redacted,E-D-0.5,21.87,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-14,Redacted,L-M-0.2,4.37,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-01-10,Redacted,L-L-2.5,36.46,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-26,Redacted,L-D-0.2,15.54,4,Redacted,United States,Redacted,
+Redacted,2021-04-26,Redacted,E-L-0.2,8.91,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-04,Redacted,L-M-2.5,100.4,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-20,Redacted,R-D-0.2,13.43,5,Redacted,United States,Redacted,
+Redacted,2022-07-15,Redacted,E-D-0.2,21.87,6,Redacted,United States,,Redacted
+Redacted,2019-02-12,Redacted,L-D-1,25.9,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-09-08,Redacted,A-M-1,56.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-13,Redacted,R-L-0.2,10.76,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-08-25,Redacted,E-D-0.2,18.23,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-03-23,Redacted,R-L-0.5,28.68,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-04-11,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-29,Redacted,L-M-1,58.2,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-30,Redacted,A-D-0.5,17.91,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-15,Redacted,R-M-0.2,17.91,6,Redacted,United States,Redacted,
+Redacted,2021-12-27,Redacted,E-D-0.5,14.58,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-10-03,Redacted,A-M-1,33.75,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-02-05,Redacted,L-M-0.5,34.92,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-08-31,Redacted,E-D-0.5,14.58,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-13,Redacted,R-D-0.2,5.37,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-03-22,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,
+Redacted,2020-01-17,Redacted,L-L-0.5,19.02,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-02,Redacted,E-M-1,27.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-23,Redacted,A-D-0.5,29.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-14,Redacted,A-D-0.2,17.91,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-07-20,Redacted,L-L-0.2,28.53,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-03,Redacted,R-D-1,35.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-26,Redacted,A-D-0.5,17.91,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-26,Redacted,R-D-1,8.95,1,Redacted,United States,,Redacted
+Redacted,2020-10-22,Redacted,L-D-2.5,29.79,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-12-24,Redacted,E-L-0.5,44.55,5,Redacted,United States,,Redacted
+Redacted,2019-09-06,Redacted,E-L-1,89.1,6,Redacted,United States,,Redacted
+Redacted,2019-04-08,Redacted,L-M-0.5,43.65,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2022-01-26,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,
+Redacted,2019-11-28,Redacted,A-L-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-21,Redacted,R-M-1,59.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-21,Redacted,A-L-0.5,15.54,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-12,Redacted,A-L-2.5,89.36,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-01,Redacted,R-L-1,23.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-22,Redacted,R-M-2.5,137.31,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-09-18,Redacted,A-D-1,9.95,1,Redacted,United States,,Redacted
+Redacted,2019-01-03,Redacted,R-L-0.5,21.51,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-29,Redacted,E-M-1,82.5,6,Redacted,United States,Redacted,
+Redacted,2021-10-19,Redacted,L-M-0.2,8.73,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-07-14,Redacted,R-M-1,19.9,2,Redacted,United States,Redacted,
+Redacted,2021-07-19,Redacted,E-L-0.5,17.82,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-10,Redacted,A-M-0.5,20.25,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-17,Redacted,A-L-2.5,59.57,2,Redacted,United States,,Redacted
+Redacted,2020-02-28,Redacted,L-L-0.5,19.02,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-03,Redacted,L-D-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-22,Redacted,E-M-1,41.25,3,Redacted,United States,Redacted,
+Redacted,2019-11-09,Redacted,L-L-2.5,145.82,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-07,Redacted,E-L-0.2,26.73,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-04-26,Redacted,L-M-0.5,43.65,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-11,Redacted,L-L-1,31.7,2,Redacted,United States,,Redacted
+Redacted,2021-06-15,Redacted,A-D-2.5,22.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-27,Redacted,E-D-2.5,27.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-19,Redacted,E-M-1,82.5,6,Redacted,United States,Redacted,
+Redacted,2022-07-29,Redacted,R-M-2.5,45.77,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-01-20,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-02-21,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-03,Redacted,L-L-0.2,23.78,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-21,Redacted,L-M-0.5,52.38,6,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-06-13,Redacted,R-L-0.2,17.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-05,Redacted,A-L-2.5,148.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-16,Redacted,R-L-0.5,28.68,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-03,Redacted,L-L-0.5,9.51,1,Redacted,United States,Redacted,
+Redacted,2022-07-09,Redacted,A-L-0.5,31.08,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-29,Redacted,R-D-0.2,8.06,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-27,Redacted,E-D-1,36.45,3,Redacted,United States,,
+Redacted,2021-02-13,Redacted,R-D-0.2,16.11,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-07-13,Redacted,R-D-2.5,41.17,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-12,Redacted,R-D-0.2,10.74,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-04,Redacted,E-M-2.5,126.5,4,Redacted,United States,,Redacted
+Redacted,2021-04-03,Redacted,R-L-1,23.9,2,Redacted,United Kingdom,Redacted,
+Redacted,2022-06-01,Redacted,R-M-0.5,5.97,1,Redacted,United States,Redacted,
+Redacted,2021-02-14,Redacted,L-D-0.2,7.77,2,Redacted,United Kingdom,,
+Redacted,2021-12-13,Redacted,L-D-0.5,23.31,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-02-07,Redacted,R-L-2.5,137.43,5,Redacted,United States,Redacted,
+Redacted,2021-02-08,Redacted,R-D-0.2,8.06,3,Redacted,United States,Redacted,
+Redacted,2020-08-11,Redacted,L-L-0.5,28.53,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-10,Redacted,A-M-1,67.5,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-10-10,Redacted,L-D-2.5,178.71,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2020-12-08,Redacted,E-M-2.5,31.63,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-18,Redacted,E-L-0.2,8.91,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-04,Redacted,R-M-0.5,35.82,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-10,Redacted,L-L-0.5,38.04,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-11-29,Redacted,L-D-0.5,15.54,2,Redacted,United States,,Redacted
+Redacted,2022-07-19,Redacted,L-L-1,79.25,5,Redacted,United States,Redacted,
+Redacted,2020-06-26,Redacted,L-L-0.2,4.76,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-14,Redacted,E-M-1,55.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-09,Redacted,R-D-0.5,26.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-30,Redacted,E-L-2.5,136.62,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-30,Redacted,L-L-1,47.55,3,Redacted,United States,Redacted,Redacted
+Redacted,2019-11-12,Redacted,A-M-0.2,16.88,5,Redacted,United States,,Redacted
+Redacted,2022-02-11,Redacted,A-D-1,29.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-28,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-10,Redacted,E-M-0.2,20.63,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-05,Redacted,A-D-2.5,137.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-29,Redacted,A-D-0.2,2.99,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-06,Redacted,E-M-1,27.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-06,Redacted,A-D-0.2,5.97,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-19,Redacted,R-M-1,59.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-16,Redacted,R-D-2.5,82.34,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-06,Redacted,A-D-2.5,22.89,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-15,Redacted,E-L-0.5,8.91,1,Redacted,United States,,Redacted
+Redacted,2021-10-17,Redacted,A-D-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-07,Redacted,L-M-2.5,100.4,3,Redacted,United States,Redacted,
+Redacted,2022-07-13,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-21,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-01-13,Redacted,R-L-0.5,28.68,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-13,Redacted,L-M-0.2,4.37,1,Redacted,United States,,Redacted
+Redacted,2021-11-02,Redacted,E-M-0.2,8.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-07-10,Redacted,E-M-0.2,8.25,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-07,Redacted,A-D-0.5,35.82,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-28,Redacted,E-D-2.5,167.67,6,Redacted,United States,,Redacted
+Redacted,2022-07-05,Redacted,A-M-2.5,51.75,2,Redacted,United States,Redacted,
+Redacted,2021-09-21,Redacted,A-D-0.2,8.96,3,Redacted,United States,,Redacted
+Redacted,2019-01-03,Redacted,E-L-0.5,53.46,6,Redacted,United States,Redacted,
+Redacted,2022-03-08,Redacted,A-L-0.2,23.31,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-08,Redacted,A-M-0.2,6.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-10,Redacted,L-D-0.5,7.77,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-27,Redacted,L-D-2.5,119.14,4,Redacted,United States,,Redacted
+Redacted,2021-03-04,Redacted,A-D-1,19.9,2,Redacted,United States,,Redacted
+Redacted,2021-11-16,Redacted,R-L-0.5,35.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-16,Redacted,L-D-2.5,89.36,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-19,Redacted,L-M-0.2,8.73,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-28,Redacted,R-L-2.5,137.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-22,Redacted,L-M-0.5,34.92,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-08,Redacted,A-L-2.5,178.71,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-26,Redacted,A-M-2.5,25.88,1,Redacted,United States,Redacted,
+Redacted,2019-12-03,Redacted,L-D-1,77.7,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-17,Redacted,R-M-1,9.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-31,Redacted,L-M-1,29.1,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-10-21,Redacted,R-L-0.2,21.51,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-04-24,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-13,Redacted,A-D-0.5,17.91,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-08-19,Redacted,A-L-2.5,29.79,1,Redacted,Ireland,,Redacted
+Redacted,2019-03-02,Redacted,E-M-0.5,41.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-21,Redacted,R-M-0.5,17.91,3,Redacted,United States,Redacted,
+Redacted,2021-09-21,Redacted,E-D-0.5,7.29,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-08-30,Redacted,E-L-1,29.7,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2019-02-25,Redacted,A-M-1,22.5,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-17,Redacted,R-M-0.2,11.94,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-08-03,Redacted,A-L-1,25.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-26,Redacted,L-M-0.5,43.65,5,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-02-26,Redacted,A-L-0.5,46.62,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-08-03,Redacted,L-L-0.5,28.53,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-07,Redacted,R-L-2.5,27.49,1,Redacted,United States,Redacted,
+Redacted,2019-06-14,Redacted,E-D-0.2,10.94,3,Redacted,United States,Redacted,
+Redacted,2019-11-21,Redacted,R-L-0.2,7.17,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-03-31,Redacted,A-L-0.2,23.31,6,Redacted,United States,Redacted,
+Redacted,2019-07-01,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-05,Redacted,A-M-2.5,77.63,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-20,Redacted,R-D-0.5,5.37,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-18,Redacted,R-D-2.5,123.51,6,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-11-18,Redacted,L-M-0.5,17.46,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-06-20,Redacted,E-L-0.2,13.37,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-06,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-17,Redacted,R-D-0.2,2.69,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-26,Redacted,R-D-2.5,20.59,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-30,Redacted,A-D-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-19,Redacted,E-M-0.2,20.63,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2022-03-31,Redacted,L-L-0.5,57.06,6,Redacted,United States,,Redacted
+Redacted,2020-07-04,Redacted,R-D-2.5,82.34,4,Redacted,Ireland,Redacted,
+Redacted,2021-11-21,Redacted,E-M-2.5,158.13,5,Redacted,United States,Redacted,
+Redacted,2021-05-31,Redacted,R-D-0.5,32.22,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-04-11,Redacted,E-D-1,24.3,2,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-09-15,Redacted,R-L-0.5,35.85,5,Redacted,United States,Redacted,
+Redacted,2021-11-23,Redacted,L-M-1,72.75,5,Redacted,United States,Redacted,
+Redacted,2022-01-23,Redacted,L-L-1,47.55,3,Redacted,Ireland,Redacted,
+Redacted,2021-01-27,Redacted,R-L-0.2,3.59,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-06-24,Redacted,E-M-2.5,158.13,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-15,Redacted,L-M-0.5,17.46,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-24,Redacted,A-L-2.5,148.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-05,Redacted,A-M-0.5,40.5,6,Redacted,United States,Redacted,
+Redacted,2022-01-27,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-10,Redacted,L-D-1,38.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-06,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-15,Redacted,R-L-0.2,10.76,3,Redacted,United States,Redacted,
+Redacted,2021-09-08,Redacted,A-D-2.5,91.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-11,Redacted,A-M-1,45.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-18,Redacted,R-M-2.5,137.31,6,Redacted,United States,Redacted,
+Redacted,2021-07-29,Redacted,A-M-0.5,6.75,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-03-20,Redacted,A-M-1,45.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-04,Redacted,E-D-2.5,83.84,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-04-05,Redacted,E-D-0.2,3.65,1,Redacted,Ireland,,
+Redacted,2022-01-12,Redacted,A-M-0.5,6.75,1,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2022-01-12,Redacted,E-D-0.5,21.87,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-12-16,Redacted,R-D-0.2,13.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-30,Redacted,R-D-2.5,123.51,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-11-09,Redacted,L-D-0.2,7.77,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-08,Redacted,A-M-1,67.5,6,Redacted,United States,,
+Redacted,2019-10-08,Redacted,E-D-2.5,27.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-09-12,Redacted,A-L-2.5,89.36,3,Redacted,United States,,Redacted
+Redacted,2022-07-28,Redacted,A-M-0.5,20.25,3,Redacted,United States,Redacted,
+Redacted,2020-06-30,Redacted,A-M-0.5,33.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-01-09,Redacted,E-D-2.5,111.78,4,Redacted,United States,Redacted,Redacted
+Redacted,2022-07-12,Redacted,E-M-2.5,63.25,2,Redacted,United States,,Redacted
+Redacted,2020-11-30,Redacted,E-L-0.2,8.91,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-03-22,Redacted,E-D-1,12.15,1,Redacted,United States,,Redacted
+Redacted,2022-02-15,Redacted,A-D-0.5,23.88,4,Redacted,United States,,
+Redacted,2020-10-13,Redacted,E-M-1,55.0,4,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-27,Redacted,R-D-1,26.85,3,Redacted,United States,Redacted,
+Redacted,2021-08-01,Redacted,R-M-2.5,114.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-18,Redacted,A-M-2.5,155.25,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-24,Redacted,L-D-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2021-10-24,Redacted,R-M-2.5,91.54,4,Redacted,United States,Redacted,Redacted
+Redacted,2019-12-30,Redacted,E-L-1,74.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-02,Redacted,L-L-0.2,28.53,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-05-16,Redacted,R-L-0.5,14.34,2,Redacted,United States,Redacted,Redacted
+Redacted,2022-04-23,Redacted,A-L-0.5,15.54,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-09-25,Redacted,R-L-1,35.85,3,Redacted,United States,Redacted,Redacted
+Redacted,2022-06-07,Redacted,A-L-0.5,46.62,6,Redacted,United States,Redacted,Redacted
+Redacted,2020-08-11,Redacted,R-L-0.5,35.85,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-02-28,Redacted,L-D-2.5,119.14,4,Redacted,United States,Redacted,
+Redacted,2019-09-11,Redacted,L-D-0.5,23.31,3,Redacted,United States,Redacted,
+Redacted,2021-04-08,Redacted,A-M-1,11.25,1,Redacted,Ireland,,Redacted
+Redacted,2021-09-06,Redacted,E-D-2.5,83.84,3,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2021-09-10,Redacted,R-L-2.5,109.94,4,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-05-22,Redacted,R-L-0.2,14.34,4,Redacted,United States,Redacted,
+Redacted,2020-09-18,Redacted,R-L-0.2,21.51,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-31,Redacted,A-M-1,22.5,2,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-01-21,Redacted,A-L-0.2,3.89,1,Redacted,United States,Redacted,
+Redacted,2022-06-10,Redacted,E-D-2.5,27.95,1,Redacted,United States,Redacted,
+Redacted,2019-04-27,Redacted,E-L-2.5,170.78,5,Redacted,United States,Redacted,
+Redacted,2019-04-27,Redacted,R-L-2.5,54.97,2,Redacted,United States,Redacted,
+Redacted,2019-04-27,Redacted,E-L-1,14.85,1,Redacted,United States,Redacted,
+Redacted,2019-04-27,Redacted,A-L-0.2,7.77,2,Redacted,United States,Redacted,
+Redacted,2022-02-06,Redacted,L-L-0.2,23.78,5,Redacted,United States,,Redacted
+Redacted,2022-01-30,Redacted,L-L-1,79.25,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-11-23,Redacted,A-D-2.5,45.77,2,Redacted,United States,Redacted,
+Redacted,2022-04-13,Redacted,R-D-1,8.95,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2021-01-07,Redacted,R-M-0.5,23.88,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-02-04,Redacted,E-L-0.2,22.28,5,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-16,Redacted,R-M-1,29.85,3,Redacted,United States,,Redacted
+Redacted,2019-01-26,Redacted,E-L-0.5,53.46,6,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-19,Redacted,R-D-0.2,2.69,1,Redacted,Ireland,Redacted,Redacted
+Redacted,2022-03-22,Redacted,R-M-0.2,5.97,2,Redacted,United States,Redacted,Redacted
+Redacted,2019-07-03,Redacted,L-D-1,12.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2019-09-21,Redacted,E-M-0.5,8.25,1,Redacted,United States,Redacted,
+Redacted,2019-08-26,Redacted,A-L-2.5,148.93,5,Redacted,United States,Redacted,Redacted
+Redacted,2021-08-03,Redacted,A-L-2.5,89.36,3,Redacted,Ireland,Redacted,
+Redacted,2021-10-24,Redacted,L-M-1,87.3,6,Redacted,United States,Redacted,Redacted
+Redacted,2019-04-01,Redacted,R-D-0.5,5.37,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-12-08,Redacted,A-D-0.2,8.96,3,Redacted,Ireland,Redacted,Redacted
+Redacted,2019-06-27,Redacted,R-L-2.5,137.43,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-07-14,Redacted,R-L-1,59.75,5,Redacted,United States,Redacted,Redacted
+Redacted,2020-03-23,Redacted,A-L-0.5,23.31,3,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-26,Redacted,R-D-0.5,10.74,2,Redacted,United States,Redacted,
+Redacted,2020-05-31,Redacted,E-D-2.5,167.67,6,Redacted,United States,Redacted,
+Redacted,2021-07-20,Redacted,E-D-0.2,21.87,6,Redacted,United States,Redacted,Redacted
+Redacted,2022-08-12,Redacted,R-L-1,23.9,2,Redacted,United States,Redacted,Redacted
+Redacted,2020-01-01,Redacted,A-M-0.2,6.75,2,Redacted,United States,Redacted,Redacted
+Redacted,2021-01-18,Redacted,E-M-2.5,31.63,1,Redacted,Ireland,,Redacted
+Redacted,2021-12-31,Redacted,R-L-1,47.8,4,Redacted,United States,Redacted,Redacted
+Redacted,2020-05-04,Redacted,L-M-2.5,33.47,1,Redacted,United States,Redacted,Redacted
+Redacted,2021-02-20,Redacted,A-D-0.5,29.85,5,Redacted,United Kingdom,Redacted,Redacted
+Redacted,2020-03-07,Redacted,R-M-1,29.85,3,Redacted,United Kingdom,Redacted,
+Redacted,2019-04-05,Redacted,A-M-2.5,155.25,6,Redacted,United States,Redacted,
+Redacted,2022-06-06,Redacted,E-D-0.2,18.23,5,Redacted,United States,Redacted,
+Redacted,2022-06-06,Redacted,L-D-0.5,15.54,2,Redacted,United States,Redacted,
+Redacted,2021-03-21,Redacted,L-L-2.5,109.37,3,Redacted,Ireland,Redacted,
+Redacted,2021-12-19,Redacted,A-L-1,77.7,6,Redacted,United States,Redacted,
+Redacted,2021-02-17,Redacted,A-D-0.2,8.96,3,Redacted,Ireland,Redacted,
+Redacted,2020-01-06,Redacted,R-L-2.5,27.49,1,Redacted,United States,Redacted,Redacted
+Redacted,2022-05-04,Redacted,R-M-0.5,29.85,5,Redacted,United States,Redacted,
+Redacted,2019-10-11,Redacted,A-M-0.5,27.0,4,Redacted,United States,Redacted,
+Redacted,2021-08-03,Redacted,A-D-1,9.95,1,Redacted,United States,Redacted,Redacted
+Redacted,2020-10-15,Redacted,E-M-0.2,12.38,3,Redacted,United Kingdom,Redacted,

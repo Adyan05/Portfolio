@@ -1,15 +1,446 @@
 {
   "coffee-sales": [
     {
-      "id": "coffee-totals",
-      "title": "What sales volume and revenue did the business record?",
+      "id": "coffee-1",
+      "title": "Recent Sales Review",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT orderid, orderdate, customerid, productid, quantity, sales\nFROM orders\nORDER BY orderdate DESC, orderid, productid\nLIMIT 20;",
+      "columns": [
+        "Order ID",
+        "Order date",
+        "Customer ID",
+        "Product ID",
+        "Quantity",
+        "Sales"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "2022-08-19",
+          "Redacted",
+          "A-L-2.5",
+          1,
+          29.79
+        ],
+        [
+          "Redacted",
+          "2022-08-19",
+          "Redacted",
+          "L-D-0.5",
+          2,
+          15.54
+        ],
+        [
+          "Redacted",
+          "2022-08-17",
+          "Redacted",
+          "A-L-1",
+          3,
+          38.85
+        ],
+        [
+          "Redacted",
+          "2022-08-12",
+          "Redacted",
+          "R-L-1",
+          2,
+          23.9
+        ],
+        [
+          "Redacted",
+          "2022-08-08",
+          "Redacted",
+          "R-D-0.5",
+          4,
+          21.48
+        ],
+        [
+          "Redacted",
+          "2022-08-06",
+          "Redacted",
+          "A-D-1",
+          3,
+          29.85
+        ],
+        [
+          "Redacted",
+          "2022-08-04",
+          "Redacted",
+          "R-L-0.2",
+          3,
+          10.76
+        ],
+        [
+          "Redacted",
+          "2022-08-04",
+          "Redacted",
+          "R-M-0.2",
+          5,
+          14.93
+        ],
+        [
+          "Redacted",
+          "2022-08-04",
+          "Redacted",
+          "E-M-0.5",
+          5,
+          41.25
+        ],
+        [
+          "Redacted",
+          "2022-08-02",
+          "Redacted",
+          "A-D-0.5",
+          3,
+          17.91
+        ]
+      ],
+      "rowCount": 20,
+      "export": "sql-results/coffee-1.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-2",
+      "title": "Countries Represented in the Customer Base",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT DISTINCT country\nFROM customers\nORDER BY country ASC",
+      "columns": [
+        "Country"
+      ],
+      "rows": [
+        [
+          "Ireland"
+        ],
+        [
+          "United Kingdom"
+        ],
+        [
+          "United States"
+        ]
+      ],
+      "rowCount": 3,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-3",
+      "title": "Quarterly sales inspection",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT orderdate, sales\nFROM orders\nWHERE orderdate >= '2021-01-01' AND orderdate < '2021-04-01'\nORDER BY orderdate ASC",
+      "columns": [
+        "Order date",
+        "Sales"
+      ],
+      "rows": [
+        [
+          "2021-01-04",
+          9.51
+        ],
+        [
+          "2021-01-04",
+          35.82
+        ],
+        [
+          "2021-01-07",
+          47.55
+        ],
+        [
+          "2021-01-07",
+          23.88
+        ],
+        [
+          "2021-01-10",
+          43.65
+        ],
+        [
+          "2021-01-11",
+          23.31
+        ],
+        [
+          "2021-01-11",
+          40.5
+        ],
+        [
+          "2021-01-11",
+          23.78
+        ],
+        [
+          "2021-01-13",
+          5.37
+        ],
+        [
+          "2021-01-13",
+          17.91
+        ]
+      ],
+      "rowCount": 84,
+      "export": "sql-results/coffee-3.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-4",
+      "title": "Selected-market sales",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT orderdate, sales, country\nFROM orders\nWHERE orderdate >= '2021-01-01' AND orderdate < '2022-01-01' AND Country IN ('Ireland', 'United Kingdom');",
+      "columns": [
+        "Order date",
+        "Sales",
+        "Country"
+      ],
+      "rows": [
+        [
+          "2021-07-15",
+          27.5,
+          "Ireland"
+        ],
+        [
+          "2021-07-15",
+          54.97,
+          "Ireland"
+        ],
+        [
+          "2021-01-04",
+          9.51,
+          "Ireland"
+        ],
+        [
+          "2021-07-23",
+          53.7,
+          "Ireland"
+        ],
+        [
+          "2021-07-17",
+          2.99,
+          "Ireland"
+        ],
+        [
+          "2021-10-19",
+          38.85,
+          "Ireland"
+        ],
+        [
+          "2021-11-10",
+          77.7,
+          "Ireland"
+        ],
+        [
+          "2021-06-27",
+          61.76,
+          "Ireland"
+        ],
+        [
+          "2021-10-07",
+          68.31,
+          "United Kingdom"
+        ],
+        [
+          "2021-12-15",
+          21.87,
+          "Ireland"
+        ]
+      ],
+      "rowCount": 70,
+      "export": "sql-results/coffee-4.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-5",
+      "title": "Email-provider review",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT customername, email, COUNT(*) AS gmail_customers\nFROM customers\nWHERE email ILIKE '%@gmail.com'\nGROUP BY customername, email",
+      "columns": [
+        "Customer name",
+        "Email",
+        "Gmail customers"
+      ],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No rows returned."
+    },
+    {
+      "id": "coffee-6",
+      "title": "Missing contact information",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT customername, COALESCE(NULLIF(TRIM(email),''), 'Missing Email') AS empty_email\nFROM customers\nWHERE NULLIF(TRIM(email),'') IS NULL",
+      "columns": [
+        "Customer name",
+        "Empty email"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ],
+        [
+          "Redacted",
+          "Missing Email"
+        ]
+      ],
+      "rowCount": 204,
+      "export": "sql-results/coffee-6.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-7",
+      "title": "Sales-line value bands",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT sales, coffeetypename, customername,\nCASE\n    WHEN sales < 20 THEN 'Small Sale'\n    WHEN sales >= 20 AND sales < 50 THEN 'Medium Sale'\n    WHEN sales >= 50 THEN 'High Sale'\n    END AS sales_category\nFROM orders",
+      "columns": [
+        "Sales",
+        "Coffee type",
+        "Customer name",
+        "Sales category"
+      ],
+      "rows": [
+        [
+          19.9,
+          "Robusta",
+          "Redacted",
+          "Small Sale"
+        ],
+        [
+          41.25,
+          "Excelsa",
+          "Redacted",
+          "Medium Sale"
+        ],
+        [
+          12.95,
+          "Arabica",
+          "Redacted",
+          "Small Sale"
+        ],
+        [
+          27.5,
+          "Excelsa",
+          "Redacted",
+          "Medium Sale"
+        ],
+        [
+          54.97,
+          "Robusta",
+          "Redacted",
+          "High Sale"
+        ],
+        [
+          38.85,
+          "Liberica",
+          "Redacted",
+          "Medium Sale"
+        ],
+        [
+          21.87,
+          "Excelsa",
+          "Redacted",
+          "Medium Sale"
+        ],
+        [
+          4.76,
+          "Liberica",
+          "Redacted",
+          "Small Sale"
+        ],
+        [
+          17.91,
+          "Robusta",
+          "Redacted",
+          "Small Sale"
+        ],
+        [
+          5.97,
+          "Robusta",
+          "Redacted",
+          "Small Sale"
+        ]
+      ],
+      "rowCount": 1000,
+      "export": "sql-results/coffee-7.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-8",
+      "title": "Affordable product shortlist",
+      "source": "SimpleSummary.sql",
+      "code": "SELECT productid, coffeetype, unitprice\nFROM products\nWHERE unitprice <= 10\nORDER BY unitprice ASC, productid ASC\nLIMIT 5",
+      "columns": [
+        "Product ID",
+        "Coffee type",
+        "Unitprice"
+      ],
+      "rows": [
+        [
+          "R-D-0.2",
+          "Rob",
+          2.685
+        ],
+        [
+          "A-D-0.2",
+          "Ara",
+          2.985
+        ],
+        [
+          "R-M-0.2",
+          "Rob",
+          2.985
+        ],
+        [
+          "A-M-0.2",
+          "Ara",
+          3.375
+        ],
+        [
+          "R-L-0.2",
+          "Rob",
+          3.585
+        ]
+      ],
+      "rowCount": 5,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-9",
+      "title": "Executive sales snapshot",
       "source": "AggregationKPI.sql",
       "code": "SELECT SUM(sales) as total_revenue, SUM(quantity) as units_sold, COUNT(DISTINCT orderid) AS distinct_orders, COUNT(DISTINCT customerid) as purchasing_customers\nFROM orders",
       "columns": [
-        "Revenue",
-        "Units",
-        "Orders",
-        "Customers"
+        "Total revenue",
+        "Units sold",
+        "Distinct orders",
+        "Purchasing customers"
       ],
       "rows": [
         [
@@ -21,26 +452,135 @@
       ],
       "rowCount": 1,
       "export": null,
-      "explanation": "SUM totals sales and quantities. COUNT DISTINCT prevents repeated order and customer IDs inflating those KPIs.",
-      "finding": "45,135.35 across 957 orders is the sales baseline. The 3,551 units measure volume independently of order count.",
-      "decision": "Use the baseline to compare sales performance across periods.",
-      "action": "Review revenue, units and order counts together each month.",
-      "kpi": "Monthly revenue and distinct orders",
-      "dashboard": "images/coffee/dashboard-1.png",
-      "chart": null,
-      "decimals": [
-        0
-      ],
-      "hrRate": false
+      "status": null
     },
     {
-      "id": "coffee-types",
-      "title": "Which coffee types lead revenue and unit sales?",
+      "id": "coffee-10",
+      "title": "Average Order Value",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT ROUND (SUM(sales) / NULLIF(COUNT(DISTINCT orderid),0), 2) AS Average_Order_Value\nFROM orders",
+      "columns": [
+        "Average order value"
+      ],
+      "rows": [
+        [
+          47.16
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-11",
+      "title": "Transaction coverage and range",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT MIN(orderdate) AS earliest_sale_date, MAX(orderdate) AS latest_sale_date, MIN(sales) AS min_sales, MAX(sales) AS max_sales, ROUND(AVG(quantity),2) AS average_units_per_sales\nFROM orders",
+      "columns": [
+        "Earliest sale date",
+        "Latest sale date",
+        "Min sales",
+        "Max sales",
+        "Average units per sales"
+      ],
+      "rows": [
+        [
+          "2019-01-02",
+          "2022-08-19",
+          2.69,
+          218.73,
+          3.55
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-12",
+      "title": "Monthly sales scorecard",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT DATE_TRUNC('month', orderdate)::date  AS SalesMonth, SUM(sales) AS MonthlyRevenue, COUNT(DISTINCT orderid) AS OrderCounts, SUM(quantity) AS UnitsSold\nFROM orders\nGROUP BY SalesMonth\nORDER BY SalesMonth",
+      "columns": [
+        "Salesmonth",
+        "Monthlyrevenue",
+        "Ordercounts",
+        "Unitssold"
+      ],
+      "rows": [
+        [
+          "2019-01-01",
+          829.0,
+          17,
+          80
+        ],
+        [
+          "2019-02-01",
+          987.42,
+          23,
+          73
+        ],
+        [
+          "2019-03-01",
+          1021.16,
+          23,
+          83
+        ],
+        [
+          "2019-04-01",
+          1680.77,
+          26,
+          114
+        ],
+        [
+          "2019-05-01",
+          398.59,
+          13,
+          45
+        ],
+        [
+          "2019-06-01",
+          1384.72,
+          21,
+          89
+        ],
+        [
+          "2019-07-01",
+          1004.16,
+          19,
+          76
+        ],
+        [
+          "2019-08-01",
+          706.37,
+          17,
+          63
+        ],
+        [
+          "2019-09-01",
+          1277.03,
+          22,
+          79
+        ],
+        [
+          "2019-10-01",
+          885.0,
+          24,
+          79
+        ]
+      ],
+      "rowCount": 44,
+      "export": "sql-results/coffee-12.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-13",
+      "title": "Coffee-type performance",
       "source": "AggregationKPI.sql",
       "code": "SELECT SUM(sales) AS revenue, SUM(quantity) units_sold, coffeetypename\nFROM orders\nGROUP BY coffeetypename\nORDER BY revenue DESC",
       "columns": [
         "Revenue",
-        "Units",
+        "Units sold",
         "Coffee type"
       ],
       "rows": [
@@ -67,24 +607,88 @@
       ],
       "rowCount": 4,
       "export": null,
-      "explanation": "GROUP BY coffee type supports separate comparisons of SUM(sales) and SUM(quantity).",
-      "finding": "Excelsa leads revenue at 12,306.71. Comparing revenue with units helps separate product value from volume.",
-      "decision": "Decide which coffee types warrant an inventory review.",
-      "action": "Compare demand with stock availability and margins before adjusting stock.",
-      "kpi": "Units sold and stockout rate by coffee type",
-      "dashboard": "images/coffee/dashboard-1.png",
-      "chart": [
-        2,
-        0
-      ],
-      "decimals": [
-        0
-      ],
-      "hrRate": false
+      "status": null
     },
     {
-      "id": "coffee-country",
-      "title": "Which markets contribute the most coffee revenue?",
+      "id": "coffee-14",
+      "title": "Roast and package preferences",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT SUM(sales) AS revenue, SUM(quantity) AS units, roasttypename, size\nFROM orders\nGROUP BY roasttypename, size",
+      "columns": [
+        "Revenue",
+        "Units",
+        "Roast type",
+        "Size"
+      ],
+      "rows": [
+        [
+          8985.73,
+          283,
+          "Light",
+          2.5
+        ],
+        [
+          1328.99,
+          318,
+          "Light",
+          0.2
+        ],
+        [
+          2052.66,
+          310,
+          "Dark",
+          0.5
+        ],
+        [
+          7250.9,
+          260,
+          "Medium",
+          2.5
+        ],
+        [
+          4000.9,
+          324,
+          "Medium",
+          1.0
+        ],
+        [
+          4456.1,
+          322,
+          "Light",
+          1.0
+        ],
+        [
+          955.69,
+          255,
+          "Medium",
+          0.2
+        ],
+        [
+          7549.49,
+          298,
+          "Dark",
+          2.5
+        ],
+        [
+          1023.81,
+          319,
+          "Dark",
+          0.2
+        ],
+        [
+          2553.75,
+          229,
+          "Dark",
+          1.0
+        ]
+      ],
+      "rowCount": 12,
+      "export": "sql-results/coffee-14.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-15",
+      "title": "Country performance",
       "source": "AggregationKPI.sql",
       "code": "SELECT country, SUM(sales) AS revenue, COUNT(DISTINCT orderid), COUNT(DISTINCT customerid) , ROUND(SUM(sales)/ COUNT(DISTINCT orderid),2) AS AverageOrderValue\nFROM orders\nGROUP by country",
       "columns": [
@@ -92,16 +696,9 @@
         "Revenue",
         "Orders",
         "Customers",
-        "Average order value"
+        "Averageordervalue"
       ],
       "rows": [
-        [
-          "United States",
-          35639.73,
-          743,
-          712,
-          47.97
-        ],
         [
           "Ireland",
           6697.06,
@@ -115,37 +712,1313 @@
           68,
           63,
           41.16
+        ],
+        [
+          "United States",
+          35639.73,
+          743,
+          712,
+          47.97
         ]
       ],
       "rowCount": 3,
       "export": null,
-      "explanation": "The query groups by country, counts distinct invoices and customers, and divides revenue by each market’s order count.",
-      "finding": "The United States contributes 35,639.73, about 79% of revenue. A large share of sales depends on one market.",
-      "decision": "Decide where to examine sales concentration first.",
-      "action": "Track market shares and investigate demand in smaller markets before expanding.",
-      "kpi": "Revenue share by market",
-      "dashboard": "images/coffee/dashboard-1.png",
-      "chart": [
-        0,
-        1
+      "status": null
+    },
+    {
+      "id": "coffee-16",
+      "title": "Products with meaningful sales volume",
+      "source": "AggregationKPI.sql",
+      "code": "SELECT productid, SUM(sales) AS revenue, SUM(quantity) units_sold\nFROM orders\nGROUP BY productid\nHAVING SUM(quantity) >= 50\nORDER BY revenue",
+      "columns": [
+        "Product ID",
+        "Revenue",
+        "Units sold"
       ],
-      "decimals": [
-        1,
-        4
+      "rows": [
+        [
+          "R-M-0.2",
+          176.16,
+          59
+        ],
+        [
+          "A-L-0.2",
+          194.28,
+          50
+        ],
+        [
+          "L-D-0.2",
+          213.7,
+          55
+        ],
+        [
+          "A-M-0.2",
+          219.39,
+          65
+        ],
+        [
+          "R-D-0.2",
+          247.1,
+          92
+        ],
+        [
+          "E-D-0.2",
+          273.42,
+          75
+        ],
+        [
+          "A-D-0.2",
+          289.59,
+          97
+        ],
+        [
+          "E-L-0.2",
+          338.63,
+          76
+        ],
+        [
+          "R-D-0.5",
+          354.42,
+          66
+        ],
+        [
+          "L-M-0.2",
+          357.97,
+          82
+        ]
       ],
-      "hrRate": false
+      "rowCount": 45,
+      "export": "sql-results/coffee-16.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-17",
+      "title": "Customer purchase lookup",
+      "source": "MultitableAnalysis.sql",
+      "code": "SELECT ord.customerid, ord.orderdate, ord.orderid, ord.productid, ord.sales, ord.quantity, cust.customername, cust.country, cust.phonenumber, cust.email\nFROM orders ord\nJOIN customers cust ON ord.customerid= cust.customerid",
+      "columns": [
+        "Customer ID",
+        "Order date",
+        "Order ID",
+        "Product ID",
+        "Sales",
+        "Quantity",
+        "Customer name",
+        "Country",
+        "Phonenumber",
+        "Email"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "2019-09-05",
+          "Redacted",
+          "R-M-1",
+          19.9,
+          2,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "2019-09-05",
+          "Redacted",
+          "E-M-0.5",
+          41.25,
+          5,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "2021-06-17",
+          "Redacted",
+          "A-L-1",
+          12.95,
+          1,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "2021-07-15",
+          "Redacted",
+          "E-M-1",
+          27.5,
+          2,
+          "Redacted",
+          "Ireland",
+          "Redacted",
+          null
+        ],
+        [
+          "Redacted",
+          "2021-07-15",
+          "Redacted",
+          "R-L-2.5",
+          54.97,
+          2,
+          "Redacted",
+          "Ireland",
+          "Redacted",
+          null
+        ],
+        [
+          "Redacted",
+          "2021-08-04",
+          "Redacted",
+          "L-D-1",
+          38.85,
+          3,
+          "Redacted",
+          "United States",
+          "Redacted",
+          null
+        ],
+        [
+          "Redacted",
+          "2022-01-21",
+          "Redacted",
+          "E-D-0.5",
+          21.87,
+          3,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "2022-05-20",
+          "Redacted",
+          "L-L-0.2",
+          4.76,
+          1,
+          "Redacted",
+          "Ireland",
+          "Redacted",
+          null
+        ],
+        [
+          "Redacted",
+          "2019-01-02",
+          "Redacted",
+          "R-M-0.5",
+          17.91,
+          3,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "2019-09-05",
+          "Redacted",
+          "R-M-0.5",
+          5.97,
+          1,
+          "Redacted",
+          "United States",
+          "Redacted",
+          "Redacted"
+        ]
+      ],
+      "rowCount": 1000,
+      "export": "sql-results/coffee-17.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-18",
+      "title": "Customers who have never purchased",
+      "source": "MultitableAnalysis.sql",
+      "code": "SELECT cust.customerid, cust.customername\nFROM customers cust\nJOIN orders ord ON cust.customerid=ord.customerid\nWHERE ord.orderid IS NULL",
+      "columns": [
+        "Customer ID",
+        "Customer name"
+      ],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No rows returned. The source uses an inner join before filtering for missing orders."
+    },
+    {
+      "id": "coffee-19",
+      "title": "Complete customer value directory",
+      "source": "MultitableAnalysis.sql",
+      "code": "SELECT cust.customerid, cust.customername, COUNT(DISTINCT ord.orderid) AS OrderCount, COALESECE(SUM(ord.Sales),0) AS Revenue\nFROM customers cust\nLEFT JOIN orders ord ON cust.customerid=ord.customerid\nGROUP BY cust.customerid, cust.customername",
+      "columns": [],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No output. The source calls the undefined function COALESECE."
+    },
+    {
+      "id": "coffee-20",
+      "title": "Estimated product profitability",
+      "source": "MultitableAnalysis.sql",
+      "code": "WITH product_info AS(\nSELECT ord.productid, SUM(ord.quantity) AS units_sold, SUM(ord.sales) as revenue, SUM(ord.quantity*prod.profit) AS estimated_total_profit\nFROM orders ord\nJOIN products prod ON ord.productid=prod.productid\nGROUP BY ord.productid\n)\nSELECT productid, units_sold, revenue, ROUND(estimated_total_profit,2) AS estimated_total_profit , ROUND(100*estimated_total_profit/NULLIF(revenue,0),2) AS estimated_profit_margin\nFROM product_info",
+      "columns": [
+        "Product ID",
+        "Units sold",
+        "Revenue",
+        "Estimated total profit",
+        "Estimated profit margin"
+      ],
+      "rows": [
+        [
+          "L-M-2.5",
+          41,
+          1372.1,
+          178.37,
+          13.0
+        ],
+        [
+          "E-D-0.5",
+          78,
+          568.62,
+          62.55,
+          11.0
+        ],
+        [
+          "A-D-0.2",
+          97,
+          289.59,
+          26.06,
+          9.0
+        ],
+        [
+          "E-L-2.5",
+          72,
+          2459.19,
+          270.51,
+          11.0
+        ],
+        [
+          "L-L-0.5",
+          78,
+          741.78,
+          96.43,
+          13.0
+        ],
+        [
+          "L-M-0.2",
+          82,
+          357.97,
+          46.53,
+          13.0
+        ],
+        [
+          "L-D-2.5",
+          82,
+          2442.42,
+          317.51,
+          13.0
+        ],
+        [
+          "A-L-1",
+          72,
+          932.4,
+          83.92,
+          9.0
+        ],
+        [
+          "L-L-0.2",
+          92,
+          437.52,
+          56.87,
+          13.0
+        ],
+        [
+          "A-M-0.2",
+          65,
+          219.39,
+          19.74,
+          9.0
+        ]
+      ],
+      "rowCount": 48,
+      "export": "sql-results/coffee-20.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-24",
+      "title": "Customers spending above the customer average",
+      "source": "AdvancedAnalysis.sql",
+      "code": "with customer_spend AS (\nSELECT customerid, customername, SUM(sales) AS revenue\nFROM orders\nGROUP BY customerid, customername)\nSELECT *\nFROM customer_spend\nWHERE revenue > (\n    SELECT AVG(revenue)\n    FROM customer_spend\n)",
+      "columns": [
+        "Customer ID",
+        "Customer name",
+        "Revenue"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "Redacted",
+          148.93
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          87.3
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          59.75
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          110.61
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          103.5
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          123.51
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          53.46
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          251.13
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          87.3
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          204.93
+        ]
+      ],
+      "rowCount": 306,
+      "export": "sql-results/coffee-24.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-25",
+      "title": "Customer purchase-frequency segments",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH customer_metric AS(\n    SELECT cust.customerid,\n            cust.customername,\n            COUNT(DISTINCT ord.orderid) AS order_count,\n            COALESCE(SUM(ord.sales),0) AS revenue\n    FROM customers cust\n    LEFT JOIN orders ord\n    ON cust.customerid=ord.customerid\n    GROUP BY cust.customerid, cust.customername\n),\ncustomer_segments AS (\n    SELECT customerid,\n            revenue,\n            CASE\n            WHEN order_count=0 THEN 'Never Purchased'\n            WHEN order_count=1 THEN 'One Order'\n            WHEN order_count=2 THEN 'Two Orders'\n            WHEN order_count=3 THEN 'Three Order'\n            ELSE 'Four-plus Orders'\n        END as Segment\n    FROM customer_metric\n)\nSELECT segment, COUNT(*) AS customer_count, SUM(revenue) as revenue\nFROM customer_segments\nGROUP BY segment",
+      "columns": [
+        "Segment",
+        "Customer count",
+        "Revenue"
+      ],
+      "rows": [
+        [
+          "Never Purchased",
+          87,
+          0
+        ],
+        [
+          "Three Order",
+          7,
+          1414.57
+        ],
+        [
+          "One Order",
+          888,
+          41564.23
+        ],
+        [
+          "Two Orders",
+          13,
+          1226.03
+        ],
+        [
+          "Four-plus Orders",
+          5,
+          930.52
+        ]
+      ],
+      "rowCount": 5,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-26",
+      "title": "Customers inactive for at least 180 days",
+      "source": "AdvancedAnalysis.sql",
+      "code": "with customer_last_order AS(\n    SELECT customerid, customername, MAX(orderdate) AS last_order, SUM(sales) AS revenue\n    FROM orders\n    GROUP BY customerid, customername\n    )\nSELECT customerid, customername, last_order, revenue, DATE '2022-08-19' - last_order AS days_since_last_purchase\nFROM customer_last_order\nWHERE DATE '2022-08-19' - last_order >= 180\nORDER BY revenue DESC",
+      "columns": [
+        "Customer ID",
+        "Customer name",
+        "Last order",
+        "Revenue",
+        "Days since last purchase"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "Redacted",
+          "2021-06-20",
+          289.11,
+          425
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2021-05-23",
+          281.68,
+          453
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2021-08-02",
+          278.01,
+          382
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2020-10-10",
+          246.21,
+          678
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2021-04-30",
+          218.73,
+          476
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2021-06-28",
+          206.61,
+          417
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2019-12-14",
+          204.93,
+          979
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2019-06-25",
+          204.93,
+          1151
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2019-12-04",
+          204.93,
+          989
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          "2019-07-25",
+          204.93,
+          1121
+        ]
+      ],
+      "rowCount": 793,
+      "export": "sql-results/coffee-26.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-27",
+      "title": "Products priced above their peers",
+      "source": "AdvancedAnalysis.sql",
+      "code": "SELECT prod.productid, prod.coffeetype, prod.unitprice, prod.size\nFROM products prod\nWHERE unitprice > (\n    SELECT AVG(peer.unitprice)\n    FROM products peer\n    WHERE peer.coffeetype=prod.coffeetype AND peer.size=prod.size\n)",
+      "columns": [
+        "Product ID",
+        "Coffee type",
+        "Unitprice",
+        "Size"
+      ],
+      "rows": [
+        [
+          "A-L-0.2",
+          "Ara",
+          3.885,
+          0.2
+        ],
+        [
+          "A-L-0.5",
+          "Ara",
+          7.77,
+          0.5
+        ],
+        [
+          "A-L-1",
+          "Ara",
+          12.95,
+          1.0
+        ],
+        [
+          "A-L-2.5",
+          "Ara",
+          29.785,
+          2.5
+        ],
+        [
+          "R-L-0.2",
+          "Rob",
+          3.585,
+          0.2
+        ],
+        [
+          "R-L-0.5",
+          "Rob",
+          7.17,
+          0.5
+        ],
+        [
+          "R-L-1",
+          "Rob",
+          11.95,
+          1.0
+        ],
+        [
+          "R-L-2.5",
+          "Rob",
+          27.485,
+          2.5
+        ],
+        [
+          "L-L-0.2",
+          "Lib",
+          4.755,
+          0.2
+        ],
+        [
+          "L-L-0.5",
+          "Lib",
+          9.51,
+          0.5
+        ]
+      ],
+      "rowCount": 24,
+      "export": "sql-results/coffee-27.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-28",
+      "title": "Customers who have bought both Arabica and Robusta",
+      "source": "AdvancedAnalysis.sql",
+      "code": "SELECT cust.customerid, cust.customername\nFROM customers cust\nWHERE EXISTS (\n    SELECT 1\n    FROM orders ord\n    JOIN products prod\n    ON ord.productid = prod.productid\n    WHERE cust.customerid = ord.customerid AND prod.coffeetype LIKE 'Ara'\n    )\nAND EXISTS (\n    SELECT 1\n    FROM orders ord\n    JOIN products prod\n    ON ord.productid = prod.productid\n    WHERE cust.customerid = ord.customerid AND prod.coffeetype LIKE 'Rob'\n    )",
+      "columns": [
+        "Customer ID",
+        "Customer name"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ],
+        [
+          "Redacted",
+          "Redacted"
+        ]
+      ],
+      "rowCount": 10,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-29",
+      "title": "Return within 90 days of first purchase",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH order_events AS(\n    SELECT DISTINCT customerid,customername, orderid, orderdate\n    FROM orders\n    ),\nfirst_purchase AS(\n    SELECT customerid, MIN(orderdate) AS first_purchase_date\n    FROM order_events\n    GROUP BY customerid\n)\n, first_flags AS (\n    SELECT fp.customerid, fp.first_purchase_date,\n    CASE WHEN (\n            SELECT COUNT(DISTINCT oe.orderid)\n            FROM order_events oe\n            WHERE oe.customerid=fp.customerid\n            AND oe.orderdate::date BETWEEN\n            fp.first_purchase_date::date AND fp.first_purchase_date::date + 90)\n            >=2 THEN 1\n            ELSE 0\n        END AS returned_within_90days\n    FROM first_purchase fp\n    WHERE fp.first_purchase_date::date <= DATE '2022-08-19' - 90\n    )\nSELECT DATE_TRUNC('month', first_purchase_date)::date AS first_purchase_month,\n        COUNT(*) AS eligible_customers,\n        SUM(returned_within_90days) AS returning_customers,\n        ROUND(100.0 * SUM(returned_within_90days)/COUNT(*),2) AS repeat_purchase_rate_pct\nFROM first_flags\nGROUP BY DATE_TRUNC('month', first_purchase_date)::date\nORDER BY first_purchase_month\nFROM first_flags",
+      "columns": [],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No output. The source ends with an extra FROM clause."
+    },
+    {
+      "id": "coffee-30",
+      "title": "Seasonal revenue patterns",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH SELECT SUM(sales) AS monthly_revenue, DATE_TRUNC('month',orderdate)::date AS sales_month\nFROM orders\nWHERE orderdate >= '2019-01-01' AND orderdate < '2022-01-01'\nGROUP BY DATE_TRUNC('month',orderdate)::date\nORDER BY sales_month",
+      "columns": [],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No output. The source starts with an incomplete WITH clause."
+    },
+    {
+      "id": "coffee-31",
+      "title": "Customer revenue leaderboard",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH customer_revenue AS(\n    SELECT customerid, customername, SUM(sales) AS revenue\n    FROM orders\n    GROUP BY customerid, customername\n)\nSELECT *, RANK() OVER (ORDER BY revenue DESC) AS customer_rank\nFROM customer_revenue\nORDER BY customer_rank, customerid",
+      "columns": [
+        "Customer ID",
+        "Customer name",
+        "Revenue",
+        "Customer rank"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          "Redacted",
+          317.08,
+          1
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          307.06,
+          2
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          289.11,
+          3
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          281.68,
+          4
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          278.01,
+          5
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          251.13,
+          6
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          246.21,
+          7
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          218.73,
+          8
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          206.61,
+          9
+        ],
+        [
+          "Redacted",
+          "Redacted",
+          204.93,
+          10
+        ]
+      ],
+      "rowCount": 913,
+      "export": "sql-results/coffee-31.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-32",
+      "title": "Top three products within each country",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH country_product_revenue AS(\n    SELECT SUM(ord.sales) AS revenue, ord.productid, ord.coffeetypename, cust.country\n    FROM orders ord\n    JOIN products prod\n    ON ord.productid=prod.productid\n    JOIN customers cust\n    ON cust.customerid=ord.customerid\n    GROUP BY ord.productid, ord.coffeetypename, cust.country\n),\nranked_product AS(\n    SELECT *, RANK() OVER (\n                    PARTITION BY country\n                    ORDER BY revenue DESC\n    ) AS product_rank\n    FROM country_product_revenue\n    )\nSELECT *\nFROM ranked_product\nWHERE product_rank <= 3\nORDER BY country, product_rank, productid, coffeetypename",
+      "columns": [
+        "Revenue",
+        "Product ID",
+        "Coffee type",
+        "Country",
+        "Product rank"
+      ],
+      "rows": [
+        [
+          714.86,
+          "L-D-2.5",
+          "Liberica",
+          "Ireland",
+          1
+        ],
+        [
+          535.22,
+          "R-D-2.5",
+          "Robusta",
+          "Ireland",
+          2
+        ],
+        [
+          444.02,
+          "E-L-2.5",
+          "Excelsa",
+          "Ireland",
+          3
+        ],
+        [
+          279.46,
+          "E-D-2.5",
+          "Excelsa",
+          "United Kingdom",
+          1
+        ],
+        [
+          182.28,
+          "L-L-2.5",
+          "Liberica",
+          "United Kingdom",
+          2
+        ],
+        [
+          137.31,
+          "A-D-2.5",
+          "Arabica",
+          "United Kingdom",
+          3
+        ],
+        [
+          137.31,
+          "R-M-2.5",
+          "Robusta",
+          "United Kingdom",
+          3
+        ],
+        [
+          2432.29,
+          "A-M-2.5",
+          "Arabica",
+          "United States",
+          1
+        ],
+        [
+          2293.51,
+          "A-L-2.5",
+          "Arabica",
+          "United States",
+          2
+        ],
+        [
+          1946.86,
+          "E-L-2.5",
+          "Excelsa",
+          "United States",
+          3
+        ]
+      ],
+      "rowCount": 10,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "coffee-33",
+      "title": "Exactly three products per coffee type",
+      "source": "AdvancedAnalysis.sql",
+      "code": "with product_revenue AS(\n    SELECT productid, coffeetypename, SUM(sales) as revenue\n    FROM orders\n    GROUP BY productid, coffeetypename\n    ),\nrank_coffee AS(\n    SELECT *,\n            ROW_NUMBER() OVER (\n                            PARTITION BY coffeetypename\n                            ORDER BY revenue DESC, productid) AS product_position\n    FROM product_revenue\n)\nSELECT *\nFROM rank_coffee\nWHERE product_position <= 3\nORDER BY coffeetypename, product_position",
+      "columns": [
+        "Product ID",
+        "Coffee type",
+        "Revenue",
+        "Product position"
+      ],
+      "rows": [
+        [
+          "A-L-2.5",
+          "Arabica",
+          2561.59,
+          1
+        ],
+        [
+          "A-M-2.5",
+          "Arabica",
+          2509.92,
+          2
+        ],
+        [
+          "A-D-2.5",
+          "Arabica",
+          1739.32,
+          3
+        ],
+        [
+          "E-L-2.5",
+          "Excelsa",
+          2459.19,
+          1
+        ],
+        [
+          "E-M-2.5",
+          "Excelsa",
+          2087.29,
+          2
+        ],
+        [
+          "E-D-2.5",
+          "Excelsa",
+          1844.43,
+          3
+        ],
+        [
+          "L-D-2.5",
+          "Liberica",
+          2442.42,
+          1
+        ],
+        [
+          "L-L-2.5",
+          "Liberica",
+          2150.89,
+          2
+        ],
+        [
+          "L-M-2.5",
+          "Liberica",
+          1372.1,
+          3
+        ],
+        [
+          "R-L-2.5",
+          "Robusta",
+          1814.06,
+          1
+        ]
+      ],
+      "rowCount": 12,
+      "export": "sql-results/coffee-33.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-34",
+      "title": "Purchase-frequency ranking with real ties",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH customer_order AS(\n    SELECT COUNT(DISTINCT orderid) AS order_count, customerid\n    FROM orders\n    GROUP BY customerid\n)\nSELECT *, RANK() OVER (ORDER BY order_count DESC) AS customer_rank,\n        DENSE_RANK() OVER (ORDER BY order_count DESC) AS dense_customer_rank\nFROM customer_order\nORDER BY customer_rank, customerid",
+      "columns": [
+        "Order count",
+        "Customer ID",
+        "Customer rank",
+        "Dense customer rank"
+      ],
+      "rows": [
+        [
+          5,
+          "Redacted",
+          1,
+          1
+        ],
+        [
+          5,
+          "Redacted",
+          1,
+          1
+        ],
+        [
+          4,
+          "Redacted",
+          3,
+          2
+        ],
+        [
+          4,
+          "Redacted",
+          3,
+          2
+        ],
+        [
+          4,
+          "Redacted",
+          3,
+          2
+        ],
+        [
+          3,
+          "Redacted",
+          6,
+          3
+        ],
+        [
+          3,
+          "Redacted",
+          6,
+          3
+        ],
+        [
+          3,
+          "Redacted",
+          6,
+          3
+        ],
+        [
+          3,
+          "Redacted",
+          6,
+          3
+        ],
+        [
+          3,
+          "Redacted",
+          6,
+          3
+        ]
+      ],
+      "rowCount": 913,
+      "export": "sql-results/coffee-34.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-35",
+      "title": "Product revenue contribution",
+      "source": "AdvancedAnalysis.sql",
+      "code": "with product_sale AS(\n    SELECT SUM(sales) AS revenue, productid, country\n    FROM orders\n    GROUP BY productid, country\n)\nSELECT *, ROUND( 100.0 * revenue/ NULLIF(SUM(revenue) OVER (PARTITION BY country),0),2) as revenue_percentage\nFROM product_sale\nORDER BY country, revenue_percentage DESC",
+      "columns": [
+        "Revenue",
+        "Product ID",
+        "Country",
+        "Revenue percentage"
+      ],
+      "rows": [
+        [
+          714.86,
+          "L-D-2.5",
+          "Ireland",
+          10.67
+        ],
+        [
+          535.22,
+          "R-D-2.5",
+          "Ireland",
+          7.99
+        ],
+        [
+          444.02,
+          "E-L-2.5",
+          "Ireland",
+          6.63
+        ],
+        [
+          439.76,
+          "R-L-2.5",
+          "Ireland",
+          6.57
+        ],
+        [
+          437.47,
+          "L-L-2.5",
+          "Ireland",
+          6.53
+        ],
+        [
+          268.08,
+          "A-L-2.5",
+          "Ireland",
+          4.0
+        ],
+        [
+          213.75,
+          "A-M-1",
+          "Ireland",
+          3.19
+        ],
+        [
+          208.95,
+          "A-D-1",
+          "Ireland",
+          3.12
+        ],
+        [
+          200.79,
+          "L-M-0.5",
+          "Ireland",
+          3.0
+        ],
+        [
+          194.25,
+          "L-D-1",
+          "Ireland",
+          2.9
+        ]
+      ],
+      "rowCount": 131,
+      "export": "sql-results/coffee-35.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-36",
+      "title": "Revenue accumulated through the year",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH monthly_rev AS (\n    SELECT DATE_TRUNC('month', orderdate)::date AS sales_month,\n            SUM(sales) AS monthly_revenue\n    FROM orders\nGROUP BY DATE_TRUNC('month', orderdate)::date",
+      "columns": [],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No output. The source ends inside its CTE."
+    },
+    {
+      "id": "coffee-37",
+      "title": "Three-month moving-average revenue",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH monthly_sales AS(\n    SELECT SUM(sales) AS revenue, DATE_TRUNC('month', orderdate)::date as sales_month\n    FROM orders\n    WHERE orderdate < DATE '2022-08-01'\n    GROUP BY DATE_TRUNC('month', orderdate)::date\n)\nSELECT sales_month,\n        revenue,\n        CASE WHEN COUNT(*) OVER (\n                        ORDER BY sales_month\n                        ROWS BETWEEN 2 PRECEDING AND CURRENT ROW\n                        ) = 3\n            THEN ROUND(AVG(revenue) OVER (\n                                ORDER BY sales_month\n                                ROWS BETWEEN 2 PRECEDING AND CURRENT ROW\n                                ),2)\n            END AS three_month_moving_average\n        FROM monthly_sales\n        ORDER BY sales_month",
+      "columns": [
+        "Sales month",
+        "Revenue",
+        "Three month moving average"
+      ],
+      "rows": [
+        [
+          "2019-01-01",
+          829.0,
+          null
+        ],
+        [
+          "2019-02-01",
+          987.42,
+          null
+        ],
+        [
+          "2019-03-01",
+          1021.16,
+          945.86
+        ],
+        [
+          "2019-04-01",
+          1680.77,
+          1229.78
+        ],
+        [
+          "2019-05-01",
+          398.59,
+          1033.51
+        ],
+        [
+          "2019-06-01",
+          1384.72,
+          1154.69
+        ],
+        [
+          "2019-07-01",
+          1004.16,
+          929.16
+        ],
+        [
+          "2019-08-01",
+          706.37,
+          1031.75
+        ],
+        [
+          "2019-09-01",
+          1277.03,
+          995.85
+        ],
+        [
+          "2019-10-01",
+          885.0,
+          956.13
+        ]
+      ],
+      "rowCount": 43,
+      "export": "sql-results/coffee-37.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-38",
+      "title": "Month-over-month and year-over-year growth",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH monthly_sales AS (\n    SELECT SUM(sales) AS revenue, DATE_TRUNC('month', orderdate)::date AS sales_month\n    FROM orders\n    WHERE orderdate < DATE '2022-08-01'\n    GROUP BY DATE_TRUNC('month', orderdate)::date\n), revenue_comparison AS (\n    SELECT sales_month,\n            revenue,\n            LAG(revenue, 1) OVER(\n                            ORDER by sales_month\n            ) AS prev_month_rev,\n            LAG(revenue, 12) OVER(\n                            ORDER by sales_month\n            ) AS prev_year_rev\n    FROM monthly_sales\n)\nSELECT *, ROUND(100.0 * (revenue-prev_month_rev)/NULLIF(prev_month_rev,0),2) AS Month_over_month_growth_percentage,\n        ROUND(100.0 * (revenue-prev_year_rev)/NULLIF(prev_year_rev,0),2) AS Year_over_Year_growth_percentage\nFROM revenue_comparison\nORDER BY sales_month",
+      "columns": [
+        "Sales month",
+        "Revenue",
+        "Prev month rev",
+        "Prev year rev",
+        "Month over month growth percentage",
+        "Year over year growth percentage"
+      ],
+      "rows": [
+        [
+          "2019-01-01",
+          829.0,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          "2019-02-01",
+          987.42,
+          829.0,
+          null,
+          19.11,
+          null
+        ],
+        [
+          "2019-03-01",
+          1021.16,
+          987.42,
+          null,
+          3.42,
+          null
+        ],
+        [
+          "2019-04-01",
+          1680.77,
+          1021.16,
+          null,
+          64.59,
+          null
+        ],
+        [
+          "2019-05-01",
+          398.59,
+          1680.77,
+          null,
+          -76.29,
+          null
+        ],
+        [
+          "2019-06-01",
+          1384.72,
+          398.59,
+          null,
+          247.4,
+          null
+        ],
+        [
+          "2019-07-01",
+          1004.16,
+          1384.72,
+          null,
+          -27.48,
+          null
+        ],
+        [
+          "2019-08-01",
+          706.37,
+          1004.16,
+          null,
+          -29.66,
+          null
+        ],
+        [
+          "2019-09-01",
+          1277.03,
+          706.37,
+          null,
+          80.79,
+          null
+        ],
+        [
+          "2019-10-01",
+          885.0,
+          1277.03,
+          null,
+          -30.7,
+          null
+        ]
+      ],
+      "rowCount": 43,
+      "export": "sql-results/coffee-38.csv",
+      "status": null
+    },
+    {
+      "id": "coffee-39",
+      "title": "Customer purchase history and next purchase",
+      "source": "AdvancedAnalysis.sql",
+      "code": "WITH order_events AS (\n    SELECT orderid, customerid, orderdate, SUM(sales) AS revenue\n    FROM orders\n    GROUP BY customerid, orderid, orderdate\n),\npurchase_history AS(\n    SELECT *,\n        ROW_NUMBER() OVER (\n                    PARTITION BY customerid\n                    ORDER BY orderdate, orderid\n        ) AS purchase_number\n        LAG(orderdate) OVER (\n                    PARTITION BY customerid\n                    ORDER BY orderdate, orderid\n        ) AS previous purchas\n)",
+      "columns": [],
+      "rows": [],
+      "rowCount": 0,
+      "export": null,
+      "status": "No output. The source has syntax errors and ends before a final SELECT."
     }
   ],
   "online-retail": [
     {
-      "id": "retail-totals",
-      "title": "What revenue, orders, customers and order value did retail record?",
-      "source": "RevenueAnalysis.sql",
-      "code": "WITH revenue_summary AS(    \n    SELECT \n        SUM(Revenue) AS total_revenue, \n        COUNT (DISTINCT Invoice) AS total_orders, \n        COUNT (DISTINCT CustomerID) AS total_customers\n    FROM OnlineRetail..OnlineRetail)\nSELECT \n    ROUND(total_revenue,2) AS total_revenue,\n    total_orders,\n    total_customers,\n    ROUND(total_revenue/total_orders,2) AS average_order_value\nFROM revenue_summary",
+      "id": "retail-1",
+      "title": "How many records, invoices and customers are present, and which rows fail quality checks?",
+      "source": "DataQuality.sql",
+      "code": "SELECT\n    COUNT(*) AS total_rows,\n    COUNT(DISTINCT Invoice) AS total_invoices,\n    COUNT(DISTINCT CustomerID) AS total_customers,\n    SUM(CASE WHEN CustomerID IS NULL THEN 1 ELSE 0 END) AS missing_customers,\n    SUM(CASE WHEN Description IS NULL THEN 1 ELSE 0 END) AS missing_descriptions,\n    SUM(CASE WHEN Quantity <= 0 THEN 1 ELSE 0 END) AS invalid_quantity_rows,\n    SUM(CASE WHEN Price <= 0 THEN 1 ELSE 0 END) AS invalid_price_rows\nFROM OnlineRetail..OnlineRetail",
       "columns": [
-        "Revenue",
-        "Orders",
-        "Customers",
+        "Total rows",
+        "Total invoices",
+        "Total customers",
+        "Missing customers",
+        "Missing descriptions",
+        "Invalid quantity rows",
+        "Invalid price rows"
+      ],
+      "rows": [
+        [
+          805549,
+          36969,
+          5878,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "retail-2",
+      "title": "What are the overall revenue and order KPIs?",
+      "source": "RevenueAnalysis.sql",
+      "code": "WITH revenue_summary AS(\n    SELECT\n        SUM(Revenue) AS total_revenue,\n        COUNT (DISTINCT Invoice) AS total_orders,\n        COUNT (DISTINCT CustomerID) AS total_customers\n    FROM OnlineRetail..OnlineRetail)\nSELECT\n    ROUND(total_revenue,2) AS total_revenue,\n    total_orders,\n    total_customers,\n    ROUND(total_revenue/total_orders,2) AS average_order_value\nFROM revenue_summary",
+      "columns": [
+        "Total revenue",
+        "Total orders",
+        "Total customers",
         "Average order value"
       ],
       "rows": [
@@ -158,305 +2031,205 @@
       ],
       "rowCount": 1,
       "export": null,
-      "explanation": "A CTE aggregates sales and counts distinct invoices and customers before calculating average order value.",
-      "finding": "The cleaned dataset contains 17,743,429.18 in positive sales over 36,969 distinct invoices. These totals exclude returns.",
-      "decision": "Set a baseline for retail reporting.",
-      "action": "Track positive sales separately from returns and net revenue.",
-      "kpi": "Positive sales and return rate",
-      "dashboard": "images/retail/sales_overview.png",
-      "chart": null,
-      "decimals": [
-        0,
-        3
-      ],
-      "hrRate": false
+      "status": null
     },
     {
-      "id": "retail-country",
-      "title": "Which countries contribute the most retail revenue?",
-      "source": "Country_Analysis.sql",
-      "code": "SELECT\n    Country,\n    ROUND (SUM(Revenue),2) AS Revenue,\n    COUNT (DISTINCT Invoice) AS Orders,\n    COUNT (DISTINCT CustomerID) AS Customers\nFROM OnlineRetail..OnlineRetail\nGROUP BY Country\nORDER BY revenue DESC",
+      "id": "retail-3",
+      "title": "How do revenue and order KPIs vary by month?",
+      "source": "RevenueAnalysis.sql",
+      "code": "WITH revenue_summary AS (\n    SELECT\n        YearMonth,\n        SUM(Revenue) AS total_revenue,\n        COUNT(DISTINCT Invoice) AS total_orders,\n        COUNT(DISTINCT CustomerID) AS total_customers\n    FROM OnlineRetail..OnlineRetail\n    GROUP BY YearMonth\n)\nSELECT\n    YearMonth,\n    ROUND(total_revenue, 2) AS total_revenue,\n    total_orders,\n    total_customers,\n    ROUND(total_revenue / NULLIF(total_orders, 0), 2) AS average_order_value\nFROM revenue_summary\nWHERE YearMonth is not null\nORDER BY YearMonth;",
       "columns": [
-        "Country",
-        "Revenue",
-        "Orders",
-        "Customers"
+        "Year and month",
+        "Total revenue",
+        "Total orders",
+        "Total customers",
+        "Average order value"
       ],
       "rows": [
         [
-          "United Kingdom",
-          14723147.52,
-          33541,
-          5350
+          "2009-12",
+          686654.16,
+          1512,
+          955,
+          454.14
         ],
         [
-          "EIRE",
-          621631.11,
-          567,
-          5
+          "2010-01",
+          557319.06,
+          1011,
+          720,
+          551.26
         ],
         [
-          "Netherlands",
-          554232.34,
-          228,
-          22
+          "2010-02",
+          506371.07,
+          1104,
+          772,
+          458.67
         ],
         [
-          "Germany",
-          431262.46,
-          789,
-          107
+          "2010-03",
+          699608.99,
+          1524,
+          1057,
+          459.06
         ],
         [
-          "France",
-          355257.47,
-          614,
-          95
+          "2010-04",
+          594609.19,
+          1329,
+          942,
+          447.41
         ],
         [
-          "Australia",
-          169968.11,
-          95,
-          15
+          "2010-05",
+          599985.79,
+          1377,
+          966,
+          435.72
         ],
         [
-          "Spain",
-          109178.53,
-          154,
-          41
+          "2010-06",
+          639066.58,
+          1497,
+          1041,
+          426.9
         ],
         [
-          "Switzerland",
-          100365.34,
-          90,
-          22
+          "2010-07",
+          591636.74,
+          1381,
+          928,
+          428.41
         ],
         [
-          "Sweden",
-          91549.72,
-          104,
-          19
+          "2010-08",
+          604242.65,
+          1293,
+          911,
+          467.32
         ],
         [
-          "Denmark",
-          69862.19,
-          43,
-          12
-        ],
-        [
-          "Belgium",
-          65753.42,
-          149,
-          29
-        ],
-        [
-          "Norway",
-          60109.62,
-          45,
-          13
-        ],
-        [
-          "Portugal",
-          57285.3,
-          93,
-          24
-        ],
-        [
-          "Japan",
-          47138.39,
-          33,
-          10
-        ],
-        [
-          "Channel Islands",
-          44996.76,
-          55,
-          13
-        ],
-        [
-          "Italy",
-          32550.42,
-          65,
-          17
-        ],
-        [
-          "Finland",
-          29925.54,
-          57,
-          14
-        ],
-        [
-          "Singapore",
-          25317.06,
-          11,
-          1
-        ],
-        [
-          "Cyprus",
-          24980.13,
-          37,
-          11
-        ],
-        [
-          "Austria",
-          23613.01,
-          45,
-          13
-        ],
-        [
-          "Greece",
-          19096.19,
-          18,
-          5
-        ],
-        [
-          "Poland",
-          10902.45,
-          28,
-          6
-        ],
-        [
-          "Israel",
-          10421.09,
-          7,
-          4
-        ],
-        [
-          "United Arab Emirates",
-          9202.69,
-          11,
-          4
-        ],
-        [
-          "Unspecified",
-          8613.65,
-          16,
-          6
-        ],
-        [
-          "USA",
-          8366.86,
-          20,
-          9
-        ],
-        [
-          "Malta",
-          8099.09,
-          9,
-          2
-        ],
-        [
-          "Lithuania",
-          6553.74,
-          6,
-          1
-        ],
-        [
-          "Iceland",
-          5633.32,
-          8,
-          1
-        ],
-        [
-          "Canada",
-          4883.04,
-          8,
-          5
-        ],
-        [
-          "Thailand",
-          3070.54,
-          2,
-          1
-        ],
-        [
-          "RSA",
-          1933.74,
-          2,
-          2
-        ],
-        [
-          "Lebanon",
-          1693.88,
-          1,
-          1
-        ],
-        [
-          "Brazil",
-          1411.87,
-          2,
-          2
-        ],
-        [
-          "Bahrain",
-          1354.37,
-          4,
-          2
-        ],
-        [
-          "European Community",
-          1300.25,
-          4,
-          1
-        ],
-        [
-          "Korea",
-          1118.51,
-          2,
-          2
-        ],
-        [
-          "Czech Republic",
-          826.74,
-          2,
-          1
-        ],
-        [
-          "West Indies",
-          536.41,
-          1,
-          1
-        ],
-        [
-          "Saudi Arabia",
-          145.92,
-          1,
-          1
-        ],
-        [
-          "Nigeria",
-          140.39,
-          2,
-          1
+          "2010-09",
+          831615.0,
+          1689,
+          1145,
+          492.37
         ]
       ],
-      "rowCount": 41,
-      "export": null,
-      "explanation": "GROUP BY Country measures market revenue and distinct counts at the same level.",
-      "finding": "The UK generated about 82.98% of retained sales revenue. Other markets account for a much smaller share.",
-      "decision": "Prioritise a review of exposure to the UK market.",
-      "action": "Monitor the country mix and investigate non-UK demand before making expansion decisions.",
-      "kpi": "Country revenue share",
-      "dashboard": "images/retail/sales_overview.png",
-      "chart": [
-        0,
-        1
-      ],
-      "decimals": [
-        1
-      ],
-      "hrRate": false
+      "rowCount": 25,
+      "export": "sql-results/retail-3.csv",
+      "status": null
     },
     {
-      "id": "retail-product",
-      "title": "Which stock-code and description combinations lead sales?",
+      "id": "retail-4",
+      "title": "Which product and price combinations generate the most revenue?",
       "source": "ProductAnalysis.sql",
-      "code": "SELECT \n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    SUM(Quantity) AS Units_Sold,\n    COUNT (DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description\nORDER BY Revenue DESC",
+      "code": "SELECT\n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    ROUND(Price,2) AS Price,\n    SUM(Quantity) AS Units_Sold,\n    COUNT (DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description, Price\nORDER BY Revenue DESC",
       "columns": [
-        "Stock code",
+        "Stockcode",
         "Description",
         "Revenue",
-        "Units",
+        "Price",
+        "Units sold",
+        "Orders"
+      ],
+      "rows": [
+        [
+          "22423",
+          "REGENCY CAKESTAND 3 TIER",
+          186872.7,
+          10.95,
+          17066,
+          587
+        ],
+        [
+          "23843",
+          "PAPER CRAFT , LITTLE BIRDIE",
+          168469.6,
+          2.08,
+          80995,
+          1
+        ],
+        [
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          150202.65,
+          2.55,
+          58903,
+          1051
+        ],
+        [
+          "22423",
+          "REGENCY CAKESTAND 3 TIER",
+          98889.0,
+          12.75,
+          7756,
+          2717
+        ],
+        [
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          80467.15,
+          2.95,
+          27277,
+          3814
+        ],
+        [
+          "23166",
+          "MEDIUM CERAMIC TOP STORAGE JAR",
+          79130.48,
+          1.04,
+          76087,
+          28
+        ],
+        [
+          "84879",
+          "ASSORTED COLOUR BIRD ORNAMENT",
+          77314.12,
+          1.69,
+          45748,
+          2495
+        ],
+        [
+          "POST",
+          "POSTAGE",
+          64296.0,
+          18.0,
+          3572,
+          1127
+        ],
+        [
+          "21137",
+          "BLACK RECORD COVER FRAME",
+          60504.72,
+          3.39,
+          17848,
+          221
+        ],
+        [
+          "84879",
+          "ASSORTED COLOUR BIRD ORNAMENT",
+          47938.45,
+          1.45,
+          33061,
+          155
+        ]
+      ],
+      "rowCount": 12785,
+      "export": "sql-results/retail-4.csv",
+      "status": null
+    },
+    {
+      "id": "retail-5",
+      "title": "Which products lead by revenue?",
+      "source": "ProductAnalysis.sql",
+      "code": "SELECT\n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    SUM(Quantity) AS Units_Sold,\n    COUNT (DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description\nORDER BY Revenue DESC",
+      "columns": [
+        "Stockcode",
+        "Description",
+        "Revenue",
+        "Units sold",
         "Orders"
       ],
       "rows": [
@@ -532,251 +2305,1239 @@
         ]
       ],
       "rowCount": 5286,
-      "export": "sql-results/retail-product.csv",
-      "explanation": "Groups by both stock code and description, then ranks revenue. A stock code can appear under different descriptions.",
-      "finding": "The leading row is stock code 22423. Revenue rankings should be read alongside volumes and stock-code definitions.",
-      "decision": "Identify products to examine for assortment and inventory planning.",
-      "action": "Group consistently by stock code and separate nonmerchandise entries before changing the assortment.",
-      "kpi": "Units sold and revenue by stock code",
-      "dashboard": "images/retail/product_performance.png",
-      "chart": [
-        0,
-        2
+      "export": "sql-results/retail-5.csv",
+      "status": null
+    },
+    {
+      "id": "retail-6",
+      "title": "Which products sell the most units?",
+      "source": "ProductAnalysis.sql",
+      "code": "SELECT\n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    SUM(Quantity) AS Units_Sold,\n    COUNT (DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description\nORDER BY Units_Sold DESC",
+      "columns": [
+        "Stockcode",
+        "Description",
+        "Revenue",
+        "Units sold",
+        "Orders"
       ],
-      "decimals": [
-        2
+      "rows": [
+        [
+          "84077",
+          "WORLD WAR 2 GLIDERS ASSTD DESIGNS",
+          24905.87,
+          109169,
+          920
+        ],
+        [
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          252072.46,
+          93640,
+          4888
+        ],
+        [
+          "23843",
+          "PAPER CRAFT , LITTLE BIRDIE",
+          168469.6,
+          80995,
+          1
+        ],
+        [
+          "84879",
+          "ASSORTED COLOUR BIRD ORNAMENT",
+          127074.17,
+          79913,
+          2652
+        ],
+        [
+          "23166",
+          "MEDIUM CERAMIC TOP STORAGE JAR",
+          81416.73,
+          77916,
+          195
+        ],
+        [
+          "85099B",
+          "JUMBO BAG RED RETROSPOT",
+          136980.08,
+          75759,
+          2612
+        ],
+        [
+          "17003",
+          "BROCADE RING PURSE",
+          14827.71,
+          71129,
+          387
+        ],
+        [
+          "21977",
+          "PACK OF 60 PINK PAISLEY CAKE CASES",
+          26733.45,
+          55270,
+          1578
+        ],
+        [
+          "84991",
+          "60 TEATIME FAIRY CAKE CASES",
+          26121.57,
+          53495,
+          1765
+        ],
+        [
+          "21212",
+          "PACK OF 72 RETROSPOT CAKE CASES",
+          22214.26,
+          46107,
+          1348
+        ]
       ],
-      "hrRate": false
+      "rowCount": 5286,
+      "export": "sql-results/retail-6.csv",
+      "status": null
+    },
+    {
+      "id": "retail-7",
+      "title": "What is average unit revenue for products selling at least 1,000 units?",
+      "source": "ProductAnalysis.sql",
+      "code": "With HighQuantityLowRev AS (\nSELECT\n    StockCode,\n    Description,\n    ROUND(SUM(revenue),2) AS Revenue,\n    SUM(Quantity) AS Units_Sold\nFROM OnlineRetail..OnlineRetail\nWHERE StockCode is not null\nGROUP BY StockCode, Description\n)\nSELECT\n    StockCode,\n    Description,\n    Revenue,\n    Units_Sold,\n    ROUND(Revenue * 1.0/Units_Sold, 2) AS Average_Unit_Revenue\nFROM HighQuantityLowRev\nWHERE Units_Sold >= 1000\nORDER BY Units_Sold DESC",
+      "columns": [
+        "Stockcode",
+        "Description",
+        "Revenue",
+        "Units sold",
+        "Average unit revenue"
+      ],
+      "rows": [
+        [
+          "84077",
+          "WORLD WAR 2 GLIDERS ASSTD DESIGNS",
+          24905.87,
+          109169,
+          0.23
+        ],
+        [
+          "85123A",
+          "WHITE HANGING HEART T-LIGHT HOLDER",
+          252072.46,
+          93640,
+          2.69
+        ],
+        [
+          "23843",
+          "PAPER CRAFT , LITTLE BIRDIE",
+          168469.6,
+          80995,
+          2.08
+        ],
+        [
+          "84879",
+          "ASSORTED COLOUR BIRD ORNAMENT",
+          127074.17,
+          79913,
+          1.59
+        ],
+        [
+          "23166",
+          "MEDIUM CERAMIC TOP STORAGE JAR",
+          81416.73,
+          77916,
+          1.04
+        ],
+        [
+          "85099B",
+          "JUMBO BAG RED RETROSPOT",
+          136980.08,
+          75759,
+          1.81
+        ],
+        [
+          "17003",
+          "BROCADE RING PURSE",
+          14827.71,
+          71129,
+          0.21
+        ],
+        [
+          "21977",
+          "PACK OF 60 PINK PAISLEY CAKE CASES",
+          26733.45,
+          55270,
+          0.48
+        ],
+        [
+          "84991",
+          "60 TEATIME FAIRY CAKE CASES",
+          26121.57,
+          53495,
+          0.49
+        ],
+        [
+          "21212",
+          "PACK OF 72 RETROSPOT CAKE CASES",
+          22214.26,
+          46107,
+          0.48
+        ]
+      ],
+      "rowCount": 1989,
+      "export": "sql-results/retail-7.csv",
+      "status": null
+    },
+    {
+      "id": "retail-8",
+      "title": "Which customers generate the most revenue?",
+      "source": "CustomerAnalysis.sql",
+      "code": "With TopCustRev AS (\nSELECT\n    CustomerID,\n    COUNT (DISTINCT Invoice) AS Orders,\n    SUM(Revenue) AS Revenue\nFROM OnlineRetail..OnlineRetail\nGROUP BY CustomerID\n)\nSELECT\n    CustomerID,\n    Orders,\n    ROUND(Revenue, 2) AS Revenue,\n    ROUND(Revenue * 1.0/Orders,2) AS Average_Order_Value\nFROM TopCustRev\nWHERE CustomerID is not null\nORDER BY Revenue DESC",
+      "columns": [
+        "Customer ID",
+        "Orders",
+        "Revenue",
+        "Average order value"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          145,
+          608821.65,
+          4198.77
+        ],
+        [
+          "Redacted",
+          151,
+          528602.52,
+          3500.68
+        ],
+        [
+          "Redacted",
+          156,
+          313946.37,
+          2012.48
+        ],
+        [
+          "Redacted",
+          398,
+          295972.63,
+          743.65
+        ],
+        [
+          "Redacted",
+          51,
+          246973.09,
+          4842.61
+        ],
+        [
+          "Redacted",
+          143,
+          196482.81,
+          1374.01
+        ],
+        [
+          "Redacted",
+          60,
+          175603.55,
+          2926.73
+        ],
+        [
+          "Redacted",
+          2,
+          168472.5,
+          84236.25
+        ],
+        [
+          "Redacted",
+          55,
+          147142.77,
+          2675.32
+        ],
+        [
+          "Redacted",
+          28,
+          144458.37,
+          5159.23
+        ]
+      ],
+      "rowCount": 5878,
+      "export": "sql-results/retail-8.csv",
+      "status": null
+    },
+    {
+      "id": "retail-9",
+      "title": "How much revenue comes from each customer decile?",
+      "source": "CustomerAnalysis.sql",
+      "code": "WITH CustRev AS (\nSELECT\n    CustomerID,\n    SUM(Revenue) AS Revenue\nFrom OnlineRetail..OnlineRetail\nGROUP BY CustomerID\n)\n,RankCus AS(\nSELECT\n    CustomerID,\n    Revenue,\n    NTILE(10) OVER (ORDER BY Revenue DESC) AS Revenue_Decline\nFROM CustRev\n)\nSELECT\n    Revenue_Decline,\n    COUNT (*) AS Customers,\n    ROUND(SUM(Revenue),2) AS Decline_Revenue\nFROM RankCus\nGROUP BY Revenue_Decline\nORDER BY Revenue_Decline",
+      "columns": [
+        "Revenue decline",
+        "Customers",
+        "Decline revenue"
+      ],
+      "rows": [
+        [
+          1,
+          588,
+          11342602.48
+        ],
+        [
+          2,
+          588,
+          2365823.58
+        ],
+        [
+          3,
+          588,
+          1378405.61
+        ],
+        [
+          4,
+          588,
+          895605.43
+        ],
+        [
+          5,
+          588,
+          622141.09
+        ],
+        [
+          6,
+          588,
+          440492.7
+        ],
+        [
+          7,
+          588,
+          299964.67
+        ],
+        [
+          8,
+          588,
+          205585.05
+        ],
+        [
+          9,
+          587,
+          129834.51
+        ],
+        [
+          10,
+          587,
+          62974.05
+        ]
+      ],
+      "rowCount": 10,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "retail-10",
+      "title": "What share of customers order more than once?",
+      "source": "CustomerAnalysis.sql",
+      "code": "WITH CustOrders AS(\nSELECT\n    CustomerID,\n    COUNT(DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nGROUP BY CustomerID\n)\nSELECT\n    COUNT (*) AS Total_Customer,\n    SUM(CASE WHEN Orders > 1 THEN 1 ELSE 0 END) AS RepeatCustomers,\n    ROUND(100 * SUM(CASE WHEN Orders > 1 THEN 1 ELSE 0 END) / COUNT (*), 2) AS Customer_Repeat_Rate\nFROM CustOrders",
+      "columns": [
+        "Total customer",
+        "Repeatcustomers",
+        "Customer repeat rate"
+      ],
+      "rows": [
+        [
+          5878,
+          4255,
+          72.0
+        ]
+      ],
+      "rowCount": 1,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "retail-11",
+      "title": "Which countries generate the most revenue?",
+      "source": "Country_Analysis.sql",
+      "code": "SELECT\n    Country,\n    ROUND (SUM(Revenue),2) AS Revenue,\n    COUNT (DISTINCT Invoice) AS Orders,\n    COUNT (DISTINCT CustomerID) AS Customers\nFROM OnlineRetail..OnlineRetail\nGROUP BY Country\nORDER BY revenue DESC",
+      "columns": [
+        "Country",
+        "Revenue",
+        "Orders",
+        "Customers"
+      ],
+      "rows": [
+        [
+          "United Kingdom",
+          14723147.52,
+          33541,
+          5350
+        ],
+        [
+          "EIRE",
+          621631.11,
+          567,
+          5
+        ],
+        [
+          "Netherlands",
+          554232.34,
+          228,
+          22
+        ],
+        [
+          "Germany",
+          431262.46,
+          789,
+          107
+        ],
+        [
+          "France",
+          355257.47,
+          614,
+          95
+        ],
+        [
+          "Australia",
+          169968.11,
+          95,
+          15
+        ],
+        [
+          "Spain",
+          109178.53,
+          154,
+          41
+        ],
+        [
+          "Switzerland",
+          100365.34,
+          90,
+          22
+        ],
+        [
+          "Sweden",
+          91549.72,
+          104,
+          19
+        ],
+        [
+          "Denmark",
+          69862.19,
+          43,
+          12
+        ]
+      ],
+      "rowCount": 41,
+      "export": "sql-results/retail-11.csv",
+      "status": null
+    },
+    {
+      "id": "retail-12",
+      "title": "What is average order value by country?",
+      "source": "Country_Analysis.sql",
+      "code": "with AOV as(\nSELECT\n    Country,\n    SUM(Revenue) AS Revenue,\n    COUNT(DISTINCT Invoice) AS Orders\nFROM OnlineRetail..OnlineRetail\nGROUP BY Country\n)\nSELECT\n    Country,\n    ROUND(Revenue, 2) AS Revenue,\n    Orders,\n    ROUND(Revenue/Orders, 2) AS Average_Order_Value\nFROM AOV\nORDER BY Revenue DESC",
+      "columns": [
+        "Country",
+        "Revenue",
+        "Orders",
+        "Average order value"
+      ],
+      "rows": [
+        [
+          "United Kingdom",
+          14723147.52,
+          33541,
+          438.96
+        ],
+        [
+          "EIRE",
+          621631.11,
+          567,
+          1096.35
+        ],
+        [
+          "Netherlands",
+          554232.34,
+          228,
+          2430.84
+        ],
+        [
+          "Germany",
+          431262.46,
+          789,
+          546.59
+        ],
+        [
+          "France",
+          355257.47,
+          614,
+          578.6
+        ],
+        [
+          "Australia",
+          169968.11,
+          95,
+          1789.14
+        ],
+        [
+          "Spain",
+          109178.53,
+          154,
+          708.95
+        ],
+        [
+          "Switzerland",
+          100365.34,
+          90,
+          1115.17
+        ],
+        [
+          "Sweden",
+          91549.72,
+          104,
+          880.29
+        ],
+        [
+          "Denmark",
+          69862.19,
+          43,
+          1624.7
+        ]
+      ],
+      "rowCount": 41,
+      "export": "sql-results/retail-12.csv",
+      "status": null
+    },
+    {
+      "id": "retail-13",
+      "title": "How do customer count, revenue and average RFM metrics vary by segment?",
+      "source": "RFMSegment.sql",
+      "code": "SELECT\n    Segment,\n    COUNT(*) AS Customers,\n    ROUND(SUM(Monetary), 2) AS Revenue,\n    ROUND(AVG(Monetary), 2) As Average_Customer_Value,\n    ROUND(AVG(Frequency), 2) AS Average_Orders,\n    ROUND(AVG(Recency), 2) AS Average_Recency_Days\nFROM OnlineRetail..RFMSegments\nGROUP BY Segment\nORDER BY Revenue DESC",
+      "columns": [
+        "Segment",
+        "Customers",
+        "Revenue",
+        "Average customer value",
+        "Average orders",
+        "Average recency days"
+      ],
+      "rows": [
+        [
+          "Champions",
+          1182,
+          12289134.8,
+          10396.9,
+          18.0,
+          22.0
+        ],
+        [
+          "At Risk",
+          880,
+          2221679.29,
+          2524.64,
+          6.0,
+          277.0
+        ],
+        [
+          "Loyal Customers",
+          877,
+          1327332.75,
+          1513.49,
+          5.0,
+          39.0
+        ],
+        [
+          "Needs Attention",
+          2045,
+          1135329.16,
+          555.17,
+          1.0,
+          411.0
+        ],
+        [
+          "New or Promising",
+          894,
+          769953.17,
+          861.25,
+          1.0,
+          40.0
+        ]
+      ],
+      "rowCount": 5,
+      "export": null,
+      "status": null
     }
   ],
   "hr-analytics": [
     {
       "id": "hr-1",
-      "title": "What is the overall employee attrition rate?",
+      "title": "What is the overall attrition rate?",
       "source": "hr_employee.sql",
-      "code": "SELECT \n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis;",
+      "code": "SELECT\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis;",
       "columns": [
-        "Employees",
-        "Leavers",
-        "Original SQL rate (%)",
-        "Decimal rate (%)"
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
       ],
       "rows": [
         [
           1470,
           237,
-          16.0,
-          16.12
+          16.0
         ]
       ],
       "rowCount": 1,
       "export": null,
-      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
-      "finding": "237 of 1,470 employees left. The decimal snapshot baseline is 16.12%.",
-      "decision": "Set a baseline for comparing groups.",
-      "action": "Compare future snapshots using the same definition.",
-      "kpi": "Attrition rate and leaver count",
-      "dashboard": "images/hr/powerbi/01-overview.png",
-      "chart": null,
-      "decimals": [
-        2,
-        3
-      ],
-      "hrRate": true
+      "status": null
     },
     {
       "id": "hr-2",
-      "title": "Which departments have the highest employee attrition rates?",
+      "title": "Which department has the highest attrition?",
       "source": "hr_employee.sql",
-      "code": "SELECT \n    Department,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY department\nORDER BY attrition_percentage DESC;",
+      "code": "SELECT\n    Department,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY department\nORDER BY attrition_percentage DESC;",
       "columns": [
         "Department",
-        "Employees",
-        "Leavers",
-        "Original SQL rate (%)",
-        "Decimal rate (%)"
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
       ],
       "rows": [
         [
           "Sales",
           446,
           92,
-          20.0,
-          20.63
+          20.0
         ],
         [
           "Human Resources",
           63,
           12,
-          19.0,
-          19.05
+          19.0
         ],
         [
           "Research & Development",
           961,
           133,
-          13.0,
-          13.84
+          13.0
         ]
       ],
       "rowCount": 3,
       "export": null,
-      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
-      "finding": "Sales has the highest decimal rate at 20.63%, followed by Human Resources at 19.05%. Research & Development has the most leavers in absolute terms (133).",
-      "decision": "Use both rates and counts to prioritise investigation.",
-      "action": "Review workload and employee feedback in Sales, and examine the volume of departures in R&D.",
-      "kpi": "Department attrition rate and leaver count",
-      "dashboard": "images/hr/powerbi/01-overview.png",
-      "chart": [
-        0,
-        4
-      ],
-      "decimals": [
-        3,
-        4
-      ],
-      "hrRate": true
+      "status": null
     },
     {
       "id": "hr-3",
-      "title": "Which job roles show the highest attrition rates?",
+      "title": "Which job roles have the highest attrition?",
       "source": "hr_employee.sql",
       "code": "SELECT\n    JobRole,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY JobRole\nORDER BY attrition_percentage DESC;",
       "columns": [
         "Job role",
-        "Employees",
-        "Leavers",
-        "Original SQL rate (%)",
-        "Decimal rate (%)"
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
       ],
       "rows": [
         [
           "Sales Representative",
           83,
           33,
-          39.0,
-          39.76
+          39.0
         ],
         [
           "Laboratory Technician",
           259,
           62,
-          23.0,
-          23.94
+          23.0
         ],
         [
           "Human Resources",
           52,
           12,
-          23.0,
-          23.08
+          23.0
         ],
         [
           "Sales Executive",
           326,
           57,
-          17.0,
-          17.48
+          17.0
         ],
         [
           "Research Scientist",
           292,
           47,
-          16.0,
-          16.1
-        ],
-        [
-          "Manufacturing Director",
-          145,
-          10,
-          6.0,
-          6.9
+          16.0
         ],
         [
           "Healthcare Representative",
           131,
           9,
-          6.0,
-          6.87
+          6.0
+        ],
+        [
+          "Manufacturing Director",
+          145,
+          10,
+          6.0
         ],
         [
           "Manager",
           102,
           5,
-          4.0,
-          4.9
+          4.0
         ],
         [
           "Research Director",
           80,
           2,
-          2.0,
-          2.5
+          2.0
         ]
       ],
       "rowCount": 9,
       "export": null,
-      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
-      "finding": "Sales Representatives have the highest observed rate. Group sizes differ across roles and affect the interpretation.",
-      "decision": "Identify roles that warrant a closer retention review.",
-      "action": "Ask HR to investigate job conditions and compare rates alongside role headcounts.",
-      "kpi": "Attrition rate and headcount by role",
-      "dashboard": "images/hr/powerbi/01-overview.png",
-      "chart": [
-        0,
-        4
-      ],
-      "decimals": [
-        3,
-        4
-      ],
-      "hrRate": true
+      "status": null
     },
     {
       "id": "hr-4",
-      "title": "How does overtime relate to employee attrition?",
+      "title": "How does observed attrition compare by overtime status?",
       "source": "hr_employee.sql",
       "code": "SELECT\n    OverTime,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY OverTime\nORDER BY attrition_percentage DESC;",
       "columns": [
         "Overtime",
-        "Employees",
-        "Leavers",
-        "Original SQL rate (%)",
-        "Decimal rate (%)"
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
       ],
       "rows": [
         [
           "Yes",
           416,
           127,
-          30.0,
-          30.53
+          30.0
         ],
         [
           "No",
           1054,
           110,
-          10.0,
-          10.44
+          10.0
         ]
       ],
       "rowCount": 2,
       "export": null,
-      "explanation": "SUM counts leavers via the CASE-derived flag. COUNT counts employees. The original integer expression truncates before ROUND.",
-      "finding": "The decimal rate is 30.53% with overtime and 10.44% without. The comparison is observational.",
-      "decision": "Decide whether workload patterns warrant review.",
-      "action": "Compare overtime allocation with role, staffing and employee feedback.",
-      "kpi": "Overtime hours and attrition rate",
-      "dashboard": "images/hr/powerbi/02-factors.png",
-      "chart": [
-        0,
-        4
+      "status": null
+    },
+    {
+      "id": "hr-5",
+      "title": "Are low-income employees more likely to leave?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    income_band,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY income_band\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Income band",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
       ],
-      "decimals": [
-        3,
-        4
+      "rows": [
+        [
+          "Low Income",
+          395,
+          113,
+          28.0
+        ],
+        [
+          "Medium Income",
+          640,
+          77,
+          12.0
+        ],
+        [
+          "High Income",
+          435,
+          47,
+          10.0
+        ]
       ],
-      "hrRate": true
+      "rowCount": 3,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-6",
+      "title": "Does distance from home affect attrition?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    distance_band,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY distance_band\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Distance band",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
+      ],
+      "rows": [
+        [
+          "Far",
+          329,
+          68,
+          20.0
+        ],
+        [
+          "Medium Distance",
+          509,
+          82,
+          16.0
+        ],
+        [
+          "Near",
+          632,
+          87,
+          13.0
+        ]
+      ],
+      "rowCount": 3,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-7",
+      "title": "Are younger employees leaving more?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    age_group,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY age_group\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Age group",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
+      ],
+      "rows": [
+        [
+          "Under 25",
+          97,
+          38,
+          39.0
+        ],
+        [
+          "25-34",
+          554,
+          112,
+          20.0
+        ],
+        [
+          "Over 55",
+          69,
+          11,
+          15.0
+        ],
+        [
+          "35-44",
+          505,
+          51,
+          10.0
+        ],
+        [
+          "45-54",
+          245,
+          25,
+          10.0
+        ]
+      ],
+      "rowCount": 5,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-8",
+      "title": "How does observed attrition vary by job satisfaction?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    satisfaction_level,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY satisfaction_level\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Satisfaction level",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
+      ],
+      "rows": [
+        [
+          "Low",
+          289,
+          66,
+          22.0
+        ],
+        [
+          "Medium",
+          280,
+          46,
+          16.0
+        ],
+        [
+          "High",
+          442,
+          73,
+          16.0
+        ],
+        [
+          "Very High",
+          459,
+          52,
+          11.0
+        ]
+      ],
+      "rowCount": 4,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-9",
+      "title": "How does observed attrition vary by work-life balance?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    worklifebalance_group,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY worklifebalance_group\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Worklifebalance group",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
+      ],
+      "rows": [
+        [
+          "Bad",
+          80,
+          25,
+          31.0
+        ],
+        [
+          "Best",
+          153,
+          27,
+          17.0
+        ],
+        [
+          "Good",
+          344,
+          58,
+          16.0
+        ],
+        [
+          "Very Good",
+          893,
+          127,
+          14.0
+        ]
+      ],
+      "rowCount": 4,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-10",
+      "title": "How does observed attrition vary by time since promotion?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    promotion_wait_band,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage,\n    ROUND(AVG(YearsInCurrentRole),2) AS avg_years_in_current_role,\n    ROUND(AVG(YearsSinceLastPromotion),2) AS avg_years_since_last_promotion,\n    ROUND(AVG(YearsAtCompany),2) AS avg_years_at_company\nFROM hr_analysis\nGROUP BY promotion_wait_band\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Promotion wait band",
+        "Attrition (%)",
+        "Avg years in current role",
+        "Avg years since last promotion",
+        "Avg years at company"
+      ],
+      "rows": [
+        [
+          "Promoted Recently",
+          18.0,
+          2.57,
+          0.0,
+          4.4
+        ],
+        [
+          "1-3 Years",
+          14.0,
+          3.88,
+          1.46,
+          6.25
+        ],
+        [
+          "4-7 Years",
+          13.0,
+          7.21,
+          5.57,
+          10.55
+        ],
+        [
+          "8+ Years",
+          12.0,
+          9.14,
+          11.14,
+          18.08
+        ]
+      ],
+      "rowCount": 4,
+      "export": null,
+      "status": null
+    },
+    {
+      "id": "hr-11",
+      "title": "Which employee segments are high risk?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    Department,\n    JobRole,\n    age_group,\n    OverTime,\n    income_band,\n    COUNT(*) AS total_employees,\n    SUM(attrition_flag) AS employees_left,\n    ROUND(100 * SUM(attrition_flag) / COUNT(*), 2) AS attrition_percentage\nFROM hr_analysis\nGROUP BY Department, JobRole, age_group, OverTime, income_band\nHAVING COUNT(*) >=5\nORDER BY attrition_percentage DESC;",
+      "columns": [
+        "Department",
+        "Job role",
+        "Age group",
+        "Overtime",
+        "Income band",
+        "Total employees",
+        "Employees left",
+        "Attrition (%)"
+      ],
+      "rows": [
+        [
+          "Sales",
+          "Sales Representative",
+          "Under 25",
+          "Yes",
+          "Low Income",
+          8,
+          7,
+          87.0
+        ],
+        [
+          "Research & Development",
+          "Laboratory Technician",
+          "Under 25",
+          "Yes",
+          "Low Income",
+          5,
+          4,
+          80.0
+        ],
+        [
+          "Research & Development",
+          "Laboratory Technician",
+          "25-34",
+          "Yes",
+          "Low Income",
+          13,
+          9,
+          69.0
+        ],
+        [
+          "Sales",
+          "Sales Representative",
+          "25-34",
+          "Yes",
+          "Low Income",
+          8,
+          5,
+          62.0
+        ],
+        [
+          "Research & Development",
+          "Research Scientist",
+          "Under 25",
+          "Yes",
+          "Low Income",
+          11,
+          6,
+          54.0
+        ],
+        [
+          "Research & Development",
+          "Research Scientist",
+          "25-34",
+          "Yes",
+          "Low Income",
+          28,
+          15,
+          53.0
+        ],
+        [
+          "Research & Development",
+          "Laboratory Technician",
+          "25-34",
+          "Yes",
+          "Medium Income",
+          13,
+          6,
+          46.0
+        ],
+        [
+          "Research & Development",
+          "Laboratory Technician",
+          "35-44",
+          "Yes",
+          "Low Income",
+          11,
+          5,
+          45.0
+        ],
+        [
+          "Sales",
+          "Sales Executive",
+          "35-44",
+          "Yes",
+          "Medium Income",
+          18,
+          8,
+          44.0
+        ],
+        [
+          "Sales",
+          "Sales Representative",
+          "25-34",
+          "No",
+          "Medium Income",
+          5,
+          2,
+          40.0
+        ]
+      ],
+      "rowCount": 80,
+      "export": "sql-results/hr-11.csv",
+      "status": null
+    },
+    {
+      "id": "hr-11a",
+      "title": "How does the draft heuristic score rank records in this fictional dataset?",
+      "source": "hr_employee.sql",
+      "code": "SELECT\n    EmployeeNumber,\n    Age,\n    Department,\n    JobRole,\n    MonthlyIncome,\n    OverTime,\n    JobSatisfaction,\n    WorkLifeBalance,\n    YearsSinceLastPromotion,\n    Attrition,\n    (\n        CASE WHEN OverTime = 'Yes' THEN 1 ELSE 0 END +\n        CASE WHEN MonthlyIncome < 3000 THEN 1 ELSE 0 END +\n        CASE WHEN Age < 30 THEN 1 ELSE 0 END +\n        CASE WHEN JobSatisfaction <= 2 THEN 1 ELSE 0 END +\n        CASE WHEN WorkLifeBalance <= 2 THEN 1 ELSE 0 END +\n        CASE WHEN YearsSinceLastPromotion >= 4 THEN 1 ELSE 0 END\n    ) AS risk_score\nFROM hr_analysis\nORDER BY risk_score DESC;",
+      "columns": [
+        "Employeenumber",
+        "Age",
+        "Department",
+        "Job role",
+        "Monthlyincome",
+        "Overtime",
+        "Jobsatisfaction",
+        "Worklifebalance",
+        "Yearssincelastpromotion",
+        "Attrition",
+        "Risk score"
+      ],
+      "rows": [
+        [
+          "Redacted",
+          27,
+          "Research & Development",
+          "Research Scientist",
+          2235,
+          "Yes",
+          1,
+          2,
+          6,
+          "No",
+          6
+        ],
+        [
+          "Redacted",
+          29,
+          "Research & Development",
+          "Laboratory Technician",
+          2119,
+          "Yes",
+          1,
+          2,
+          0,
+          "Yes",
+          5
+        ],
+        [
+          "Redacted",
+          22,
+          "Research & Development",
+          "Research Scientist",
+          2328,
+          "Yes",
+          2,
+          2,
+          2,
+          "No",
+          5
+        ],
+        [
+          "Redacted",
+          27,
+          "Research & Development",
+          "Research Scientist",
+          2478,
+          "Yes",
+          2,
+          2,
+          1,
+          "No",
+          5
+        ],
+        [
+          "Redacted",
+          26,
+          "Research & Development",
+          "Research Scientist",
+          2368,
+          "No",
+          2,
+          2,
+          4,
+          "No",
+          5
+        ],
+        [
+          "Redacted",
+          26,
+          "Research & Development",
+          "Laboratory Technician",
+          2867,
+          "No",
+          1,
+          2,
+          7,
+          "No",
+          5
+        ],
+        [
+          "Redacted",
+          37,
+          "Research & Development",
+          "Research Scientist",
+          2782,
+          "Yes",
+          1,
+          2,
+          4,
+          "No",
+          5
+        ],
+        [
+          "Redacted",
+          35,
+          "Research & Development",
+          "Research Scientist",
+          2022,
+          "Yes",
+          2,
+          2,
+          7,
+          "Yes",
+          5
+        ],
+        [
+          "Redacted",
+          48,
+          "Research & Development",
+          "Research Scientist",
+          2367,
+          "No",
+          1,
+          2,
+          7,
+          "No",
+          4
+        ],
+        [
+          "Redacted",
+          29,
+          "Research & Development",
+          "Research Scientist",
+          2362,
+          "No",
+          1,
+          1,
+          0,
+          "Yes",
+          4
+        ]
+      ],
+      "rowCount": 1470,
+      "export": "sql-results/hr-11a.csv",
+      "status": null
     }
   ]
 }
