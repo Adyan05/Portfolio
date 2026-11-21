@@ -1,0 +1,190 @@
+:root {
+  --paper: #faf9f6;
+  --ink-black: #050505;
+  --cornflower: #548cff;
+  --cornflower-wash: #eaf1ff;
+  --paper-line: #dfded9;
+  color: var(--ink-black);
+  background: var(--paper);
+}
+
+body { background: var(--paper); }
+
+#root,
+.header,
+.header nav,
+.project-card,
+.project-info,
+.contact-section,
+.site-footer,
+.presentation,
+.presentation-footer,
+.coffee-case-study,
+.coffee-case-top,
+.coffee-case-nav,
+.coffee-case-footer {
+  color: var(--ink-black);
+  background: var(--paper);
+}
+
+#root,
+.header,
+.project-card,
+.contact-section,
+.site-footer,
+.presentation,
+.slide-stage {
+  border-color: var(--paper-line);
+}
+
+.reference-hero .name-display { color: var(--ink-black); }
+.name-display > span { -webkit-text-stroke-color: var(--ink-black); }
+.hero-portrait .slide-image { filter: none; }
+
+.profile-keyword {
+  background: transparent;
+  color: inherit;
+  text-decoration: underline var(--cornflower);
+  text-decoration-thickness: .16em;
+  text-underline-offset: .15em;
+  text-decoration-skip-ink: auto;
+}
+
+.header-contact,
+.button.dark,
+.card-bottom .text-link,
+.slide-controls .icon-button.dark,
+.business-question .question-toolbar .pill {
+  background: var(--cornflower) !important;
+  color: var(--ink-black) !important;
+  border-color: var(--cornflower);
+  box-shadow: none;
+}
+
+.header-contact:hover,
+.button.dark:hover:not(:disabled),
+.card-bottom .text-link:hover,
+.business-question .question-toolbar .pill:hover {
+  background: var(--cornflower-wash) !important;
+  color: var(--ink-black) !important;
+}
+
+.header nav a,
+.text-link,
+.pill[href],
+button.pill:not(:disabled),
+.site-footer a,
+.case-section-select select,
+.coffee-case-top a,
+.coffee-case-nav button,
+.coffee-tabs button,
+.dataset-switcher button,
+.question-toolbar a,
+.case-evidence-disclosure > summary {
+  text-decoration: underline var(--cornflower);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .22em;
+}
+
+.header nav a.active::after,
+.slide-dots span {
+  background: var(--cornflower);
+}
+
+.filters button.chosen,
+.project-cover:hover,
+.pill:hover,
+.case-section-select select {
+  border-color: var(--cornflower);
+}
+
+.filters button.chosen,
+.coffee-case-nav button[aria-current="page"],
+.coffee-tabs button[aria-selected="true"],
+.dataset-switcher button[aria-selected="true"],
+.hr-actions button[aria-pressed="true"] {
+  background: var(--cornflower-wash);
+  color: var(--ink-black);
+}
+
+.coffee-case-nav button[aria-current="page"],
+.coffee-tabs button[aria-selected="true"],
+.dataset-switcher button[aria-selected="true"] {
+  box-shadow: inset 0 -3px var(--cornflower);
+}
+
+.project-card .project-cover,
+.project-card:nth-child(n) .project-cover {
+  background: var(--ink-black);
+}
+
+.cover-bottom svg,
+.brand-icon,
+.skill-symbol,
+.evidence-image > span svg {
+  color: var(--cornflower);
+}
+
+.skill-symbol,
+.brand-icon {
+  background: var(--ink-black);
+  border-radius: .35rem;
+  padding: .22rem;
+}
+
+.business-question,
+.business-question .question-code,
+.site-footer > span:first-child {
+  background: var(--ink-black);
+}
+
+.business-question .question-keyword { color: var(--cornflower); }
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--cornflower);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--cornflower);
+  color: var(--ink-black);
+}
+
+.coffee,
+.retail,
+.dwill,
+.sage {
+  --ink: var(--ink-black);
+  --accent: var(--cornflower-wash);
+}
+
+.coffee-case-hero h1 em,
+.coffee-case-nav button,
+.case-page-heading .eyebrow,
+.learning-index-item,
+.dataset-more {
+  color: var(--ink-black);
+}
+
+.coffee-case-hero h1 em {
+  text-decoration: underline var(--cornflower);
+  text-decoration-thickness: .12em;
+  text-underline-offset: .17em;
+}
+
+.case-callout,
+.next-learning,
+.formula-grid code {
+  background: var(--ink-black);
+}
+
+.case-metrics,
+.formula-grid article,
+.quality-head,
+.overview-dashboard-showcase {
+  background: var(--cornflower-wash);
+}
