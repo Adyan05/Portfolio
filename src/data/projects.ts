@@ -6,23 +6,7 @@ import { dwill } from './dwill';
 import { coffee } from './coffee';
 import { retail } from './retail';
 import { hr } from './hr';
-import { census } from './census';
 import { standardiseProject } from './caseStudies';
-const slide = (kind: SlideKind, title: string, body: string): Slide => ({id:kind,kind,title,body,placeholder:true});
-const projectSources: Project[] = [
- coffee, retail, hr,
- census,
- dwill,
- {id:'software-project',title:'Software project',category:'Software Engineering',description:'Software engineering project — content pending.',accent:'sage',technologies:[],placeholder:true,slides:[
- slide('overview','Project Overview','Add a short introduction to your project, who it serves, and what you built.'),
- slide('problem','Problem','Describe the challenge, who experiences it, and why solving it matters.'),
- slide('objectives','Objectives','Add the goals and constraints that shaped your work.'),
- slide('technologies','Tools & Technologies','List the technologies you actually used and explain the key choices.'),
- slide('architecture','Architecture','Upload your system architecture diagram and describe the flow between components.'),
- slide('features','Key Features','Describe the features you implemented and the needs they address.'),
- slide('screenshots','Implementation','Upload real implementation screenshots with descriptive captions.'),
- slide('results','Key Results','Add verified outcomes, lessons learned, and supporting evidence.'),
- slide('repository','Source Code','Add your GitHub repository URL to make the source available.') ]},
-];
+const projectSources: Project[] = [coffee, retail, hr, dwill];
 export const projects = projectSources.map(standardiseProject);
 export function validRepository(value?: string) { if(!value) return false; try { const u=new URL(value); return u.protocol==='https:' && u.hostname==='github.com' && /^\/[^/]+\/[^/]+\/?$/.test(u.pathname) && !u.username && !u.password; } catch {return false;} }
