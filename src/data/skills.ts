@@ -43,29 +43,29 @@ export const skills = [
         "icon": "ChartLine"
       },
       {
-        "name": "Data preparation",
+        "name": "Data Preparation",
         "icon": "ListFilter"
       },
       {
-        "name": "Data validation",
+        "name": "Data Validation",
         "icon": "ListChecks"
       },
       {
-        "name": "RFM analysis",
+        "name": "RFM Analysis",
         "icon": "Users"
       },
       {
-        "name": "Customer segmentation",
+        "name": "Customer Segmentation",
         "icon": "ChartPie"
       },
       {
-        "name": "Business analysis",
+        "name": "Business Analysis",
         "icon": "ChartNoAxesCombined"
       }
     ]
   },
   {
-    "title": "Software & web development",
+    "title": "Software & Web Development",
     "items": [
       {
         "name": "React",
@@ -88,7 +88,7 @@ export const skills = [
         "icon": "Link"
       },
       {
-        "name": "Smart contracts",
+        "name": "Smart Contracts",
         "icon": "FileCheck2"
       },
       {
@@ -108,36 +108,36 @@ export const skills = [
         "icon": "Globe"
       },
       {
-        "name": "Software testing",
+        "name": "Software Testing",
         "icon": "Bug"
       },
       {
-        "name": "Technical research",
+        "name": "Technical Research",
         "icon": "Search"
       }
     ]
   },
   {
-    "title": "Leadership & communication",
+    "title": "Leadership & Communication",
     "items": [
       {
         "name": "Salesforce",
         "icon": "Cloud"
       },
       {
-        "name": "Stakeholder engagement",
+        "name": "Stakeholder Engagement",
         "icon": "Handshake"
       },
       {
-        "name": "Student recruitment",
+        "name": "Student Recruitment",
         "icon": "GraduationCap"
       },
       {
-        "name": "Event planning",
+        "name": "Event Planning",
         "icon": "CalendarDays"
       },
       {
-        "name": "Team coordination",
+        "name": "Team Coordination",
         "icon": "UsersRound"
       },
       {
@@ -145,15 +145,15 @@ export const skills = [
         "icon": "Flag"
       },
       {
-        "name": "Budget management",
+        "name": "Budget Management",
         "icon": "Wallet"
       },
       {
-        "name": "Student advocacy",
+        "name": "Student Advocacy",
         "icon": "MessageCircle"
       },
       {
-        "name": "Digital outreach",
+        "name": "Digital Outreach",
         "icon": "Megaphone"
       },
       {
